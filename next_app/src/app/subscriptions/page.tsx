@@ -76,9 +76,11 @@ export default function SubscriptionsPage() {
               </ul>
             </CardContent>
             <CardFooter className="p-8 pt-0">
-              <Button className="w-full rounded-xl py-6 text-base shadow-sm group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300" asChild variant="outline">
-                <Link href="/payment">Subscribe Now</Link>
-              </Button>
+              <Link href="/payment" className="w-full block">
+                <Button className="w-full rounded-xl py-6 text-base shadow-sm group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300" variant="outline">
+                  Subscribe Now
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
 
@@ -184,9 +186,11 @@ export default function SubscriptionsPage() {
               </ul>
             </CardContent>
             <CardFooter className="p-8 pt-0">
-              <Button className="w-full rounded-xl py-6 text-base shadow-sm group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300" asChild variant="outline">
-                <Link href="/payment">Subscribe Now</Link>
-              </Button>
+              <Link href="/payment" className="w-full block">
+                <Button className="w-full rounded-xl py-6 text-base shadow-sm group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300" variant="outline">
+                  Subscribe Now
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
         </div>
