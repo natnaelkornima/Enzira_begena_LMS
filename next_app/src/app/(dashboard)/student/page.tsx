@@ -1,160 +1,129 @@
 import Link from 'next/link';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Progress } from '@/components/ui/progress';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { BookOpen, CheckCircle, Award, ChevronRight } from 'lucide-react';
 
 export default function StudentDashboardPage() {
   return (
-    <div className="p-md md:p-xl">
-      <div className="max-w-container-max mx-auto">
-        {/* Welcome Section */}
-        <header className="mb-xl flex flex-col md:flex-row justify-between items-end gap-md">
+    <div className="p-6 max-w-7xl mx-auto space-y-8">
+      {/* Welcome Section */}
+      <header className="flex flex-col md:flex-row justify-between items-end gap-6">
+        <div>
+          <h2 className="text-3xl font-bold tracking-tight mb-2">Welcome back, Julian!</h2>
+          <p className="text-muted-foreground">You've completed 75% of your weekly goals. Keep up the momentum.</p>
+        </div>
+        <Card className="p-4 flex items-center space-x-4 border-muted/50">
+          <Avatar className="h-12 w-12">
+            <AvatarImage src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDhSkIJlFXZ_jlLgn-J8XkIT8PgBqrNdUuqVblQswdJzDJo_WeUBOBQVwhqYiKU_58eXC1Hx6h75vm-W-pnceMBbQBwPLlWQMr84Zhs4NhDLZx656p5pDup7YJp0LMNFg3i0fufE9QqvqaxG6U1Qa4dt6sdSZQJuhZCXgzPlta8zJf_Rwg_-c6sESBDZvTGiXFZ82anRsq8UG1js6x3SUR4a3d_E3y3YpBawQsuzYYo-36w2EDW1vofNn8WdGSHaTVMnvrip-jZRk" />
+            <AvatarFallback>JT</AvatarFallback>
+          </Avatar>
           <div>
-            <h2 className="font-h1 text-h2 md:text-h1 text-on-surface mb-xs">Welcome back, Julian!</h2>
-            <p className="font-body-lg text-body-lg text-on-surface-variant">You've completed 75% of your weekly goals. Keep up the momentum.</p>
+            <p className="font-semibold text-sm">Julian Thorne</p>
+            <p className="text-xs text-muted-foreground">Academic Year 2024</p>
           </div>
-          <div className="flex items-center space-x-sm bg-white p-sm rounded-2xl shadow-sm border border-outline-variant/20">
-            <div className="w-12 h-12 rounded-full overflow-hidden">
-              <img 
-                alt="Student Avatar" 
-                className="w-full h-full object-cover" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDhSkIJlFXZ_jlLgn-J8XkIT8PgBqrNdUuqVblQswdJzDJo_WeUBOBQVwhqYiKU_58eXC1Hx6h75vm-W-pnceMBbQBwPLlWQMr84Zhs4NhDLZx656p5pDup7YJp0LMNFg3i0fufE9QqvqaxG6U1Qa4dt6sdSZQJuhZCXgzPlta8zJf_Rwg_-c6sESBDZvTGiXFZ82anRsq8UG1js6x3SUR4a3d_E3y3YpBawQsuzYYo-36w2EDW1vofNn8WdGSHaTVMnvrip-jZRk"
-              />
-            </div>
-            <div>
-              <p className="font-label-md text-label-md">Julian Thorne</p>
-              <p className="text-[12px] text-on-surface-variant">Academic Year 2024</p>
-            </div>
-          </div>
-        </header>
+        </Card>
+      </header>
 
-        {/* High-Level Progress Stats (Bento Grid Style) */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-md mb-xl">
-          <div className="bg-surface-container-lowest p-md rounded-2xl shadow-md border border-outline-variant/10 flex items-center space-x-md">
-            <div className="w-14 h-14 bg-error-container rounded-xl flex items-center justify-center text-error">
-              <span className="material-symbols-outlined text-[32px]" data-icon="auto_stories">auto_stories</span>
-            </div>
-            <div>
-              <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">In Progress</p>
-              <p className="font-h2 text-h2 text-on-surface">4</p>
-            </div>
+      {/* High-Level Progress Stats */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <Card className="flex items-center p-6 space-x-4">
+          <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+            <BookOpen className="h-6 w-6" />
           </div>
-          <div className="bg-surface-container-lowest p-md rounded-2xl shadow-md border border-outline-variant/10 flex items-center space-x-md">
-            <div className="w-14 h-14 bg-surface-container-high rounded-xl flex items-center justify-center text-primary">
-              <span className="material-symbols-outlined text-[32px]" data-icon="task_alt">task_alt</span>
-            </div>
-            <div>
-              <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Completed</p>
-              <p className="font-h2 text-h2 text-on-surface">12</p>
-            </div>
+          <div>
+            <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">In Progress</p>
+            <p className="text-2xl font-bold mt-1">4</p>
           </div>
-          <div className="bg-surface-container-lowest p-md rounded-2xl shadow-md border border-outline-variant/10 flex items-center space-x-md">
-            <div className="w-14 h-14 bg-on-secondary-container/10 rounded-xl flex items-center justify-center text-on-secondary-container">
-              <span className="material-symbols-outlined text-[32px]" data-icon="workspace_premium">workspace_premium</span>
-            </div>
-            <div>
-              <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Certificates</p>
-              <p className="font-h2 text-h2 text-on-surface">8</p>
-            </div>
+        </Card>
+        <Card className="flex items-center p-6 space-x-4">
+          <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center text-green-600">
+            <CheckCircle className="h-6 w-6" />
           </div>
-        </section>
+          <div>
+            <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Completed</p>
+            <p className="text-2xl font-bold mt-1">12</p>
+          </div>
+        </Card>
+        <Card className="flex items-center p-6 space-x-4">
+          <div className="h-12 w-12 bg-yellow-500/10 rounded-lg flex items-center justify-center text-yellow-600">
+            <Award className="h-6 w-6" />
+          </div>
+          <div>
+            <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Certificates</p>
+            <p className="text-2xl font-bold mt-1">8</p>
+          </div>
+        </Card>
+      </section>
 
-        {/* Course Grid */}
-        <section>
-          <div className="flex justify-between items-center mb-md">
-            <h3 className="font-h2 text-h3 text-on-surface">Continue Learning</h3>
-            <Link className="font-label-md text-error hover:underline" href="/courses">View all courses</Link>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-lg">
-            {/* Course Card 1 */}
-            <div className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-md border border-outline-variant/10 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+      {/* Course Grid */}
+      <section>
+        <div className="flex justify-between items-center mb-6">
+          <h3 className="text-2xl font-bold">Continue Learning</h3>
+          <Button variant="link" asChild className="text-primary px-0">
+            <Link href="/courses">View all courses <ChevronRight className="h-4 w-4 ml-1" /></Link>
+          </Button>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Principles of Visual Narrative",
+              instructor: "Dr. Elena Rostova",
+              progress: 68,
+              level: "Advanced",
+              img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCO4eznOM8amD3kg09Flak6yD4E1nk9K0DM6O41eZiy2xcyP6ag-vEnDfq6ESldjPBhaxYQ38O60Z0y_etkhQ03Nk8_WR_U2msJH56ZIZvIGg7wKav7ySMafP8SQuGaobbRwo0n5hxmDol0ONaqgqz1Bhj7zKQOAh3GExF8IkOyHOGTAa3pfz1ItacUoJnq6aou4JW2q9sVxbw2ew5aWgqztZmMVtvGkzovZ8cvVzT1D7dHMMFZzddPJSJ9154I_R1xKpXeXmxQv1A",
+            },
+            {
+              title: "Quantitative Financial Theory",
+              instructor: "Prof. Marcus Sterling",
+              progress: 32,
+              level: "Mastery",
+              img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBjV-5ZomSh5wO98B-vX-HTSYzR-V9AlPUvW5VEclQ1rst6S2g50uJPmy0zV36nvUugRVc3NpFWOGcYO_rh_6ozjcqsxzh5IwXiDRrqJfg42z20aCb1PAdp6L8q8Cz2dqb8gFL12qkvj-xikipdIanlukdkBiQe5bpx7HQkdTOYVbrldskwXSbyGG7CiXqcKVlBSBpvFNQQRECrLHXvTgL7kk6syZn8Sa3rw-46bvCB7_TKvjOVGv2tCXVdD_riWkSduhKvCSj2KPg",
+            },
+            {
+              title: "Modern Web Architecture",
+              instructor: "Sarah Jenkins, Senior Eng.",
+              progress: 91,
+              level: "Intermediate",
+              img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDK7JdiYvCDTo3tumsT9GvhnHfGRtDcLFYotgD6dMRVCJ1Kf0I6pmwZDMi4_4fFxcjikF6iUE-rB3zdanWheLhcrf5sDF8eaMiXcz8-Yu2R0lwFEHjovwe2Qovu1KK_BEV9DzQ2KaNBrd39mxfPm0bCskZhboMz-1gOcrDDq8fFWZY39IeVeQsLLTF1wrk37ddny9W_Rzlme7j6yG6PzjuTq16oEJXAf6MhVzCk1JehVV2XVLAN8r6v-KuCWSS-TY2Db2T78CuUqiU",
+            }
+          ].map((course, i) => (
+            <Card key={i} className="overflow-hidden hover:shadow-lg transition-all duration-300 group flex flex-col">
               <div className="relative h-48">
                 <img 
-                  alt="Design Principles" 
-                  className="w-full h-full object-cover" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO4eznOM8amD3kg09Flak6yD4E1nk9K0DM6O41eZiy2xcyP6ag-vEnDfq6ESldjPBhaxYQ38O60Z0y_etkhQ03Nk8_WR_U2msJH56ZIZvIGg7wKav7ySMafP8SQuGaobbRwo0n5hxmDol0ONaqgqz1Bhj7zKQOAh3GExF8IkOyHOGTAa3pfz1ItacUoJnq6aou4JW2q9sVxbw2ew5aWgqztZmMVtvGkzovZ8cvVzT1D7dHMMFZzddPJSJ9154I_R1xKpXeXmxQv1A"
+                  alt={course.title} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                  src={course.img}
                 />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-sm py-xs rounded-full shadow-sm">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-brand-accent">Advanced</span>
+                <div className="absolute top-4 left-4">
+                  <Badge variant="secondary" className="bg-background/90 backdrop-blur-sm uppercase tracking-widest text-[10px] font-bold text-primary">
+                    {course.level}
+                  </Badge>
                 </div>
               </div>
-              <div className="p-md">
-                <h4 className="font-h3 text-[20px] text-on-surface mb-1">Principles of Visual Narrative</h4>
-                <p className="font-label-md text-on-surface-variant mb-md">Dr. Elena Rostova</p>
-                <div className="space-y-xs mb-md">
-                  <div className="flex justify-between text-label-sm text-on-surface-variant">
-                    <span>Progress</span>
-                    <span className="font-bold">68%</span>
+              <CardContent className="p-6 flex-1 flex flex-col">
+                <h4 className="text-xl font-semibold mb-1 line-clamp-1">{course.title}</h4>
+                <p className="text-sm text-muted-foreground mb-6">{course.instructor}</p>
+                
+                <div className="mt-auto space-y-2 mb-6">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-muted-foreground">Progress</span>
+                    <span className="font-bold">{course.progress}%</span>
                   </div>
-                  <div className="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
-                    <div className="h-full bg-brand-accent rounded-full w-[68%]"></div>
-                  </div>
+                  <Progress value={course.progress} className="h-2" />
                 </div>
-                <button className="w-full bg-brand-accent hover:bg-brand-accent-hover text-on-primary py-md rounded-xl font-label-md transition-all duration-200 scale-102 active:scale-98">
-                  Continue Learning
-                </button>
-              </div>
-            </div>
-
-            {/* Course Card 2 */}
-            <div className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-md border border-outline-variant/10 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-              <div className="relative h-48">
-                <img 
-                  alt="Quantitative Analysis" 
-                  className="w-full h-full object-cover" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjV-5ZomSh5wO98B-vX-HTSYzR-V9AlPUvW5VEclQ1rst6S2g50uJPmy0zV36nvUugRVc3NpFWOGcYO_rh_6ozjcqsxzh5IwXiDRrqJfg42z20aCb1PAdp6L8q8Cz2dqb8gFL12qkvj-xikipdIanlukdkBiQe5bpx7HQkdTOYVbrldskwXSbyGG7CiXqcKVlBSBpvFNQQRECrLHXvTgL7kk6syZn8Sa3rw-46bvCB7_TKvjOVGv2tCXVdD_riWkSduhKvCSj2KPg"
-                />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-sm py-xs rounded-full shadow-sm">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-brand-accent">Mastery</span>
-                </div>
-              </div>
-              <div className="p-md">
-                <h4 className="font-h3 text-[20px] text-on-surface mb-1">Quantitative Financial Theory</h4>
-                <p className="font-label-md text-on-surface-variant mb-md">Prof. Marcus Sterling</p>
-                <div className="space-y-xs mb-md">
-                  <div className="flex justify-between text-label-sm text-on-surface-variant">
-                    <span>Progress</span>
-                    <span className="font-bold">32%</span>
-                  </div>
-                  <div className="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
-                    <div className="h-full bg-brand-accent rounded-full w-[32%]"></div>
-                  </div>
-                </div>
-                <button className="w-full bg-brand-accent hover:bg-brand-accent-hover text-on-primary py-md rounded-xl font-label-md transition-all duration-200 scale-102 active:scale-98">
-                  Continue Learning
-                </button>
-              </div>
-            </div>
-
-            {/* Course Card 3 */}
-            <div className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-md border border-outline-variant/10 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-              <div className="relative h-48">
-                <img 
-                  alt="Modern Web Arch" 
-                  className="w-full h-full object-cover" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK7JdiYvCDTo3tumsT9GvhnHfGRtDcLFYotgD6dMRVCJ1Kf0I6pmwZDMi4_4fFxcjikF6iUE-rB3zdanWheLhcrf5sDF8eaMiXcz8-Yu2R0lwFEHjovwe2Qovu1KK_BEV9DzQ2KaNBrd39mxfPm0bCskZhboMz-1gOcrDDq8fFWZY39IeVeQsLLTF1wrk37ddny9W_Rzlme7j6yG6PzjuTq16oEJXAf6MhVzCk1JehVV2XVLAN8r6v-KuCWSS-TY2Db2T78CuUqiU"
-                />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-sm py-xs rounded-full shadow-sm">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-brand-accent">Intermediate</span>
-                </div>
-              </div>
-              <div className="p-md">
-                <h4 className="font-h3 text-[20px] text-on-surface mb-1">Modern Web Architecture</h4>
-                <p className="font-label-md text-on-surface-variant mb-md">Sarah Jenkins, Senior Eng.</p>
-                <div className="space-y-xs mb-md">
-                  <div className="flex justify-between text-label-sm text-on-surface-variant">
-                    <span>Progress</span>
-                    <span className="font-bold">91%</span>
-                  </div>
-                  <div className="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
-                    <div className="h-full bg-brand-accent rounded-full w-[91%]"></div>
-                  </div>
-                </div>
-                <button className="w-full bg-brand-accent hover:bg-brand-accent-hover text-on-primary py-md rounded-xl font-label-md transition-all duration-200 scale-102 active:scale-98">
-                  Continue Learning
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+                
+                <Button className="w-full" asChild>
+                  <Link href={`/courses/${i + 1}`}>Continue Learning</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
