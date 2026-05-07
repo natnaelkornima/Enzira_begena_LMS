@@ -87,7 +87,7 @@ export default function LandingPage() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="bg-background/60 backdrop-blur-sm border-border/50">
+              <Card className="bg-background/60 backdrop-blur-sm border-border/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8 space-y-4">
                   <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
                     <BookOpen className="h-6 w-6" />
@@ -96,7 +96,7 @@ export default function LandingPage() {
                   <p className="text-muted-foreground leading-relaxed">Learn from industry experts with courses designed to take you from beginner to mastery.</p>
                 </CardContent>
               </Card>
-              <Card className="bg-background/60 backdrop-blur-sm border-border/50">
+              <Card className="bg-background/60 backdrop-blur-sm border-border/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8 space-y-4">
                   <div className="w-12 h-12 bg-green-500/10 text-green-600 rounded-xl flex items-center justify-center mb-6">
                     <BarChart3 className="h-6 w-6" />
@@ -105,7 +105,7 @@ export default function LandingPage() {
                   <p className="text-muted-foreground leading-relaxed">Engage with dynamic video players, instant-feedback quizzes, and downloadable resources.</p>
                 </CardContent>
               </Card>
-              <Card className="bg-background/60 backdrop-blur-sm border-border/50">
+              <Card className="bg-background/60 backdrop-blur-sm border-border/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8 space-y-4">
                   <div className="w-12 h-12 bg-blue-500/10 text-blue-600 rounded-xl flex items-center justify-center mb-6">
                     <ShieldCheck className="h-6 w-6" />

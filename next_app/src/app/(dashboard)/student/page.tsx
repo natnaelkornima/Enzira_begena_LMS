@@ -10,13 +10,12 @@ import { BackButton } from '@/components/ui/back-button';
 
 export default function StudentDashboardPage() {
   return (
-    <div className="p-6 max-w-7xl mx-auto space-y-8">
+    <div className="p-8 md:p-12 max-w-7xl mx-auto space-y-10 animate-in fade-in duration-500">
       {/* Welcome Section */}
-      <header className="flex flex-col md:flex-row justify-between items-end gap-6">
+      <header className="flex flex-col md:flex-row justify-between items-end gap-8">
         <div>
-          <BackButton />
-          <h2 className="text-3xl font-bold tracking-tight mb-2">Welcome back, Julian!</h2>
-          <p className="text-muted-foreground">You've completed 75% of your weekly goals. Keep up the momentum.</p>
+          <h1 className="text-3xl font-extrabold tracking-tight">Welcome back, Natnael.</h1>
+          <p className="text-muted-foreground mt-2 text-lg">You're making great progress. Keep it up!</p>
         </div>
         <Card className="p-4 flex items-center space-x-4">
           <Avatar className="h-12 w-12">
@@ -31,41 +30,46 @@ export default function StudentDashboardPage() {
       </header>
 
       {/* High-Level Progress Stats */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="flex items-center p-4 space-x-4">
-          <div className="h-10 w-10 border border-primary/20 rounded-xl flex items-center justify-center text-primary bg-primary/5">
-            <BookOpen className="h-5 w-5" />
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Card className="p-5 flex flex-row items-center gap-5 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-primary/10 hover:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden">
+          <div className="absolute -right-4 -top-4 h-24 w-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+          <div className="flex items-center justify-center h-14 w-14 shrink-0 rounded-2xl bg-background/50 backdrop-blur-sm shadow-sm border border-primary/20 text-primary group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10">
+            <BookOpen className="h-6 w-6" />
           </div>
-          <div>
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">In Progress</p>
-            <p className="text-2xl font-bold mt-1">4</p>
-          </div>
-        </Card>
-        <Card className="flex items-center p-4 space-x-4">
-          <div className="h-10 w-10 border border-green-500/20 rounded-xl flex items-center justify-center text-green-600 bg-green-500/5">
-            <CheckCircle className="h-5 w-5" />
-          </div>
-          <div>
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Completed</p>
-            <p className="text-2xl font-bold mt-1">12</p>
+          <div className="flex flex-col justify-center z-10">
+            <p className="text-sm font-semibold text-muted-foreground mb-1">Enrolled Courses</p>
+            <h3 className="text-3xl font-extrabold tracking-tight leading-none text-foreground">4</h3>
           </div>
         </Card>
-        <Card className="flex items-center p-4 space-x-4">
-          <div className="h-10 w-10 border border-yellow-500/20 rounded-xl flex items-center justify-center text-yellow-600 bg-yellow-500/5">
-            <Award className="h-5 w-5" />
+        
+        <Card className="p-5 flex flex-row items-center gap-5 bg-gradient-to-br from-green-500/10 via-green-500/5 to-transparent border-green-500/10 hover:border-green-500/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden">
+          <div className="absolute -right-4 -top-4 h-24 w-24 bg-green-500/5 rounded-full blur-2xl group-hover:bg-green-500/10 transition-colors"></div>
+          <div className="flex items-center justify-center h-14 w-14 shrink-0 rounded-2xl bg-background/50 backdrop-blur-sm shadow-sm border border-green-500/20 text-green-600 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10">
+            <CheckCircle className="h-6 w-6" />
           </div>
-          <div>
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Certificates</p>
-            <p className="text-2xl font-bold mt-1">8</p>
+          <div className="flex flex-col justify-center z-10">
+            <p className="text-sm font-semibold text-muted-foreground mb-1">Completed Lessons</p>
+            <h3 className="text-3xl font-extrabold tracking-tight leading-none text-foreground">28</h3>
+          </div>
+        </Card>
+        
+        <Card className="p-5 flex flex-row items-center gap-5 bg-gradient-to-br from-yellow-500/10 via-yellow-500/5 to-transparent border-yellow-500/10 hover:border-yellow-500/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden">
+          <div className="absolute -right-4 -top-4 h-24 w-24 bg-yellow-500/5 rounded-full blur-2xl group-hover:bg-yellow-500/10 transition-colors"></div>
+          <div className="flex items-center justify-center h-14 w-14 shrink-0 rounded-2xl bg-background/50 backdrop-blur-sm shadow-sm border border-yellow-500/20 text-yellow-600 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10">
+            <Award className="h-6 w-6" />
+          </div>
+          <div className="flex flex-col justify-center z-10">
+            <p className="text-sm font-semibold text-muted-foreground mb-1">Certificates</p>
+            <h3 className="text-3xl font-extrabold tracking-tight leading-none text-foreground">1</h3>
           </div>
         </Card>
       </section>
 
       {/* Gamification Section */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card className="flex flex-col border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <Card className="flex flex-col border-primary/20 bg-gradient-to-br from-primary/5 to-transparent hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
           <CardHeader className="pb-2 flex flex-row items-center justify-between">
-            <CardTitle className="text-lg">Current Streak</CardTitle>
+            <CardTitle className="text-xl tracking-tight">Current Streak</CardTitle>
             <Flame className="h-5 w-5 text-orange-500" />
           </CardHeader>
           <CardContent className="flex items-center gap-6">
@@ -86,9 +90,9 @@ export default function StudentDashboardPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
           <CardHeader className="pb-2 flex flex-row items-center justify-between">
-            <CardTitle className="text-lg">Recent Achievements</CardTitle>
+            <CardTitle className="text-xl tracking-tight">Recent Achievements</CardTitle>
             <Button variant="link" className="text-xs h-auto p-0">View All</Button>
           </CardHeader>
           <CardContent>
@@ -118,13 +122,11 @@ export default function StudentDashboardPage() {
 
       {/* Courses Grid */}
       <section>
-        <div className="flex justify-between items-center mb-4">
-          <h3 className="text-xl font-bold">Your Learning Path</h3>
-          <Button variant="link" asChild className="text-primary px-0">
-            <Link href="/courses/1">View All</Link>
-          </Button>
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-2xl font-bold tracking-tight">In Progress</h2>
+          <Button variant="ghost" className="text-sm text-primary">View all <ChevronRight className="h-4 w-4 ml-1" /></Button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
               title: "Principles of Visual Narrative",
