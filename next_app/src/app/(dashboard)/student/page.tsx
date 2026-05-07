@@ -17,7 +17,7 @@ export default function StudentDashboardPage() {
           <h2 className="text-3xl font-bold tracking-tight mb-2">Welcome back, Julian!</h2>
           <p className="text-muted-foreground">You've completed 75% of your weekly goals. Keep up the momentum.</p>
         </div>
-        <Card className="p-4 flex items-center space-x-4 border-muted/50">
+        <Card className="p-4 flex items-center space-x-4">
           <Avatar className="h-12 w-12">
             <AvatarImage src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDhSkIJlFXZ_jlLgn-J8XkIT8PgBqrNdUuqVblQswdJzDJo_WeUBOBQVwhqYiKU_58eXC1Hx6h75vm-W-pnceMBbQBwPLlWQMr84Zhs4NhDLZx656p5pDup7YJp0LMNFg3i0fufE9QqvqaxG6U1Qa4dt6sdSZQJuhZCXgzPlta8zJf_Rwg_-c6sESBDZvTGiXFZ82anRsq8UG1js6x3SUR4a3d_E3y3YpBawQsuzYYo-36w2EDW1vofNn8WdGSHaTVMnvrip-jZRk" />
             <AvatarFallback>JT</AvatarFallback>
@@ -31,30 +31,30 @@ export default function StudentDashboardPage() {
 
       {/* High-Level Progress Stats */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="flex items-center p-4 space-x-4 border-muted/30 shadow-none bg-muted/10">
-          <div className="h-10 w-10 border border-primary/20 rounded-lg flex items-center justify-center text-primary">
+        <Card className="flex items-center p-4 space-x-4">
+          <div className="h-10 w-10 border border-primary/20 rounded-xl flex items-center justify-center text-primary bg-primary/5">
             <BookOpen className="h-5 w-5" />
           </div>
           <div>
-            <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">In Progress</p>
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">In Progress</p>
             <p className="text-2xl font-bold mt-1">4</p>
           </div>
         </Card>
-        <Card className="flex items-center p-4 space-x-4 border-muted/30 shadow-none bg-muted/10">
-          <div className="h-10 w-10 border border-green-500/20 rounded-lg flex items-center justify-center text-green-600">
+        <Card className="flex items-center p-4 space-x-4">
+          <div className="h-10 w-10 border border-green-500/20 rounded-xl flex items-center justify-center text-green-600 bg-green-500/5">
             <CheckCircle className="h-5 w-5" />
           </div>
           <div>
-            <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Completed</p>
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Completed</p>
             <p className="text-2xl font-bold mt-1">12</p>
           </div>
         </Card>
-        <Card className="flex items-center p-4 space-x-4 border-muted/30 shadow-none bg-muted/10">
-          <div className="h-10 w-10 border border-yellow-500/20 rounded-lg flex items-center justify-center text-yellow-600">
+        <Card className="flex items-center p-4 space-x-4">
+          <div className="h-10 w-10 border border-yellow-500/20 rounded-xl flex items-center justify-center text-yellow-600 bg-yellow-500/5">
             <Award className="h-5 w-5" />
           </div>
           <div>
-            <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Certificates</p>
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Certificates</p>
             <p className="text-2xl font-bold mt-1">8</p>
           </div>
         </Card>
@@ -92,11 +92,11 @@ export default function StudentDashboardPage() {
               img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDK7JdiYvCDTo3tumsT9GvhnHfGRtDcLFYotgD6dMRVCJ1Kf0I6pmwZDMi4_4fFxcjikF6iUE-rB3zdanWheLhcrf5sDF8eaMiXcz8-Yu2R0lwFEHjovwe2Qovu1KK_BEV9DzQ2KaNBrd39mxfPm0bCskZhboMz-1gOcrDDq8fFWZY39IeVeQsLLTF1wrk37ddny9W_Rzlme7j6yG6PzjuTq16oEJXAf6MhVzCk1JehVV2XVLAN8r6v-KuCWSS-TY2Db2T78CuUqiU",
             }
           ].map((course, i) => (
-            <Card key={i} className="overflow-hidden hover:shadow-md transition-all duration-300 group flex flex-col border-muted/50 shadow-none">
+            <Card key={i} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 group flex flex-col">
               <div className="relative h-40">
                 <img 
                   alt={course.title} 
-                  className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-500" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                   src={course.img}
                 />
                 <div className="absolute top-3 left-3">
