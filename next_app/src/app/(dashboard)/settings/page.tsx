@@ -1,161 +1,176 @@
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Progress } from '@/components/ui/progress';
+import { Camera, Download, BadgeCheck } from 'lucide-react';
+
 export default function SettingsPage() {
   return (
-    <div className="p-lg max-w-5xl mx-auto">
-      <header className="mb-xl">
-        <h2 className="font-h2 text-h2 text-on-surface">Account Settings</h2>
-        <p className="text-on-surface-variant mt-xs">Manage your personal information, subscription, and security preferences.</p>
+    <div className="p-6 max-w-5xl mx-auto space-y-6">
+      <header>
+        <h2 className="text-3xl font-bold tracking-tight mb-2">Account Settings</h2>
+        <p className="text-muted-foreground">Manage your personal information, subscription, and security preferences.</p>
       </header>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-lg">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Profile Section */}
-        <section className="lg:col-span-7 space-y-lg">
-          <div className="bg-surface-container-lowest rounded-2xl shadow-md p-md border border-outline-variant/10">
-            <h3 className="font-h3 text-h3 mb-md">Personal Profile</h3>
-            {/* Avatar Upload */}
-            <div className="flex items-center gap-md mb-lg">
-              <div className="relative group">
-                <img 
-                  alt="Student Avatar" 
-                  className="w-24 h-24 rounded-full object-cover border-2 border-outline-variant/30 group-hover:opacity-80 transition-opacity cursor-pointer" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA7EdsA1RBw-3xsF257S-i931n0d1vh82ELtPPn5rKWLXgHgeirENS02j26dCShharU9x6s1PvRYmFgFy05JiT0kf1aSFZJAGXva0Y1F0XZRsfQVvm8SO7O3CLqzy6fwnLUDExyA6OphMzc5crnTqVGekNeA7roa5TH54_QK4KsRH7u975N82uiYkBfM-G1qmunzt5-YC2p8z04ROX03gmfjn9oaZCgx4UVthIuAyS78sJHm0SD2UASSJFDt3uGUtNxytbQQXvGjg"
-                />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                  <span className="material-symbols-outlined text-white">photo_camera</span>
+        <section className="lg:col-span-7 space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle>Personal Profile</CardTitle>
+            </CardHeader>
+            <CardContent>
+              {/* Avatar Upload */}
+              <div className="flex items-center gap-6 mb-8">
+                <div className="relative group cursor-pointer">
+                  <Avatar className="h-24 w-24 border-2 border-muted group-hover:opacity-80 transition-opacity">
+                    <AvatarImage src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA7EdsA1RBw-3xsF257S-i931n0d1vh82ELtPPn5rKWLXgHgeirENS02j26dCShharU9x6s1PvRYmFgFy05JiT0kf1aSFZJAGXva0Y1F0XZRsfQVvm8SO7O3CLqzy6fwnLUDExyA6OphMzc5crnTqVGekNeA7roa5TH54_QK4KsRH7u975N82uiYkBfM-G1qmunzt5-YC2p8z04ROX03gmfjn9oaZCgx4UVthIuAyS78sJHm0SD2UASSJFDt3uGUtNxytbQQXvGjg" />
+                    <AvatarFallback>AS</AvatarFallback>
+                  </Avatar>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Camera className="h-6 w-6 text-white drop-shadow-md" />
+                  </div>
+                </div>
+                <div>
+                  <Button>Change Avatar</Button>
+                  <p className="text-xs text-muted-foreground mt-2">JPG, GIF or PNG. Max size of 800K</p>
                 </div>
               </div>
-              <div>
-                <button className="bg-brand-accent hover:bg-brand-accent-hover text-white px-md py-xs rounded-lg font-label-md transition-transform hover:scale-[1.02] active:scale-[0.98]">
-                  Change Avatar
-                </button>
-                <p className="text-label-sm text-on-surface-variant mt-xs">JPG, GIF or PNG. Max size of 800K</p>
-              </div>
-            </div>
 
-            {/* Profile Form */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
-              <div className="space-y-xs">
-                <label className="font-label-md text-on-surface">Full Name</label>
-                <input className="w-full bg-background border border-outline-variant rounded-lg px-md py-sm focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none" type="text" defaultValue="Alexander Sterling"/>
+              {/* Profile Form */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="fullName">Full Name</Label>
+                  <Input id="fullName" defaultValue="Alexander Sterling" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email Address</Label>
+                  <Input id="email" type="email" defaultValue="alex.sterling@academia.edu" />
+                </div>
+                <div className="md:col-span-2 pt-4">
+                  <Button className="w-full md:w-auto">Save Personal Changes</Button>
+                </div>
               </div>
-              <div className="space-y-xs">
-                <label className="font-label-md text-on-surface">Email Address</label>
-                <input className="w-full bg-background border border-outline-variant rounded-lg px-md py-sm focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none" type="email" defaultValue="alex.sterling@academia.edu"/>
-              </div>
-              <div className="md:col-span-2 pt-md">
-                <button className="bg-brand-accent hover:bg-brand-accent-hover text-white px-lg py-md rounded-lg font-label-md transition-transform hover:scale-[1.02] w-full md:w-auto">
-                  Save Personal Changes
-                </button>
-              </div>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
 
           {/* Security Section */}
-          <div className="bg-surface-container-lowest rounded-2xl shadow-md p-md border border-outline-variant/10">
-            <h3 className="font-h3 text-h3 mb-md">Security</h3>
-            <div className="space-y-md">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
-                <div className="space-y-xs">
-                  <label className="font-label-md text-on-surface">Current Password</label>
-                  <input className="w-full bg-background border border-outline-variant rounded-lg px-md py-sm focus:ring-2 focus:ring-brand-accent outline-none" placeholder="••••••••" type="password"/>
+          <Card>
+            <CardHeader>
+              <CardTitle>Security</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="currentPassword">Current Password</Label>
+                    <Input id="currentPassword" type="password" placeholder="••••••••" />
+                  </div>
+                  <div className="hidden md:block"></div> {/* Spacer */}
+                  <div className="space-y-2">
+                    <Label htmlFor="newPassword">New Password</Label>
+                    <Input id="newPassword" type="password" placeholder="Min 8 characters" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="confirmPassword">Confirm New Password</Label>
+                    <Input id="confirmPassword" type="password" placeholder="••••••••" />
+                  </div>
                 </div>
-                <div></div> {/* Spacer */}
-                <div className="space-y-xs">
-                  <label className="font-label-md text-on-surface">New Password</label>
-                  <input className="w-full bg-background border border-outline-variant rounded-lg px-md py-sm focus:ring-2 focus:ring-brand-accent outline-none" placeholder="Min 8 characters" type="password"/>
-                </div>
-                <div className="space-y-xs">
-                  <label className="font-label-md text-on-surface">Confirm New Password</label>
-                  <input className="w-full bg-background border border-outline-variant rounded-lg px-md py-sm focus:ring-2 focus:ring-brand-accent outline-none" placeholder="••••••••" type="password"/>
+                <div className="pt-2">
+                  <Button variant="outline" className="w-full md:w-auto text-primary border-primary hover:bg-primary/5">
+                    Update Password
+                  </Button>
                 </div>
               </div>
-              <div className="pt-md">
-                <button className="border-2 border-brand-accent text-brand-accent hover:bg-brand-accent/5 px-lg py-md rounded-lg font-label-md transition-all hover:scale-[1.02] w-full md:w-auto">
-                  Update Password
-                </button>
-              </div>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
         </section>
 
         {/* Sidebar Column: Subscription & Billing */}
-        <aside className="lg:col-span-5 space-y-lg">
+        <aside className="lg:col-span-5 space-y-6">
           {/* Subscription Status Card */}
-          <div className="bg-surface-container-lowest rounded-2xl shadow-md p-md border border-outline-variant/10 overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-brand-accent/5 rounded-full -mr-12 -mt-12"></div>
-            <div className="flex justify-between items-start mb-lg relative z-10">
-              <div>
-                <p className="text-label-sm text-on-surface-variant uppercase tracking-wider">Current Plan</p>
-                <h3 className="font-h3 text-h3 text-brand-accent mt-xs">Premium Academic</h3>
+          <Card className="overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 pointer-events-none"></div>
+            <CardContent className="p-6 relative z-10">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-medium">Current Plan</p>
+                  <h3 className="text-2xl font-bold text-primary mt-1">Premium Academic</h3>
+                </div>
+                <span className="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
               </div>
-              <span className="bg-brand-accent/10 text-brand-accent px-sm py-xs rounded-full font-label-sm flex items-center gap-xs">
-                <span className="w-2 h-2 rounded-full bg-brand-accent"></span>
-                Active
-              </span>
-            </div>
-            <div className="space-y-md mb-lg">
-              <div className="flex justify-between text-body-md">
-                <span className="text-on-surface-variant">Billing Cycle</span>
-                <span className="font-semibold">Annual</span>
+              <div className="space-y-4 mb-6">
+                <div className="flex justify-between text-sm">
+                  <span className="text-muted-foreground">Billing Cycle</span>
+                  <span className="font-semibold">Annual</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-muted-foreground">Next Payment</span>
+                  <span className="font-semibold">Sept 12, 2024</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-muted-foreground">Amount</span>
+                  <span className="font-semibold">$249.00</span>
+                </div>
               </div>
-              <div className="flex justify-between text-body-md">
-                <span className="text-on-surface-variant">Next Payment</span>
-                <span className="font-semibold">Sept 12, 2024</span>
-              </div>
-              <div className="flex justify-between text-body-md">
-                <span className="text-on-surface-variant">Amount</span>
-                <span className="font-semibold">$249.00</span>
-              </div>
-            </div>
-            <div className="w-full bg-surface-container-low h-2 rounded-full overflow-hidden mb-lg">
-              <div className="bg-brand-accent h-full w-3/4 rounded-full"></div>
-            </div>
-            <button className="w-full bg-on-surface text-surface py-md rounded-xl font-label-md hover:opacity-90 transition-opacity">
-              Manage Subscription
-            </button>
-          </div>
+              <Progress value={75} className="h-2 mb-6" />
+              <Button variant="default" className="w-full">Manage Subscription</Button>
+            </CardContent>
+          </Card>
 
           {/* Billing History */}
-          <div className="bg-surface-container-lowest rounded-2xl shadow-md p-md border border-outline-variant/10">
-            <div className="flex items-center justify-between mb-md">
-              <h3 className="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Billing History</h3>
-              <button className="text-brand-accent font-label-md hover:underline">View All</button>
-            </div>
-            <div className="divide-y divide-outline-variant/20">
-              {/* Row 1 */}
-              <div className="py-md flex items-center justify-between">
-                <div>
-                  <p className="font-semibold text-on-surface">Invoice #INV-2024-001</p>
-                  <p className="text-label-sm text-on-surface-variant">Aug 12, 2024</p>
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between pb-2">
+              <CardTitle className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Billing History</CardTitle>
+              <Button variant="link" className="px-0 h-auto text-primary">View All</Button>
+            </CardHeader>
+            <CardContent className="pt-4">
+              <div className="divide-y">
+                {/* Row 1 */}
+                <div className="py-4 flex items-center justify-between">
+                  <div>
+                    <p className="font-semibold text-sm">Invoice #INV-2024-001</p>
+                    <p className="text-xs text-muted-foreground">Aug 12, 2024</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="font-semibold text-sm">$249.00</span>
+                    <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground">
+                      <Download className="h-4 w-4" />
+                    </Button>
+                  </div>
                 </div>
-                <div className="flex items-center gap-md">
-                  <span className="font-semibold">$249.00</span>
-                  <button className="material-symbols-outlined text-on-surface-variant hover:text-brand-accent transition-colors">download</button>
+                {/* Row 2 */}
+                <div className="py-4 flex items-center justify-between">
+                  <div>
+                    <p className="font-semibold text-sm">Invoice #INV-2023-001</p>
+                    <p className="text-xs text-muted-foreground">Aug 12, 2023</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="font-semibold text-sm">$249.00</span>
+                    <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground">
+                      <Download className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+                {/* Pending Row */}
+                <div className="py-4 flex items-center justify-between opacity-60">
+                  <div>
+                    <p className="font-semibold text-sm">Invoice #INV-2023-000</p>
+                    <p className="text-xs text-muted-foreground">Jul 01, 2023</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="bg-muted text-muted-foreground px-2 py-0.5 rounded text-xs font-medium">Refunded</span>
+                    <span className="font-semibold text-sm">$20.00</span>
+                  </div>
                 </div>
               </div>
-              {/* Row 2 */}
-              <div className="py-md flex items-center justify-between">
-                <div>
-                  <p className="font-semibold text-on-surface">Invoice #INV-2023-001</p>
-                  <p className="text-label-sm text-on-surface-variant">Aug 12, 2023</p>
-                </div>
-                <div className="flex items-center gap-md">
-                  <span className="font-semibold">$249.00</span>
-                  <button className="material-symbols-outlined text-on-surface-variant hover:text-brand-accent transition-colors">download</button>
-                </div>
-              </div>
-              {/* Pending Row */}
-              <div className="py-md flex items-center justify-between opacity-60">
-                <div>
-                  <p className="font-semibold text-on-surface">Invoice #INV-2023-000</p>
-                  <p className="text-label-sm text-on-surface-variant">Jul 01, 2023</p>
-                </div>
-                <div className="flex items-center gap-md">
-                  <span className="bg-surface-container-high text-on-surface-variant px-sm py-1 rounded text-label-sm">Refunded</span>
-                  <span className="font-semibold">$20.00</span>
-                </div>
-              </div>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
         </aside>
       </div>
     </div>

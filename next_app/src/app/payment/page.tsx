@@ -1,123 +1,138 @@
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { ShieldCheck, Clock, UploadCloud, Send, Info } from 'lucide-react';
 
 export default function SubmitPaymentPage() {
   return (
-    <div className="bg-background text-on-surface font-body-md min-h-screen flex flex-col">
+    <div className="bg-background min-h-screen flex flex-col">
       {/* TopAppBar */}
-      <header className="bg-surface shadow-md fixed top-0 w-full z-50">
-        <div className="flex justify-between items-center w-full px-lg py-md max-w-container-max mx-auto">
-          <div className="font-h3 text-h3 font-bold tracking-tight text-on-surface">Academia LMS</div>
-          <nav className="hidden md:flex space-x-lg">
-            <Link className="text-on-surface-variant font-medium hover:text-error transition-all duration-200" href="/pricing">Pricing</Link>
-            <Link className="text-on-surface-variant font-medium hover:text-error transition-all duration-200" href="/courses">Courses</Link>
-            <Link className="text-on-surface-variant font-medium hover:text-error transition-all duration-200" href="/about">About</Link>
-            <Link className="text-on-surface-variant font-medium hover:text-error transition-all duration-200" href="/support">Support</Link>
+      <header className="bg-card shadow-sm fixed top-0 w-full z-50 border-b">
+        <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+          <div className="text-xl font-bold tracking-tight">Academia LMS</div>
+          <nav className="hidden md:flex space-x-6 text-sm font-medium">
+            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/pricing">Pricing</Link>
+            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/courses">Courses</Link>
+            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/about">About</Link>
+            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/support">Support</Link>
           </nav>
-          <div className="flex items-center space-x-md">
-            <button className="text-on-surface-variant font-medium hover:text-error transition-all duration-200">Login</button>
-            <button className="bg-brand-accent text-on-primary px-lg py-sm rounded-full font-semibold hover:scale-[1.02] active:scale-[0.98] transition-transform shadow-md">Get Started</button>
+          <div className="flex items-center space-x-2">
+            <Button variant="ghost">Login</Button>
+            <Button>Get Started</Button>
           </div>
         </div>
       </header>
 
-      <main className="flex-grow pt-[100px] pb-xl">
-        <div className="max-w-[1000px] mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-xl">
+      <main className="flex-grow pt-[100px] pb-16">
+        <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Instructional Side Column */}
-          <div className="md:col-span-4 flex flex-col space-y-md">
-            <div className="bg-surface-container-lowest p-lg rounded-2xl shadow-md border border-outline-variant/10">
-              <h1 className="font-h2 text-h2 mb-md text-on-surface">Payment Verification</h1>
-              <p className="text-on-surface-variant mb-lg font-body-md">Complete your enrollment by submitting your transaction details. Our academic administrators verify all manual transfers within 24 hours.</p>
-              
-              <div className="space-y-md">
-                <div className="flex items-start gap-sm">
-                  <span className="material-symbols-outlined text-brand-accent" data-icon="verified_user">verified_user</span>
+          <div className="md:col-span-5 flex flex-col space-y-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-3xl">Payment Verification</CardTitle>
+                <CardDescription className="text-base mt-2">
+                  Complete your enrollment by submitting your transaction details. Our academic administrators verify all manual transfers within 24 hours.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <ShieldCheck className="h-6 w-6 text-primary shrink-0" />
                   <div>
-                    <p className="font-label-md text-on-surface">Secure Processing</p>
-                    <p className="text-label-sm text-on-surface-variant">Encrypted document handling for all ID submissions.</p>
+                    <p className="font-semibold text-sm">Secure Processing</p>
+                    <p className="text-xs text-muted-foreground mt-1">Encrypted document handling for all ID submissions.</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-sm">
-                  <span className="material-symbols-outlined text-brand-accent" data-icon="schedule">schedule</span>
+                <div className="flex items-start gap-4">
+                  <Clock className="h-6 w-6 text-primary shrink-0" />
                   <div>
-                    <p className="font-label-md text-on-surface">Manual Review</p>
-                    <p className="text-label-sm text-on-surface-variant">Approvals typically processed during business hours.</p>
+                    <p className="font-semibold text-sm">Manual Review</p>
+                    <p className="text-xs text-muted-foreground mt-1">Approvals typically processed during business hours.</p>
                   </div>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
 
-            <div className="relative h-64 rounded-2xl overflow-hidden shadow-md">
+            <div className="relative h-48 md:h-64 rounded-xl overflow-hidden shadow-sm border hidden md:block">
               <img 
                 alt="Workspace" 
                 className="w-full h-full object-cover" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvU-OsDHucqOyvFyMJ2JHqKDd-SOhrMY5_DrzDp41nzwTAmf146tM6M6tmQzjHMUp1iE6oMo1pY_aoJ8cM6koxos9w_9V2upn2tpOTg1gY-1tcSfaopORwt44BopenJO37mXUwRLDd10QTXfiqivO_rX3a_zHOjfE7--0RQ8j3mVcFzPWTZ4IaEJEQuFlgCeyBIJCNe39G9KY8sG0Uld6Ib4mJq1pGUMN-GvjrKdGadVGBMG5OMHPf6f3UI3GcfpIULXXYl7txkh8"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent flex items-end p-md">
-                <p className="text-white font-label-md italic">"Education is the most powerful weapon which you can use to change the world."</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                <p className="text-white text-sm italic font-medium">"Education is the most powerful weapon which you can use to change the world."</p>
               </div>
             </div>
           </div>
 
           {/* Payment Form Column */}
-          <div className="md:col-span-8">
-            <div className="bg-surface-container-lowest p-lg md:p-xl rounded-2xl shadow-md space-y-lg">
-              <form className="space-y-lg">
-                {/* Text Fields */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
-                  <div className="flex flex-col space-y-xs">
-                    <label className="font-label-md text-on-surface px-xs">Full Name</label>
-                    <input className="w-full bg-white border-outline-variant rounded-lg p-md focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all" placeholder="Enter your full name" type="text"/>
+          <div className="md:col-span-7">
+            <Card>
+              <CardContent className="p-6 sm:p-8 space-y-6">
+                <form className="space-y-6">
+                  {/* Text Fields */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="fullName">Full Name</Label>
+                      <Input id="fullName" placeholder="Enter your full name" />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email Address</Label>
+                      <Input id="email" type="email" placeholder="name@university.edu" />
+                    </div>
                   </div>
-                  <div className="flex flex-col space-y-xs">
-                    <label className="font-label-md text-on-surface px-xs">Email Address</label>
-                    <input className="w-full bg-white border-outline-variant rounded-lg p-md focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all" placeholder="name@university.edu" type="email"/>
-                  </div>
-                </div>
 
-                <div className="flex flex-col space-y-xs">
-                  <label className="font-label-md text-on-surface px-xs">Transaction ID/Reference</label>
-                  <input className="w-full bg-white border-outline-variant rounded-lg p-md focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all" placeholder="TXN-98234-X" type="text"/>
-                </div>
-
-                {/* Drag & Drop Zone */}
-                <div className="flex flex-col space-y-xs">
-                  <label className="font-label-md text-on-surface px-xs">Payment Screenshot</label>
-                  <div className="border-2 border-dashed border-outline-variant rounded-2xl p-xl flex flex-col items-center justify-center bg-surface-container-low/30 hover:bg-surface-container-low transition-colors cursor-pointer group">
-                    <span className="material-symbols-outlined text-[48px] text-on-surface-variant group-hover:text-brand-accent transition-colors mb-md" data-icon="cloud_upload">cloud_upload</span>
-                    <p className="font-label-md text-on-surface">Drag and drop your receipt here</p>
-                    <p className="text-label-sm text-on-surface-variant mt-xs">PNG, JPG or PDF up to 10MB</p>
-                    <button className="mt-md text-brand-accent font-semibold hover:underline" type="button">Or browse files</button>
+                  <div className="space-y-2">
+                    <Label htmlFor="txnId">Transaction ID/Reference</Label>
+                    <Input id="txnId" placeholder="TXN-98234-X" />
                   </div>
-                </div>
 
-                {/* Submit Button */}
-                <div className="pt-md border-t border-outline-variant/20">
-                  <Link href="/pending" className="w-full bg-brand-accent text-on-primary font-h3 text-h3 py-md rounded-xl shadow-md hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-md transition-transform">
-                    <span>Submit Payment Proof</span>
-                    <span className="material-symbols-outlined" data-icon="send">send</span>
-                  </Link>
-                  <div className="mt-lg p-md bg-brand-accent/10 rounded-lg flex items-center gap-md">
-                    <span className="material-symbols-outlined text-brand-accent" data-icon="info" style={{ fontVariationSettings: "'FILL' 1" }}>info</span>
-                    <p className="text-label-md text-on-surface-variant">
-                      <span className="font-semibold text-on-surface">Status note:</span> Your subscription will be activated after admin approval
-                    </p>
+                  {/* Drag & Drop Zone */}
+                  <div className="space-y-2">
+                    <Label>Payment Screenshot</Label>
+                    <div className="border-2 border-dashed rounded-xl p-8 flex flex-col items-center justify-center bg-muted/20 hover:bg-muted/50 transition-colors cursor-pointer group">
+                      <UploadCloud className="h-12 w-12 text-muted-foreground group-hover:text-primary transition-colors mb-4" />
+                      <p className="text-sm font-medium">Drag and drop your receipt here</p>
+                      <p className="text-xs text-muted-foreground mt-1">PNG, JPG or PDF up to 10MB</p>
+                      <Button variant="link" type="button" className="mt-2 text-primary">Or browse files</Button>
+                    </div>
                   </div>
-                </div>
-              </form>
-            </div>
+
+                  {/* Submit Button */}
+                  <div className="pt-4 border-t">
+                    <Button className="w-full h-12 text-base font-semibold gap-2" asChild>
+                      <Link href="/pending">
+                        Submit Payment Proof
+                        <Send className="h-4 w-4" />
+                      </Link>
+                    </Button>
+                    
+                    <div className="mt-6 p-4 bg-primary/10 rounded-lg flex items-start gap-3 border border-primary/20">
+                      <Info className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                      <p className="text-sm text-muted-foreground">
+                        <span className="font-semibold text-foreground">Status note:</span> Your subscription will be activated after admin approval.
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="bg-surface-container w-full py-xl mt-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center px-lg max-w-container-max mx-auto space-y-md md:space-y-0">
-          <div className="font-h3 text-h3 font-bold text-on-surface">Academia LMS</div>
-          <p className="text-body-md text-on-surface-variant">© 2024 Academia LMS. Built for Intellectual Rigor.</p>
-          <div className="flex gap-lg">
-            <Link className="text-on-surface-variant font-body-md hover:text-error transition-colors" href="/privacy">Privacy Policy</Link>
-            <Link className="text-on-surface-variant font-body-md hover:text-error transition-colors" href="/terms">Terms of Service</Link>
-            <Link className="text-on-surface-variant font-body-md hover:text-error transition-colors" href="/cookies">Cookie Policy</Link>
+      <footer className="bg-card border-t w-full py-12 mt-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center px-6 max-w-7xl mx-auto gap-6">
+          <div className="flex flex-col items-center md:items-start">
+            <span className="text-lg font-bold">Academia LMS</span>
+            <p className="text-muted-foreground text-sm mt-1">© 2024 Academia LMS. Built for Intellectual Rigor.</p>
+          </div>
+          <div className="flex gap-6 text-sm font-medium text-muted-foreground">
+            <Link className="hover:text-primary transition-colors" href="/privacy">Privacy Policy</Link>
+            <Link className="hover:text-primary transition-colors" href="/terms">Terms of Service</Link>
+            <Link className="hover:text-primary transition-colors" href="/cookies">Cookie Policy</Link>
           </div>
         </div>
       </footer>

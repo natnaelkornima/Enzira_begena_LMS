@@ -1,222 +1,236 @@
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Card, CardContent } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Play, Pause, Volume2, Maximize, ChevronLeft, ChevronRight, CheckCircle2, PlayCircle, Lock, FileText, Download, User } from 'lucide-react';
 
 export default function SingleCoursePage() {
   return (
     <div className="bg-background min-h-screen">
       {/* TopAppBar */}
-      <header className="bg-surface shadow-md docked full-width top-0 z-50 sticky">
-        <div className="flex justify-between items-center w-full px-lg py-md max-w-container-max mx-auto">
-          <div className="flex items-center gap-md">
-            <span className="font-h3 text-h3 font-bold text-on-surface">Academia LMS</span>
+      <header className="bg-card border-b sticky top-0 z-50">
+        <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+          <div className="flex items-center gap-2">
+            <span className="text-xl font-bold">Academia LMS</span>
           </div>
-          <nav className="hidden md:flex items-center space-x-lg">
-            <Link className="text-on-surface-variant font-medium hover:text-error transition-all duration-200" href="/pricing">Pricing</Link>
-            <Link className="text-on-surface font-semibold border-b-2 border-error hover:text-error transition-all duration-200" href="/courses">Courses</Link>
-            <Link className="text-on-surface-variant font-medium hover:text-error transition-all duration-200" href="/about">About</Link>
-            <Link className="text-on-surface-variant font-medium hover:text-error transition-all duration-200" href="/support">Support</Link>
+          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/pricing">Pricing</Link>
+            <Link className="text-foreground border-b-2 border-primary" href="/courses">Courses</Link>
+            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/about">About</Link>
+            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/support">Support</Link>
           </nav>
-          <div className="flex items-center gap-sm">
-            <button className="px-md py-xs rounded-lg text-on-surface-variant font-medium hover:scale-[1.02] transition-all">Login</button>
-            <button className="bg-brand-accent text-on-primary px-md py-xs rounded-lg font-semibold hover:bg-brand-accent-hover hover:scale-[1.02] transition-all duration-200 shadow-md">Get Started</button>
+          <div className="flex items-center gap-2">
+            <Button variant="ghost">Login</Button>
+            <Button>Get Started</Button>
           </div>
         </div>
       </header>
 
-      <main className="max-w-container-max mx-auto px-lg py-xl">
+      <main className="max-w-7xl mx-auto px-6 py-8">
         {/* Header Section: Course Identity & Progress */}
-        <div className="mb-xl flex flex-col md:flex-row md:items-end justify-between gap-md">
+        <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
-            <h1 className="font-h2 text-h2 text-on-surface">Advanced Computational Architecture &amp; Digital Tectonics</h1>
-            <p className="text-on-surface-variant mt-xs flex items-center gap-xs">
-              <span className="material-symbols-outlined text-[20px]">person</span>
+            <h1 className="text-3xl font-bold tracking-tight">Advanced Computational Architecture &amp; Digital Tectonics</h1>
+            <p className="text-muted-foreground mt-2 flex items-center gap-2">
+              <User className="h-4 w-4" />
               Instructor: Dr. Helena Vance
             </p>
           </div>
           <div className="w-full md:w-64">
-            <div className="flex justify-between items-center mb-xs">
-              <span className="font-label-md text-label-md text-on-surface">Course Progress</span>
-              <span className="font-label-md text-label-md text-error">64%</span>
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-sm font-medium">Course Progress</span>
+              <span className="text-sm font-bold text-primary">64%</span>
             </div>
-            <div className="h-2 w-full bg-outline-variant rounded-full overflow-hidden">
-              <div className="h-full bg-error w-[64%]"></div>
-            </div>
+            <Progress value={64} className="h-2 w-full" />
           </div>
         </div>
 
         {/* Main Content Split Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-lg">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Column: Video Player & Tabs */}
-          <div className="lg:col-span-8 space-y-lg">
+          <div className="lg:col-span-8 space-y-6">
             {/* Video Player Container */}
-            <div className="aspect-video bg-on-surface rounded-2xl shadow-md overflow-hidden relative group">
+            <div className="aspect-video bg-black rounded-lg overflow-hidden relative group border">
               <img 
                 alt="Architectural Course Video Thumbnail" 
                 className="w-full h-full object-cover opacity-80" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMUSAgdNfsR_x9kjjSUCzHadPiheR_KwFyRZkwHI55gIkMaT1pKv8iH8ZOJ-DHpcojNCw7bq4JZPLv3LKnazF0DKk8FGDURzH0z0LFZ5Td0Jgx4ERi7lrRrmViEI2C0Yw94Mnm8yDlD6OmVjmJ6sszmiCeTqSliS0mq1RgJ53x-2JIuLoZmldcml2mkrlhI0NoetQFVOseRTRjvEvQsVE37DXZwAt9N3z1OJEK7TyVGLR3c_qyfHSz0n3pK4wsVv6AOC0pOBGeVLw"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <button className="bg-error text-white p-lg rounded-full shadow-xl hover:scale-110 transition-transform active:scale-[0.95]">
-                  <span className="material-symbols-outlined text-[48px]" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
-                </button>
+                <Button size="icon" className="h-16 w-16 rounded-full shadow-2xl scale-110 hover:scale-125 transition-transform bg-primary hover:bg-primary">
+                  <Play className="h-8 w-8 fill-current ml-1" />
+                </Button>
               </div>
               {/* Custom Controls Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-md bg-gradient-to-t from-black/80 to-transparent flex items-center gap-md">
-                <span className="material-symbols-outlined text-white">pause</span>
-                <div className="flex-grow h-1 bg-white/30 rounded-full relative">
-                  <div className="absolute inset-y-0 left-0 w-1/3 bg-error rounded-full"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent flex items-center gap-4 text-white">
+                <Pause className="h-5 w-5 cursor-pointer" />
+                <div className="flex-grow h-1 bg-white/30 rounded-full relative cursor-pointer">
+                  <div className="absolute inset-y-0 left-0 w-1/3 bg-primary rounded-full"></div>
                 </div>
-                <span className="text-white text-label-sm">12:45 / 45:00</span>
-                <span className="material-symbols-outlined text-white">volume_up</span>
-                <span className="material-symbols-outlined text-white">fullscreen</span>
+                <span className="text-xs font-medium">12:45 / 45:00</span>
+                <Volume2 className="h-5 w-5 cursor-pointer" />
+                <Maximize className="h-5 w-5 cursor-pointer" />
               </div>
             </div>
 
             {/* Responsive Nav for Player */}
-            <div className="flex justify-between items-center bg-surface-container-low p-md rounded-xl border border-outline-variant/30">
-              <button className="flex items-center gap-xs text-on-surface-variant font-medium hover:text-error transition-colors">
-                <span className="material-symbols-outlined">chevron_left</span>
+            <div className="flex justify-between items-center bg-card p-4 rounded-lg border">
+              <Button variant="ghost" className="gap-2 text-muted-foreground">
+                <ChevronLeft className="h-4 w-4" />
                 Previous Lesson
-              </button>
-              <span className="font-label-md text-on-surface-variant hidden md:block">Lesson 4 of 12: Parametric Foundations</span>
-              <button className="bg-error text-white px-md py-xs rounded-lg font-semibold flex items-center gap-xs hover:bg-[#7A1600] transition-all shadow-md">
+              </Button>
+              <span className="text-sm font-medium hidden md:block">Lesson 4 of 12: Parametric Foundations</span>
+              <Button className="gap-2">
                 Next Lesson
-                <span className="material-symbols-outlined">chevron_right</span>
-              </button>
+                <ChevronRight className="h-4 w-4" />
+              </Button>
             </div>
 
             {/* Detail Tabs */}
-            <div className="bg-surface-container-lowest rounded-2xl shadow-md overflow-hidden">
-              <div className="flex border-b border-outline-variant/30">
-                <button className="px-lg py-md font-label-md border-b-2 border-brand-accent text-on-surface">Description</button>
-                <button className="px-lg py-md font-label-md text-on-surface-variant hover:text-error transition-colors">Resources</button>
-                <button className="px-lg py-md font-label-md text-on-surface-variant hover:text-error transition-colors">Discussion</button>
-              </div>
-              <div className="p-lg space-y-md">
-                <h3 className="font-h3 text-h3 text-on-surface">About this Lesson</h3>
-                <p className="text-on-surface-variant leading-relaxed">
+            <Tabs defaultValue="description" className="w-full">
+              <TabsList className="w-full justify-start border-b rounded-none h-auto p-0 bg-transparent">
+                <TabsTrigger value="description" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none px-6 py-3">Description</TabsTrigger>
+                <TabsTrigger value="resources" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none px-6 py-3">Resources</TabsTrigger>
+                <TabsTrigger value="discussion" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none px-6 py-3">Discussion</TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="description" className="mt-6 space-y-6">
+                <h3 className="text-xl font-semibold">About this Lesson</h3>
+                <p className="text-muted-foreground leading-relaxed">
                   In this section, we delve into the core principles of parametric design. We will explore how algorithmic thinking translates into physical structures and how computational tools allow for unprecedented formal experimentation. This lesson focuses on the relationship between mathematical constraints and aesthetic output.
                 </p>
-                <div className="bg-surface-container-low p-md rounded-xl flex items-start gap-md">
-                  <div className="w-16 h-16 rounded-full overflow-hidden bg-outline-variant flex-shrink-0">
-                    <img 
-                      alt="Instructor Profile" 
-                      className="w-full h-full object-cover" 
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6lFMtygXsJBSM1GSnpiMBNm1AN61R4CDln_sxZM7eAd6ejWLEmAIb1nV59CgPohFDLbxyhUmQ201XYOppinESE8yLgk7D_hsNkq2W1MjqpZQrHElLs_s0EtKCZX5fcH4pe-LnvTK86Ejw1iGI6D4WXsH1dlmb_osQZ_nXHqN5Owof6yl-tNfmcZ4RKq6Kfdds4079PsiC_i0ccsnvLZngS37nmOMuyuXXlJf0IIi_hPAwDpDpFhMpzu6smN6-RNboigAFov7Bqis"
-                    />
+                <Card className="bg-muted/50 border-none">
+                  <CardContent className="p-6 flex items-start gap-4">
+                    <Avatar className="h-16 w-16">
+                      <AvatarImage src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6lFMtygXsJBSM1GSnpiMBNm1AN61R4CDln_sxZM7eAd6ejWLEmAIb1nV59CgPohFDLbxyhUmQ201XYOppinESE8yLgk7D_hsNkq2W1MjqpZQrHElLs_s0EtKCZX5fcH4pe-LnvTK86Ejw1iGI6D4WXsH1dlmb_osQZ_nXHqN5Owof6yl-tNfmcZ4RKq6Kfdds4079PsiC_i0ccsnvLZngS37nmOMuyuXXlJf0IIi_hPAwDpDpFhMpzu6smN6-RNboigAFov7Bqis" />
+                      <AvatarFallback>HV</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <h4 className="font-semibold text-lg">Dr. Helena Vance</h4>
+                      <p className="text-sm text-muted-foreground italic mb-2">PhD in Computational Design, MIT</p>
+                      <p className="text-sm text-muted-foreground">Helena is a leading figure in digital fabrication and has consulted for major architectural firms worldwide.</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+              
+              <TabsContent value="resources" className="mt-6">
+                <h4 className="text-lg font-semibold mb-4">Downloadable Resources</h4>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-4 p-3 hover:bg-muted transition-colors rounded-lg cursor-pointer border border-transparent hover:border-border">
+                    <div className="bg-primary/10 p-2 rounded-lg">
+                      <FileText className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="flex-grow">
+                      <p className="text-sm font-semibold">Lecture_Slides_V2.pdf</p>
+                      <p className="text-xs text-muted-foreground">4.2 MB</p>
+                    </div>
+                    <Download className="h-5 w-5 text-muted-foreground" />
                   </div>
-                  <div>
-                    <h4 className="font-label-md text-on-surface">Dr. Helena Vance</h4>
-                    <p className="text-label-sm text-on-surface-variant italic">PhD in Computational Design, MIT</p>
-                    <p className="text-label-sm text-on-surface-variant mt-xs">Helena is a leading figure in digital fabrication and has consulted for major architectural firms worldwide.</p>
+                  <div className="flex items-center gap-4 p-3 hover:bg-muted transition-colors rounded-lg cursor-pointer border border-transparent hover:border-border">
+                    <div className="bg-primary/10 p-2 rounded-lg">
+                      <FileText className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="flex-grow">
+                      <p className="text-sm font-semibold">Project_Files.zip</p>
+                      <p className="text-xs text-muted-foreground">128 MB</p>
+                    </div>
+                    <Download className="h-5 w-5 text-muted-foreground" />
                   </div>
                 </div>
-              </div>
-            </div>
+              </TabsContent>
+              
+              <TabsContent value="discussion" className="mt-6">
+                <div className="text-center py-10 text-muted-foreground">
+                  Discussion forum loading...
+                </div>
+              </TabsContent>
+            </Tabs>
           </div>
 
           {/* Right Column: Lesson Accordion */}
-          <div className="lg:col-span-4 space-y-md">
-            <div className="bg-surface-container-lowest rounded-2xl shadow-md p-md">
-              <h3 className="font-h3 text-h3 text-on-surface mb-md px-xs">Course Content</h3>
-              <div className="space-y-xs">
-                {/* Module 1 */}
-                <div className="border border-outline-variant/20 rounded-xl overflow-hidden">
-                  <div className="bg-surface-container-high p-md flex justify-between items-center cursor-pointer">
-                    <span className="font-label-md text-on-surface">Module 1: Foundations</span>
-                    <span className="material-symbols-outlined text-on-surface-variant">expand_more</span>
-                  </div>
-                  <div className="divide-y divide-outline-variant/10 hidden">
-                    <div className="p-md flex items-center gap-sm bg-surface-container-low text-on-primary-container">
-                      <span className="material-symbols-outlined text-error" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
-                      <div className="flex-grow">
-                        <p className="text-label-md font-semibold">1.1 Introduction to Tectonics</p>
-                        <p className="text-label-sm opacity-70">12:30</p>
+          <div className="lg:col-span-4">
+            <Card className="sticky top-24">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-semibold mb-4">Course Content</h3>
+                <Accordion type="single" collapsible defaultValue="module-2" className="space-y-3">
+                  
+                  {/* Module 1 */}
+                  <AccordionItem value="module-1" className="border rounded-lg px-2">
+                    <AccordionTrigger className="hover:no-underline py-3">
+                      <span className="text-sm font-medium">Module 1: Foundations</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-3 space-y-1">
+                      <div className="p-2 flex items-center gap-3 bg-muted/50 rounded-md">
+                        <CheckCircle2 className="h-4 w-4 text-green-600" />
+                        <div className="flex-grow">
+                          <p className="text-sm font-semibold">1.1 Introduction to Tectonics</p>
+                          <p className="text-xs text-muted-foreground">12:30</p>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
+                    </AccordionContent>
+                  </AccordionItem>
 
-                {/* Module 2 (Active) */}
-                <div className="border border-outline-variant/20 rounded-xl overflow-hidden">
-                  <div className="bg-surface-container-high p-md flex justify-between items-center cursor-pointer">
-                    <span className="font-label-md text-on-surface">Module 2: Parametric Modeling</span>
-                    <span className="material-symbols-outlined text-on-surface">expand_less</span>
-                  </div>
-                  <div className="divide-y divide-outline-variant/10">
-                    <div className="p-md flex items-center gap-sm bg-surface-container-low border-l-4 border-error">
-                      <span className="material-symbols-outlined text-error">play_circle</span>
-                      <div className="flex-grow">
-                        <p className="text-label-md font-bold text-on-surface">2.1 Parametric Foundations</p>
-                        <p className="text-label-sm text-on-surface-variant">Currently Watching</p>
+                  {/* Module 2 (Active) */}
+                  <AccordionItem value="module-2" className="border rounded-lg px-2">
+                    <AccordionTrigger className="hover:no-underline py-3">
+                      <span className="text-sm font-medium">Module 2: Parametric Modeling</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-3 space-y-1">
+                      <div className="p-2 flex items-center gap-3 bg-primary/5 border-l-4 border-primary rounded-r-md">
+                        <PlayCircle className="h-4 w-4 text-primary" />
+                        <div className="flex-grow">
+                          <p className="text-sm font-bold text-foreground">2.1 Parametric Foundations</p>
+                          <p className="text-xs text-muted-foreground">Currently Watching</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="p-md flex items-center gap-sm hover:bg-surface-container-low transition-colors cursor-pointer group">
-                      <span className="material-symbols-outlined text-on-surface-variant group-hover:text-error transition-colors">lock</span>
-                      <div className="flex-grow">
-                        <p className="text-label-md font-medium text-on-surface-variant">2.2 Advanced Geometry</p>
-                        <p className="text-label-sm text-on-surface-variant">24:40</p>
+                      <div className="p-2 flex items-center gap-3 hover:bg-muted transition-colors rounded-md cursor-pointer group">
+                        <Lock className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                        <div className="flex-grow">
+                          <p className="text-sm font-medium text-muted-foreground">2.2 Advanced Geometry</p>
+                          <p className="text-xs text-muted-foreground">24:40</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="p-md flex items-center gap-sm hover:bg-surface-container-low transition-colors cursor-pointer group">
-                      <span className="material-symbols-outlined text-on-surface-variant group-hover:text-error transition-colors">lock</span>
-                      <div className="flex-grow">
-                        <p className="text-label-md font-medium text-on-surface-variant">2.3 Algorithmic Workflows</p>
-                        <p className="text-label-sm text-on-surface-variant">15:20</p>
+                      <div className="p-2 flex items-center gap-3 hover:bg-muted transition-colors rounded-md cursor-pointer group">
+                        <Lock className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                        <div className="flex-grow">
+                          <p className="text-sm font-medium text-muted-foreground">2.3 Algorithmic Workflows</p>
+                          <p className="text-xs text-muted-foreground">15:20</p>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
+                    </AccordionContent>
+                  </AccordionItem>
 
-                {/* Module 3 */}
-                <div className="border border-outline-variant/20 rounded-xl overflow-hidden">
-                  <div className="bg-surface-container p-md flex justify-between items-center opacity-60">
-                    <span className="font-label-md text-on-surface">Module 3: Physical Output</span>
-                    <span className="material-symbols-outlined">lock</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-lg pt-md border-t border-outline-variant/20">
-                <h4 className="font-label-md text-on-surface mb-md">Downloadable Resources</h4>
-                <div className="space-y-sm">
-                  <div className="flex items-center gap-md p-xs hover:bg-surface-container transition-colors rounded-lg cursor-pointer">
-                    <div className="bg-error/10 p-xs rounded-lg">
-                      <span className="material-symbols-outlined text-error">picture_as_pdf</span>
-                    </div>
-                    <div className="flex-grow">
-                      <p className="text-label-sm font-semibold text-on-surface">Lecture_Slides_V2.pdf</p>
-                      <p className="text-[10px] text-on-surface-variant">4.2 MB</p>
-                    </div>
-                    <span className="material-symbols-outlined text-on-surface-variant text-sm">download</span>
-                  </div>
-                  <div className="flex items-center gap-md p-xs hover:bg-surface-container transition-colors rounded-lg cursor-pointer">
-                    <div className="bg-error/10 p-xs rounded-lg">
-                      <span className="material-symbols-outlined text-error">folder_zip</span>
-                    </div>
-                    <div className="flex-grow">
-                      <p className="text-label-sm font-semibold text-on-surface">Project_Files.zip</p>
-                      <p className="text-[10px] text-on-surface-variant">128 MB</p>
-                    </div>
-                    <span className="material-symbols-outlined text-on-surface-variant text-sm">download</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  {/* Module 3 */}
+                  <AccordionItem value="module-3" className="border rounded-lg px-2 opacity-60">
+                    <AccordionTrigger className="hover:no-underline py-3" disabled>
+                      <span className="text-sm font-medium flex items-center justify-between w-full pr-4">
+                        Module 3: Physical Output
+                        <Lock className="h-4 w-4" />
+                      </span>
+                    </AccordionTrigger>
+                  </AccordionItem>
+                </Accordion>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="bg-surface-container w-full py-xl mt-xl">
-        <div className="flex flex-col md:flex-row justify-between items-center px-lg max-w-container-max mx-auto gap-md">
+      <footer className="bg-card border-t w-full py-12 mt-12">
+        <div className="flex flex-col md:flex-row justify-between items-center px-6 max-w-7xl mx-auto gap-6">
           <div className="flex flex-col items-center md:items-start">
-            <span className="font-h3 text-h3 font-bold text-on-surface">Academia LMS</span>
-            <p className="text-on-surface-variant text-body-md mt-xs">© 2024 Academia LMS. Built for Intellectual Rigor.</p>
+            <span className="text-lg font-bold">Academia LMS</span>
+            <p className="text-muted-foreground text-sm mt-1">© 2024 Academia LMS. Built for Intellectual Rigor.</p>
           </div>
-          <div className="flex gap-lg">
-            <Link className="text-on-surface-variant font-medium hover:text-error transition-colors" href="/privacy">Privacy Policy</Link>
-            <Link className="text-on-surface-variant font-medium hover:text-error transition-colors" href="/terms">Terms of Service</Link>
-            <Link className="text-on-surface-variant font-medium hover:text-error transition-colors" href="/cookies">Cookie Policy</Link>
+          <div className="flex gap-6 text-sm font-medium text-muted-foreground">
+            <Link className="hover:text-primary transition-colors" href="/privacy">Privacy Policy</Link>
+            <Link className="hover:text-primary transition-colors" href="/terms">Terms of Service</Link>
+            <Link className="hover:text-primary transition-colors" href="/cookies">Cookie Policy</Link>
           </div>
         </div>
       </footer>
