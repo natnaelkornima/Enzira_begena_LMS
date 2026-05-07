@@ -13,10 +13,10 @@ export default function SubmitPaymentPage() {
         <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
           <div className="text-xl font-bold tracking-tight">Academia LMS</div>
           <nav className="hidden md:flex space-x-6 text-sm font-medium">
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/pricing">Pricing</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/courses">Courses</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/about">About</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/support">Support</Link>
+            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/subscriptions">Pricing</Link>
+            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/courses/1">Courses</Link>
+            <Link className="text-muted-foreground hover:text-primary transition-colors" href="#">About</Link>
+            <Link className="text-muted-foreground hover:text-primary transition-colors" href="#">Support</Link>
           </nav>
           <div className="flex items-center space-x-2">
             <Button variant="ghost">Login</Button>
@@ -123,16 +123,39 @@ export default function SubmitPaymentPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-card border-t w-full py-12 mt-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center px-6 max-w-7xl mx-auto gap-6">
-          <div className="flex flex-col items-center md:items-start">
-            <span className="text-lg font-bold">Academia LMS</span>
-            <p className="text-muted-foreground text-sm mt-1">© 2024 Academia LMS. Built for Intellectual Rigor.</p>
+      <footer className="bg-card border-t py-12 mt-auto">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div className="md:col-span-2">
+              <span className="text-2xl font-bold tracking-tight">Academia LMS</span>
+              <p className="text-muted-foreground text-sm mt-2 max-w-sm">
+                Elevate your intellectual rigor with a platform designed for the focused student. Built for mastery and scale.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-3">Platform</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><Link href="/courses/1" className="hover:text-primary transition-colors">Courses</Link></li>
+                <li><Link href="/subscriptions" className="hover:text-primary transition-colors">Pricing</Link></li>
+                <li><Link href="/student" className="hover:text-primary transition-colors">Dashboard</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-3">Legal</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+                <li><Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link></li>
+                <li><Link href="#" className="hover:text-primary transition-colors">Cookie Policy</Link></li>
+              </ul>
+            </div>
           </div>
-          <div className="flex gap-6 text-sm font-medium text-muted-foreground">
-            <Link className="hover:text-primary transition-colors" href="/privacy">Privacy Policy</Link>
-            <Link className="hover:text-primary transition-colors" href="/terms">Terms of Service</Link>
-            <Link className="hover:text-primary transition-colors" href="/cookies">Cookie Policy</Link>
+          <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-muted-foreground text-sm">© 2024 Academia LMS. All rights reserved.</p>
+            <div className="flex gap-4">
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">Twitter</Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">GitHub</Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">Discord</Link>
+            </div>
           </div>
         </div>
       </footer>

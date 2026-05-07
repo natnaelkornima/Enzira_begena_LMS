@@ -91,17 +91,42 @@ export default function SignUpPage() {
       </main>
 
       {/* Global Footer */}
-      <footer className="w-full py-8 bg-card border-t">
-        <div className="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-4">
-          <div className="flex items-center gap-2">
-            <GraduationCap className="h-5 w-5 text-primary" />
-            <span className="font-bold text-foreground">Academia LMS</span>
+      <footer className="bg-card border-t py-12 mt-auto">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div className="md:col-span-2">
+              <span className="text-2xl font-bold tracking-tight flex items-center gap-2">
+                <GraduationCap className="h-6 w-6 text-primary" />
+                Academia LMS
+              </span>
+              <p className="text-muted-foreground text-sm mt-2 max-w-sm">
+                Elevate your intellectual rigor with a platform designed for the focused student. Built for mastery and scale.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-3">Platform</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><Link href="/courses/1" className="hover:text-primary transition-colors">Courses</Link></li>
+                <li><Link href="/subscriptions" className="hover:text-primary transition-colors">Pricing</Link></li>
+                <li><Link href="/student" className="hover:text-primary transition-colors">Dashboard</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-3">Legal</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+                <li><Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link></li>
+                <li><Link href="#" className="hover:text-primary transition-colors">Cookie Policy</Link></li>
+              </ul>
+            </div>
           </div>
-          <p className="text-sm text-muted-foreground">© 2024 Academia LMS. Built for Intellectual Rigor.</p>
-          <div className="flex gap-6">
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Cookie Policy</Link>
+          <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-muted-foreground text-sm">© 2024 Academia LMS. All rights reserved.</p>
+            <div className="flex gap-4">
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">Twitter</Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">GitHub</Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">Discord</Link>
+            </div>
           </div>
         </div>
       </footer>
