@@ -31,7 +31,7 @@ export default function StudentDashboardPage() {
 
       {/* High-Level Progress Stats */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="flex items-center p-6 space-x-4 border-muted/30 shadow-none bg-muted/10">
+        <Card className="flex items-center p-4 space-x-4 border-muted/30 shadow-none bg-muted/10">
           <div className="h-10 w-10 border border-primary/20 rounded-lg flex items-center justify-center text-primary">
             <BookOpen className="h-5 w-5" />
           </div>
@@ -40,7 +40,7 @@ export default function StudentDashboardPage() {
             <p className="text-2xl font-bold mt-1">4</p>
           </div>
         </Card>
-        <Card className="flex items-center p-6 space-x-4 border-muted/30 shadow-none bg-muted/10">
+        <Card className="flex items-center p-4 space-x-4 border-muted/30 shadow-none bg-muted/10">
           <div className="h-10 w-10 border border-green-500/20 rounded-lg flex items-center justify-center text-green-600">
             <CheckCircle className="h-5 w-5" />
           </div>
@@ -49,7 +49,7 @@ export default function StudentDashboardPage() {
             <p className="text-2xl font-bold mt-1">12</p>
           </div>
         </Card>
-        <Card className="flex items-center p-6 space-x-4 border-muted/30 shadow-none bg-muted/10">
+        <Card className="flex items-center p-4 space-x-4 border-muted/30 shadow-none bg-muted/10">
           <div className="h-10 w-10 border border-yellow-500/20 rounded-lg flex items-center justify-center text-yellow-600">
             <Award className="h-5 w-5" />
           </div>
@@ -60,16 +60,15 @@ export default function StudentDashboardPage() {
         </Card>
       </section>
 
-      {/* Course Grid */}
+      {/* Courses Grid */}
       <section>
-        <div className="flex justify-between items-center mb-6">
-          <h3 className="text-2xl font-bold">Continue Learning</h3>
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-xl font-bold">Your Learning Path</h3>
           <Button variant="link" asChild className="text-primary px-0">
-            <Link href="/courses">View all courses <ChevronRight className="h-4 w-4 ml-1" /></Link>
+            <Link href="/courses/1">View All</Link>
           </Button>
         </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
               title: "Principles of Visual Narrative",

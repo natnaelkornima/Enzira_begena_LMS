@@ -158,7 +158,7 @@ export default function SingleCoursePage() {
             <Card className="sticky top-24">
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold mb-4">Course Content</h3>
-                <Accordion collapsible defaultValue={["module-2"]} className="space-y-3">
+                <Accordion defaultValue={["module-2"]} className="space-y-3">
                   
                   {/* Module 1 */}
                   <AccordionItem value="module-1" className="border rounded-lg px-2">

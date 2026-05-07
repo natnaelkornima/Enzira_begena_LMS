@@ -15,7 +15,7 @@ export function Sidebar() {
     { name: 'Dashboard', href: '/student', icon: LayoutDashboard },
     { name: 'My Learning', href: '/courses/1', icon: BookOpen },
     { name: 'Payments', href: '/payment', icon: CreditCard },
-    { name: 'Profile', href: '/settings', icon: User },
+    { name: 'Profile', href: '/profile', icon: User },
     { name: 'Settings', href: '/settings', icon: Settings },
   ];
 

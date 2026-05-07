@@ -2,9 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Progress } from '@/components/ui/progress';
-import { Camera, Download, BadgeCheck } from 'lucide-react';
+import { Download, BadgeCheck } from 'lucide-react';
 import { BackButton } from '@/components/ui/back-button';
 
 export default function SettingsPage() {
@@ -17,46 +16,8 @@ export default function SettingsPage() {
       </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* Profile Section */}
+        {/* Main Settings Section */}
         <section className="lg:col-span-7 space-y-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Personal Profile</CardTitle>
-            </CardHeader>
-            <CardContent>
-              {/* Avatar Upload */}
-              <div className="flex items-center gap-6 mb-8">
-                <div className="relative group cursor-pointer">
-                  <Avatar className="h-24 w-24 border-2 border-muted group-hover:opacity-80 transition-opacity">
-                    <AvatarImage src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA7EdsA1RBw-3xsF257S-i931n0d1vh82ELtPPn5rKWLXgHgeirENS02j26dCShharU9x6s1PvRYmFgFy05JiT0kf1aSFZJAGXva0Y1F0XZRsfQVvm8SO7O3CLqzy6fwnLUDExyA6OphMzc5crnTqVGekNeA7roa5TH54_QK4KsRH7u975N82uiYkBfM-G1qmunzt5-YC2p8z04ROX03gmfjn9oaZCgx4UVthIuAyS78sJHm0SD2UASSJFDt3uGUtNxytbQQXvGjg" />
-                    <AvatarFallback>AS</AvatarFallback>
-                  </Avatar>
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Camera className="h-6 w-6 text-white drop-shadow-md" />
-                  </div>
-                </div>
-                <div>
-                  <Button>Change Avatar</Button>
-                  <p className="text-xs text-muted-foreground mt-2">JPG, GIF or PNG. Max size of 800K</p>
-                </div>
-              </div>
-
-              {/* Profile Form */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="fullName">Full Name</Label>
-                  <Input id="fullName" defaultValue="Alexander Sterling" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input id="email" type="email" defaultValue="alex.sterling@academia.edu" />
-                </div>
-                <div className="md:col-span-2 pt-4">
-                  <Button className="w-full md:w-auto">Save Personal Changes</Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
 
           {/* Security Section */}
           <Card>
