@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "Academia LMS",
@@ -14,7 +18,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="light"
+      className={cn("light", "font-sans", geist.variable)}
     >
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
