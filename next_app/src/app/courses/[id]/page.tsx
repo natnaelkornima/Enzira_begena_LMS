@@ -20,8 +20,8 @@ export default function SingleCoursePage() {
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
             <Link className="text-muted-foreground hover:text-primary transition-colors" href="/subscriptions">Pricing</Link>
             <Link className="text-foreground border-b-2 border-primary" href="/courses/1">Courses</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="#">About</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="#">Support</Link>
+            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/about">About</Link>
+            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/support">Support</Link>
           </nav>
           <div className="flex items-center gap-2">
             <Button variant="ghost">Login</Button>
@@ -93,55 +93,65 @@ export default function SingleCoursePage() {
 
             {/* Detail Tabs */}
             <Tabs defaultValue="description" className="w-full">
-              <TabsList className="w-full justify-start border-b rounded-none h-auto p-0 bg-transparent flex-wrap">
-                <TabsTrigger value="description" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none px-6 py-3">Description</TabsTrigger>
-                <TabsTrigger value="resources" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none px-6 py-3">Resources</TabsTrigger>
-                <TabsTrigger value="quiz" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none px-6 py-3">Knowledge Check</TabsTrigger>
-                <TabsTrigger value="discussion" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none px-6 py-3">Discussion</TabsTrigger>
-              </TabsList>
+              <div className="w-full overflow-x-auto pb-2 scrollbar-hide">
+                <TabsList className="inline-flex w-max justify-start p-1 bg-muted/30 rounded-full h-auto gap-1 border border-black/5 dark:border-white/5">
+                  <TabsTrigger value="description" className="rounded-full px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background data-[state=active]:shadow-sm data-[state=active]:text-primary transition-all duration-300">Description</TabsTrigger>
+                  <TabsTrigger value="resources" className="rounded-full px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background data-[state=active]:shadow-sm data-[state=active]:text-primary transition-all duration-300">Resources</TabsTrigger>
+                  <TabsTrigger value="quiz" className="rounded-full px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background data-[state=active]:shadow-sm data-[state=active]:text-primary transition-all duration-300">Knowledge Check</TabsTrigger>
+                  <TabsTrigger value="discussion" className="rounded-full px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background data-[state=active]:shadow-sm data-[state=active]:text-primary transition-all duration-300">Discussion</TabsTrigger>
+                </TabsList>
+              </div>
               
-              <TabsContent value="description" className="mt-6 space-y-6">
-                <h3 className="text-xl font-semibold">About this Lesson</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  In this section, we delve into the core principles of parametric design. We will explore how algorithmic thinking translates into physical structures and how computational tools allow for unprecedented formal experimentation. This lesson focuses on the relationship between mathematical constraints and aesthetic output.
-                </p>
-                <Card className="bg-muted/50 border-none">
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <Avatar className="h-16 w-16">
+              <TabsContent value="description" className="mt-8 space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
+                <div>
+                  <h3 className="text-2xl font-extrabold tracking-tight mb-3">About this Lesson</h3>
+                  <p className="text-muted-foreground leading-loose text-[15px]">
+                    In this section, we delve into the core principles of parametric design. We will explore how algorithmic thinking translates into physical structures and how computational tools allow for unprecedented formal experimentation. This lesson focuses on the relationship between mathematical constraints and aesthetic output.
+                  </p>
+                </div>
+                
+                <Card className="bg-gradient-to-br from-primary/5 to-transparent border-black/5 dark:border-white/5 rounded-[1.25rem] shadow-sm hover:shadow-md transition-shadow">
+                  <CardContent className="p-6 flex items-start gap-5">
+                    <Avatar className="h-16 w-16 border-2 border-background shadow-sm">
                       <AvatarImage src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6lFMtygXsJBSM1GSnpiMBNm1AN61R4CDln_sxZM7eAd6ejWLEmAIb1nV59CgPohFDLbxyhUmQ201XYOppinESE8yLgk7D_hsNkq2W1MjqpZQrHElLs_s0EtKCZX5fcH4pe-LnvTK86Ejw1iGI6D4WXsH1dlmb_osQZ_nXHqN5Owof6yl-tNfmcZ4RKq6Kfdds4079PsiC_i0ccsnvLZngS37nmOMuyuXXlJf0IIi_hPAwDpDpFhMpzu6smN6-RNboigAFov7Bqis" />
                       <AvatarFallback>HV</AvatarFallback>
                     </Avatar>
                     <div>
-                      <h4 className="font-semibold text-lg">Dr. Helena Vance</h4>
-                      <p className="text-sm text-muted-foreground italic mb-2">PhD in Computational Design, MIT</p>
-                      <p className="text-sm text-muted-foreground">Helena is a leading figure in digital fabrication and has consulted for major architectural firms worldwide.</p>
+                      <h4 className="font-bold text-lg tracking-tight">Dr. Helena Vance</h4>
+                      <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">PhD in Computational Design, MIT</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">Helena is a leading figure in digital fabrication and has consulted for major architectural firms worldwide. Her work bridges the gap between complex algorithms and physical material constraints.</p>
                     </div>
                   </CardContent>
                 </Card>
               </TabsContent>
               
-              <TabsContent value="resources" className="mt-6">
-                <h4 className="text-lg font-semibold mb-4">Downloadable Resources</h4>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-4 p-3 hover:bg-muted transition-colors rounded-lg cursor-pointer border border-transparent hover:border-border">
-                    <div className="bg-primary/10 p-2 rounded-lg">
-                      <FileText className="h-5 w-5 text-primary" />
+              <TabsContent value="resources" className="mt-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
+                <h3 className="text-2xl font-extrabold tracking-tight mb-6">Downloadable Resources</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="group flex items-center gap-4 p-4 rounded-2xl border border-black/5 dark:border-white/5 bg-gradient-to-br from-primary/5 to-transparent hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-primary/20 transition-all duration-300 cursor-pointer">
+                    <div className="bg-background shadow-sm border border-black/5 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300 text-primary">
+                      <FileText className="h-6 w-6" />
                     </div>
                     <div className="flex-grow">
-                      <p className="text-sm font-semibold">Lecture_Slides_V2.pdf</p>
-                      <p className="text-xs text-muted-foreground">4.2 MB</p>
+                      <h5 className="font-bold text-sm tracking-tight text-foreground mb-0.5">Lecture_Slides_V2.pdf</h5>
+                      <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest">4.2 MB • PDF Document</p>
                     </div>
-                    <Download className="h-5 w-5 text-muted-foreground" />
+                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                      <Download className="h-4 w-4" />
+                    </div>
                   </div>
-                  <div className="flex items-center gap-4 p-3 hover:bg-muted transition-colors rounded-lg cursor-pointer border border-transparent hover:border-border">
-                    <div className="bg-primary/10 p-2 rounded-lg">
-                      <FileText className="h-5 w-5 text-primary" />
+                  
+                  <div className="group flex items-center gap-4 p-4 rounded-2xl border border-black/5 dark:border-white/5 bg-gradient-to-br from-blue-500/5 to-transparent hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-blue-500/20 transition-all duration-300 cursor-pointer">
+                    <div className="bg-background shadow-sm border border-black/5 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300 text-blue-600">
+                      <FileText className="h-6 w-6" />
                     </div>
                     <div className="flex-grow">
-                      <p className="text-sm font-semibold">Project_Files.zip</p>
-                      <p className="text-xs text-muted-foreground">128 MB</p>
+                      <h5 className="font-bold text-sm tracking-tight text-foreground mb-0.5">Project_Files.zip</h5>
+                      <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest">128 MB • ZIP Archive</p>
                     </div>
-                    <Download className="h-5 w-5 text-muted-foreground" />
+                    <div className="h-10 w-10 rounded-full bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                      <Download className="h-4 w-4" />
+                    </div>
                   </div>
                 </div>
               </TabsContent>

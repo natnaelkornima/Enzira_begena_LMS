@@ -16,9 +16,10 @@ export default function LandingPage() {
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
             <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</Link>
-            <Link href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors">Testimonials</Link>
             <Link href="/subscriptions" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</Link>
             <Link href="/courses/1" className="text-muted-foreground hover:text-foreground transition-colors">Catalog</Link>
+            <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About</Link>
+            <Link href="/support" className="text-muted-foreground hover:text-foreground transition-colors">Support</Link>
           </nav>
           <div className="flex items-center gap-4">
             <Link href="/login" className="text-sm font-semibold hidden md:block hover:text-primary transition-colors">Log in</Link>
