@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
@@ -81,13 +83,21 @@ export default function AdminDashboardPage() {
             </div>
           </CardHeader>
           <CardContent className="flex-1 flex flex-col justify-end">
-            <div className="w-full h-48 bg-muted/20 rounded-md relative overflow-hidden mb-6">
-               <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
-                <svg className="absolute bottom-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 400 100">
-                  <path d="M0,80 Q50,60 100,70 T200,40 T300,50 T400,20 L400,100 L0,100 Z" fill="hsl(var(--primary))" fillOpacity="0.1"></path>
-                  <path d="M0,80 Q50,60 100,70 T200,40 T300,50 T400,20" fill="none" stroke="hsl(var(--primary))" strokeLinecap="round" strokeWidth="2"></path>
-                </svg>
-                <div className="absolute bottom-[20%] left-[100%] -translate-x-full h-3 w-3 bg-primary rounded-full ring-4 ring-background shadow-sm"></div>
+            <div className="w-full h-48 bg-background border rounded-xl relative overflow-hidden mb-6 p-4 flex items-end justify-between gap-2 group">
+              {/* Interactive Bar Chart using standard Tailwind */}
+              {[40, 60, 45, 80, 55, 90, 75, 100, 65, 85, 70, 95].map((val, i) => (
+                <div key={i} className="relative flex-1 flex flex-col justify-end h-full group/bar">
+                  {/* Tooltip */}
+                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-foreground text-background text-[10px] font-bold px-2 py-1 rounded opacity-0 group-hover/bar:opacity-100 transition-opacity z-10 pointer-events-none whitespace-nowrap">
+                    ${(val * 120).toLocaleString()}
+                  </div>
+                  {/* Bar */}
+                  <div 
+                    className="w-full bg-primary/20 hover:bg-primary transition-colors rounded-t-sm" 
+                    style={{ height: `${val}%` }} 
+                  />
+                </div>
+              ))}
             </div>
             <div className="grid grid-cols-4 pt-4 border-t">
               <div className="text-center">
@@ -145,7 +155,7 @@ export default function AdminDashboardPage() {
         <CardHeader className="flex flex-row items-center justify-between border-b pb-4">
           <CardTitle>Institutional Enrollment Queue</CardTitle>
           <div className="flex gap-2">
-            <Button variant="outline">Export CSV</Button>
+            <Button variant="outline" onClick={() => alert('Downloading CSV...')}>Export CSV</Button>
             <Button>Bulk Approve</Button>
           </div>
         </CardHeader>

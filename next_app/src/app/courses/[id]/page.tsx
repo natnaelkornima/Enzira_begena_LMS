@@ -93,9 +93,10 @@ export default function SingleCoursePage() {
 
             {/* Detail Tabs */}
             <Tabs defaultValue="description" className="w-full">
-              <TabsList className="w-full justify-start border-b rounded-none h-auto p-0 bg-transparent">
+              <TabsList className="w-full justify-start border-b rounded-none h-auto p-0 bg-transparent flex-wrap">
                 <TabsTrigger value="description" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none px-6 py-3">Description</TabsTrigger>
                 <TabsTrigger value="resources" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none px-6 py-3">Resources</TabsTrigger>
+                <TabsTrigger value="quiz" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none px-6 py-3">Knowledge Check</TabsTrigger>
                 <TabsTrigger value="discussion" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none px-6 py-3">Discussion</TabsTrigger>
               </TabsList>
               
@@ -143,6 +144,42 @@ export default function SingleCoursePage() {
                     <Download className="h-5 w-5 text-muted-foreground" />
                   </div>
                 </div>
+              </TabsContent>
+              
+              <TabsContent value="quiz" className="mt-6">
+                <Card className="border-primary/20 shadow-md">
+                  <CardContent className="p-8">
+                    <div className="flex justify-between items-center mb-6">
+                      <h3 className="text-2xl font-bold tracking-tight">Module 2 Assessment</h3>
+                      <span className="text-sm font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">3 Questions</span>
+                    </div>
+                    <p className="text-muted-foreground mb-8">Test your understanding of parametric foundations before moving to the next module.</p>
+                    
+                    <div className="space-y-6">
+                      <div className="space-y-4">
+                        <p className="font-semibold text-lg">1. Which of the following best describes 'algorithmic thinking' in design?</p>
+                        <div className="grid grid-cols-1 gap-3">
+                          <label className="flex items-center p-4 border rounded-xl cursor-pointer hover:bg-muted/50 transition-colors">
+                            <input type="radio" name="q1" className="mr-4 h-4 w-4 accent-primary" />
+                            <span>Creating manual drawings based on algorithms.</span>
+                          </label>
+                          <label className="flex items-center p-4 border-2 border-primary bg-primary/5 rounded-xl cursor-pointer transition-colors">
+                            <input type="radio" name="q1" defaultChecked className="mr-4 h-4 w-4 accent-primary" />
+                            <span className="font-medium text-primary">Defining rules and constraints to generate forms.</span>
+                          </label>
+                          <label className="flex items-center p-4 border rounded-xl cursor-pointer hover:bg-muted/50 transition-colors">
+                            <input type="radio" name="q1" className="mr-4 h-4 w-4 accent-primary" />
+                            <span>Using software to render final images.</span>
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <div className="pt-6 border-t flex justify-end">
+                        <Button size="lg" className="px-8 shadow-md">Submit Answer</Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </TabsContent>
               
               <TabsContent value="discussion" className="mt-6">

@@ -1,5 +1,6 @@
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileNav } from "@/components/layout/MobileNav";
+import { TopHeader } from "@/components/layout/TopHeader";
 
 export default function DashboardLayout({
   children,
@@ -11,6 +12,7 @@ export default function DashboardLayout({
       <MobileNav />
       <Sidebar />
       <main className="flex-1 bg-background min-w-0 flex flex-col">
+        <TopHeader />
         <div className="flex-1">
           {children}
         </div>
