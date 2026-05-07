@@ -5,12 +5,14 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Progress } from '@/components/ui/progress';
 import { Camera, Download, BadgeCheck } from 'lucide-react';
+import { BackButton } from '@/components/ui/back-button';
 
 export default function SettingsPage() {
   return (
     <div className="p-6 max-w-5xl mx-auto space-y-6">
       <header>
-        <h2 className="text-3xl font-bold tracking-tight mb-2">Account Settings</h2>
+        <BackButton />
+        <h2 className="text-3xl font-bold tracking-tight mb-2 mt-4">Account Settings</h2>
         <p className="text-muted-foreground">Manage your personal information, subscription, and security preferences.</p>
       </header>
 

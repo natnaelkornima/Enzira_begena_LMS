@@ -5,6 +5,7 @@ import { Progress } from '@/components/ui/progress';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen, CheckCircle, Award, ChevronRight } from 'lucide-react';
+import { BackButton } from '@/components/ui/back-button';
 
 export default function StudentDashboardPage() {
   return (
@@ -12,6 +13,7 @@ export default function StudentDashboardPage() {
       {/* Welcome Section */}
       <header className="flex flex-col md:flex-row justify-between items-end gap-6">
         <div>
+          <BackButton />
           <h2 className="text-3xl font-bold tracking-tight mb-2">Welcome back, Julian!</h2>
           <p className="text-muted-foreground">You've completed 75% of your weekly goals. Keep up the momentum.</p>
         </div>
@@ -29,27 +31,27 @@ export default function StudentDashboardPage() {
 
       {/* High-Level Progress Stats */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="flex items-center p-6 space-x-4">
-          <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
-            <BookOpen className="h-6 w-6" />
+        <Card className="flex items-center p-6 space-x-4 border-muted/30 shadow-none bg-muted/10">
+          <div className="h-10 w-10 border border-primary/20 rounded-lg flex items-center justify-center text-primary">
+            <BookOpen className="h-5 w-5" />
           </div>
           <div>
             <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">In Progress</p>
             <p className="text-2xl font-bold mt-1">4</p>
           </div>
         </Card>
-        <Card className="flex items-center p-6 space-x-4">
-          <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center text-green-600">
-            <CheckCircle className="h-6 w-6" />
+        <Card className="flex items-center p-6 space-x-4 border-muted/30 shadow-none bg-muted/10">
+          <div className="h-10 w-10 border border-green-500/20 rounded-lg flex items-center justify-center text-green-600">
+            <CheckCircle className="h-5 w-5" />
           </div>
           <div>
             <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Completed</p>
             <p className="text-2xl font-bold mt-1">12</p>
           </div>
         </Card>
-        <Card className="flex items-center p-6 space-x-4">
-          <div className="h-12 w-12 bg-yellow-500/10 rounded-lg flex items-center justify-center text-yellow-600">
-            <Award className="h-6 w-6" />
+        <Card className="flex items-center p-6 space-x-4 border-muted/30 shadow-none bg-muted/10">
+          <div className="h-10 w-10 border border-yellow-500/20 rounded-lg flex items-center justify-center text-yellow-600">
+            <Award className="h-5 w-5" />
           </div>
           <div>
             <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Certificates</p>
@@ -91,21 +93,21 @@ export default function StudentDashboardPage() {
               img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDK7JdiYvCDTo3tumsT9GvhnHfGRtDcLFYotgD6dMRVCJ1Kf0I6pmwZDMi4_4fFxcjikF6iUE-rB3zdanWheLhcrf5sDF8eaMiXcz8-Yu2R0lwFEHjovwe2Qovu1KK_BEV9DzQ2KaNBrd39mxfPm0bCskZhboMz-1gOcrDDq8fFWZY39IeVeQsLLTF1wrk37ddny9W_Rzlme7j6yG6PzjuTq16oEJXAf6MhVzCk1JehVV2XVLAN8r6v-KuCWSS-TY2Db2T78CuUqiU",
             }
           ].map((course, i) => (
-            <Card key={i} className="overflow-hidden hover:shadow-lg transition-all duration-300 group flex flex-col">
-              <div className="relative h-48">
+            <Card key={i} className="overflow-hidden hover:shadow-md transition-all duration-300 group flex flex-col border-muted/50 shadow-none">
+              <div className="relative h-40">
                 <img 
                   alt={course.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                  className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-500" 
                   src={course.img}
                 />
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-3 left-3">
                   <Badge variant="secondary" className="bg-background/90 backdrop-blur-sm uppercase tracking-widest text-[10px] font-bold text-primary">
                     {course.level}
                   </Badge>
                 </div>
               </div>
-              <CardContent className="p-6 flex-1 flex flex-col">
-                <h4 className="text-xl font-semibold mb-1 line-clamp-1">{course.title}</h4>
+              <CardContent className="p-5 flex-1 flex flex-col">
+                <h4 className="text-lg font-semibold mb-1 line-clamp-1">{course.title}</h4>
                 <p className="text-sm text-muted-foreground mb-6">{course.instructor}</p>
                 
                 <div className="mt-auto space-y-2 mb-6">

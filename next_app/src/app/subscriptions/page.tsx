@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { CheckCircle2, XCircle } from 'lucide-react';
+import { BackButton } from '@/components/ui/back-button';
 
 export default function SubscriptionsPage() {
   return (
@@ -25,6 +26,7 @@ export default function SubscriptionsPage() {
 
       <main className="max-w-7xl mx-auto px-6 pt-32 pb-16">
         {/* Hero Section */}
+        <div className="mb-6"><BackButton /></div>
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Elevate Your Intellectual Journey</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Choose a plan that matches your academic rigor. From individual learners to global institutions, we provide the tools for mastery.</p>
@@ -175,40 +177,9 @@ export default function SubscriptionsPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-card border-t py-12 mt-auto">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div className="md:col-span-2">
-              <span className="text-2xl font-bold tracking-tight">Academia LMS</span>
-              <p className="text-muted-foreground text-sm mt-2 max-w-sm">
-                Elevate your intellectual rigor with a platform designed for the focused student. Built for mastery and scale.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-3">Platform</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/courses/1" className="hover:text-primary transition-colors">Courses</Link></li>
-                <li><Link href="/subscriptions" className="hover:text-primary transition-colors">Pricing</Link></li>
-                <li><Link href="/student" className="hover:text-primary transition-colors">Dashboard</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-3">Legal</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
-                <li><Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link></li>
-                <li><Link href="#" className="hover:text-primary transition-colors">Cookie Policy</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground text-sm">© 2024 Academia LMS. All rights reserved.</p>
-            <div className="flex gap-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">Twitter</Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">GitHub</Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">Discord</Link>
-            </div>
-          </div>
+      <footer className="border-t py-6 mt-auto">
+        <div className="max-w-7xl mx-auto px-6 text-center text-sm text-muted-foreground">
+          © 2024 Academia LMS. All rights reserved.
         </div>
       </footer>
     </div>
