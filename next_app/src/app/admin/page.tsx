@@ -83,7 +83,7 @@ export default function AdminDashboardPage() {
             </div>
           </CardHeader>
           <CardContent className="flex-1 flex flex-col justify-end">
-            <div className="w-full h-48 bg-background border rounded-xl relative overflow-hidden mb-6 p-4 flex items-end justify-between gap-2 group">
+            <div className="w-full h-48 bg-background border rounded-[5px] relative overflow-hidden mb-6 p-4 flex items-end justify-between gap-2 group">
               {/* Interactive Bar Chart using standard Tailwind */}
               {[40, 60, 45, 80, 55, 90, 75, 100, 65, 85, 70, 95].map((val, i) => (
                 <div key={i} className="relative flex-1 flex flex-col justify-end h-full group/bar">
@@ -135,7 +135,7 @@ export default function AdminDashboardPage() {
               { icon: UserPlus, title: 'Elena Rodriguez', action: 'joined', desc: 'Modern History • 5h ago', color: 'text-green-600', bg: 'bg-green-100' },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
-                <div className={`h-8 w-8 rounded-full flex items-center justify-center shrink-0 ${item.bg} ${item.color}`}>
+                <div className={`h-8 w-8 rounded-[5px] flex items-center justify-center shrink-0 ${item.bg} ${item.color}`}>
                   <item.icon className="h-4 w-4" />
                 </div>
                 <div className="flex-1">

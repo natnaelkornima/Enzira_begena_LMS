@@ -36,31 +36,31 @@ export default function ProfilePage() {
           <p className="text-sm text-muted-foreground">Update your details and public profile.</p>
         </div>
 
-        <div className="grid gap-8">
+        <div className="grid gap-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-3">
-              <Label htmlFor="firstName" className="text-sm text-muted-foreground font-medium">First name</Label>
-              <Input id="firstName" defaultValue="Natnael" className="h-12 bg-transparent border-t-0 border-x-0 border-b-border rounded-none focus-visible:ring-0 focus-visible:border-b-primary px-0 shadow-none text-base transition-colors" />
+            <div className="space-y-2">
+              <Label htmlFor="firstName" className="text-sm font-semibold">First name</Label>
+              <Input id="firstName" defaultValue="Natnael" className="h-11 rounded-[5px] bg-muted/20 border-border focus-visible:ring-1 focus-visible:ring-primary/20" />
             </div>
-            <div className="space-y-3">
-              <Label htmlFor="lastName" className="text-sm text-muted-foreground font-medium">Last name</Label>
-              <Input id="lastName" defaultValue="Kornima" className="h-12 bg-transparent border-t-0 border-x-0 border-b-border rounded-none focus-visible:ring-0 focus-visible:border-b-primary px-0 shadow-none text-base transition-colors" />
+            <div className="space-y-2">
+              <Label htmlFor="lastName" className="text-sm font-semibold">Last name</Label>
+              <Input id="lastName" defaultValue="Kornima" className="h-11 rounded-[5px] bg-muted/20 border-border focus-visible:ring-1 focus-visible:ring-primary/20" />
             </div>
           </div>
 
-          <div className="space-y-3">
-            <Label htmlFor="email" className="text-sm text-muted-foreground font-medium">Email address</Label>
-            <Input id="email" type="email" defaultValue="natnael.k@enzira.edu" className="h-12 bg-transparent border-t-0 border-x-0 border-b-border rounded-none focus-visible:ring-0 focus-visible:border-b-primary px-0 shadow-none text-base transition-colors" />
+          <div className="space-y-2">
+            <Label htmlFor="email" className="text-sm font-semibold">Email address</Label>
+            <Input id="email" type="email" defaultValue="natnael.k@enzira.edu" className="h-11 rounded-[5px] bg-muted/20 border-border focus-visible:ring-1 focus-visible:ring-primary/20" />
           </div>
 
-          <div className="space-y-3">
-            <Label htmlFor="bio" className="text-sm text-muted-foreground font-medium">Bio</Label>
-            <Input id="bio" defaultValue="Computer Science Student and Aspiring Designer" className="h-12 bg-transparent border-t-0 border-x-0 border-b-border rounded-none focus-visible:ring-0 focus-visible:border-b-primary px-0 shadow-none text-base transition-colors" />
+          <div className="space-y-2">
+            <Label htmlFor="bio" className="text-sm font-semibold">Bio</Label>
+            <Input id="bio" defaultValue="Computer Science Student and Aspiring Designer" className="h-11 rounded-[5px] bg-muted/20 border-border focus-visible:ring-1 focus-visible:ring-primary/20" />
           </div>
         </div>
 
         <div className="flex justify-end pt-4">
-          <Button className="rounded-full px-8 font-medium">Save Changes</Button>
+          <Button className="rounded-[5px] px-8 font-semibold">Save Changes</Button>
         </div>
       </section>
 

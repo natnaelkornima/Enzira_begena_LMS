@@ -35,7 +35,7 @@ export default function SubscriptionsPage() {
         {/* Pricing Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start max-w-6xl mx-auto">
           {/* Basic Plan */}
-          <Card className="flex flex-col h-full bg-white dark:bg-zinc-900 border border-primary/10 hover:border-primary/40 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group overflow-hidden">
+          <Card className="flex flex-col h-full bg-white dark:bg-zinc-900 border border-primary/10 hover:border-primary/40 rounded-[5px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group overflow-hidden">
             <CardHeader className="p-8">
               <div className="mb-4">
                 <Badge variant="secondary" className="bg-primary/5 text-primary border-none uppercase tracking-widest text-[9px] font-bold">Foundation</Badge>
@@ -68,7 +68,7 @@ export default function SubscriptionsPage() {
             </CardContent>
             <CardFooter className="p-8 pt-0">
               <Link href="/payment" className="w-full">
-                <Button className="w-full rounded-xl py-5 text-xs font-bold uppercase tracking-widest bg-primary/5 text-primary border-primary/10 hover:bg-primary hover:text-white transition-all duration-300" variant="outline">
+                <Button className="w-full rounded-[5px] py-5 text-xs font-bold uppercase tracking-widest bg-primary/5 text-primary border-primary/10 hover:bg-primary hover:text-white transition-all duration-300" variant="outline">
                   Subscribe Now
                 </Button>
               </Link>
@@ -76,8 +76,8 @@ export default function SubscriptionsPage() {
           </Card>
 
           {/* Pro Plan */}
-          <Card className="flex flex-col h-full relative md:-translate-y-4 bg-white dark:bg-zinc-900 border-2 border-primary/30 hover:border-primary rounded-2xl shadow-2xl hover:shadow-primary/10 hover:-translate-y-6 transition-all duration-500 group overflow-visible">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-5 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-widest shadow-lg shadow-primary/20 z-20 whitespace-nowrap">
+          <Card className="flex flex-col h-full relative md:-translate-y-4 bg-white dark:bg-zinc-900 border-2 border-primary/30 hover:border-primary rounded-[5px] shadow-2xl hover:shadow-primary/10 hover:-translate-y-6 transition-all duration-500 group overflow-visible">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-5 py-1.5 rounded-[5px] text-[9px] font-bold uppercase tracking-widest shadow-lg shadow-primary/20 z-20 whitespace-nowrap">
               Most Popular
             </div>
             <CardHeader className="p-8 pt-10">
@@ -109,7 +109,7 @@ export default function SubscriptionsPage() {
             </CardContent>
             <CardFooter className="p-8 pt-0">
               <Link href="/payment" className="w-full">
-                <Button className="w-full rounded-xl py-5 text-xs font-bold uppercase tracking-widest bg-primary text-white shadow-lg shadow-primary/20 hover:scale-[1.02] transition-all duration-300">
+                <Button className="w-full rounded-[5px] py-5 text-xs font-bold uppercase tracking-widest bg-primary text-white shadow-lg shadow-primary/20 hover:scale-[1.02] transition-all duration-300">
                   Subscribe Now
                 </Button>
               </Link>
@@ -117,7 +117,7 @@ export default function SubscriptionsPage() {
           </Card>
 
           {/* Enterprise Plan */}
-          <Card className="flex flex-col h-full bg-white dark:bg-zinc-900 border border-primary/10 hover:border-primary/40 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group overflow-hidden">
+          <Card className="flex flex-col h-full bg-white dark:bg-zinc-900 border border-primary/10 hover:border-primary/40 rounded-[5px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group overflow-hidden">
             <CardHeader className="p-8">
               <div className="mb-4">
                 <Badge variant="secondary" className="bg-primary/5 text-primary border-none uppercase tracking-widest text-[9px] font-bold">Authority</Badge>
@@ -146,7 +146,7 @@ export default function SubscriptionsPage() {
             </CardContent>
             <CardFooter className="p-8 pt-0">
               <Link href="/payment" className="w-full">
-                <Button className="w-full rounded-xl py-5 text-xs font-bold uppercase tracking-widest bg-primary/5 text-primary border-primary/10 hover:bg-primary hover:text-white transition-all duration-300" variant="outline">
+                <Button className="w-full rounded-[5px] py-5 text-xs font-bold uppercase tracking-widest bg-primary/5 text-primary border-primary/10 hover:bg-primary hover:text-white transition-all duration-300" variant="outline">
                   Subscribe Now
                 </Button>
               </Link>

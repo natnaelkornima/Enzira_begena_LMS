@@ -21,7 +21,7 @@ export default function LandingPage() {
           </nav>
           <div className="flex items-center gap-4">
             <Link href="/login" className="text-sm font-semibold hidden md:block hover:text-primary transition-colors">Log in</Link>
-            <Button className="rounded-full px-6" asChild>
+            <Button className="px-6" asChild>
               <Link href="/signup">Get Started</Link>
             </Button>
           </div>
@@ -36,7 +36,7 @@ export default function LandingPage() {
           <div className="absolute bottom-[0%] right-[-5%] w-[40%] h-[40%] bg-rose-500/5 rounded-full blur-[100px] animate-pulse-glow -z-10" style={{ animationDelay: '-3s' }} />
           
           <div className="max-w-4xl mx-auto px-6 text-center animate-reveal">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 text-xs font-bold text-primary/80 mb-8 hover:bg-primary/10 transition-colors cursor-pointer group">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[5px] bg-primary/5 border border-primary/10 text-xs font-bold text-primary/80 mb-8 hover:bg-primary/10 transition-colors cursor-pointer group">
               Featured in Fortune · Enzira Begena 2.0 <ChevronRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
             </div>
             
@@ -51,7 +51,7 @@ export default function LandingPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="rounded-full h-12 px-8 text-sm font-bold bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20 group" asChild>
+              <Button size="lg" className="h-12 px-8 text-sm font-bold bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20 group" asChild>
                 <Link href="/subscriptions">
                   Start Your Journey
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -72,7 +72,7 @@ export default function LandingPage() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[500px]">
               {/* Expertly Crafted Pathways */}
-              <div className="md:col-span-8 bg-white dark:bg-zinc-900 border border-primary/10 rounded-2xl p-10 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-500 group overflow-hidden relative bg-gradient-to-br from-white via-white to-primary/5 dark:from-zinc-900 dark:via-zinc-900 dark:to-primary/10">
+              <div className="md:col-span-8 bg-white dark:bg-zinc-900 border border-primary/10 rounded-[5px] p-10 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-500 group overflow-hidden relative bg-gradient-to-br from-white via-white to-primary/5 dark:from-zinc-900 dark:via-zinc-900 dark:to-primary/10">
                 <div className="max-w-sm relative z-10">
                   <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px] font-bold">Curriculum</Badge>
                   <h3 className="text-3xl font-bold text-foreground mb-4 leading-tight">Expertly Crafted Pathways</h3>
@@ -98,7 +98,7 @@ export default function LandingPage() {
               </div>
               
               {/* Real-time Insights */}
-              <div className="md:col-span-4 bg-white dark:bg-zinc-900 border border-primary/10 rounded-2xl p-8 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-500 flex flex-col justify-between group bg-gradient-to-br from-white via-white to-primary/5 dark:from-zinc-900 dark:via-zinc-900 dark:to-primary/10">
+              <div className="md:col-span-4 bg-white dark:bg-zinc-900 border border-primary/10 rounded-[5px] p-8 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-500 flex flex-col justify-between group bg-gradient-to-br from-white via-white to-primary/5 dark:from-zinc-900 dark:via-zinc-900 dark:to-primary/10">
                 <div>
                   <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px] font-bold">Analytics</Badge>
                   <h3 className="text-xl font-bold text-foreground mb-3">Real-time Insights</h3>
@@ -117,7 +117,7 @@ export default function LandingPage() {
               </div>
 
               {/* Enterprise Grade */}
-              <div className="md:col-span-4 bg-white dark:bg-zinc-900 border border-primary/10 rounded-2xl p-8 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-500 flex flex-col justify-between group bg-gradient-to-br from-white via-white to-primary/5 dark:from-zinc-900 dark:via-zinc-900 dark:to-primary/10">
+              <div className="md:col-span-4 bg-white dark:bg-zinc-900 border border-primary/10 rounded-[5px] p-8 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-500 flex flex-col justify-between group bg-gradient-to-br from-white via-white to-primary/5 dark:from-zinc-900 dark:via-zinc-900 dark:to-primary/10">
                 <div>
                   <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px] font-bold">Security</Badge>
                   <h3 className="text-xl font-bold text-foreground mb-3">Enterprise Grade</h3>
@@ -133,7 +133,7 @@ export default function LandingPage() {
               </div>
 
               {/* Scale Globally */}
-              <div className="md:col-span-8 bg-white dark:bg-zinc-900 border border-primary/10 rounded-2xl p-8 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-500 flex items-center gap-10 group bg-gradient-to-br from-white via-white to-primary/5 dark:from-zinc-900 dark:via-zinc-900 dark:to-primary/10">
+              <div className="md:col-span-8 bg-white dark:bg-zinc-900 border border-primary/10 rounded-[5px] p-8 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-500 flex items-center gap-10 group bg-gradient-to-br from-white via-white to-primary/5 dark:from-zinc-900 dark:via-zinc-900 dark:to-primary/10">
                 <div className="flex-1">
                   <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px] font-bold">Global</Badge>
                   <h3 className="text-2xl font-bold text-foreground mb-3">Scale Globally</h3>
@@ -143,11 +143,11 @@ export default function LandingPage() {
                 </div>
                 <div className="flex-1 hidden md:flex items-center -space-x-3">
                   {[12, 34, 45, 67].map((id, i) => (
-                    <div key={id} className="w-12 h-12 rounded-full border-[3px] border-white dark:border-zinc-900 bg-muted-foreground/10 overflow-hidden hover:translate-y-[-4px] transition-transform cursor-pointer relative z-[1] flex items-center justify-center" style={{ transitionDelay: `${i * 100}ms` }}>
+                    <div key={id} className="w-12 h-12 rounded-[5px] border-[3px] border-white dark:border-zinc-900 bg-muted-foreground/10 overflow-hidden hover:translate-y-[-4px] transition-transform cursor-pointer relative z-[1] flex items-center justify-center" style={{ transitionDelay: `${i * 100}ms` }}>
                       <span className="text-[10px] font-bold text-muted-foreground/40">U{i+1}</span>
                     </div>
                   ))}
-                  <div className="w-12 h-12 rounded-full border-[3px] border-white dark:border-zinc-900 bg-primary/10 flex items-center justify-center text-[10px] font-bold text-primary relative z-0">
+                  <div className="w-12 h-12 rounded-[5px] border-[3px] border-white dark:border-zinc-900 bg-primary/10 flex items-center justify-center text-[10px] font-bold text-primary relative z-0">
                     +40
                   </div>
                 </div>
@@ -160,7 +160,7 @@ export default function LandingPage() {
         <section className="py-32 text-center relative overflow-hidden">
           <div className="max-w-2xl mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-8">Start your journey today.</h2>
-            <Button size="lg" className="rounded-full h-12 px-10 text-sm font-bold bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all group" asChild>
+            <Button size="lg" className="h-12 px-10 text-sm font-bold bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all group" asChild>
               <Link href="/signup">
                 Get Started Free
                 <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

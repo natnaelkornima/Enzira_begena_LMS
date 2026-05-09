@@ -55,15 +55,15 @@ export default function SettingsPage() {
         <aside className="lg:col-span-5 space-y-6">
           {/* Subscription Status Card */}
           <Card className="overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-[5px] -mr-12 -mt-12 pointer-events-none"></div>
             <CardContent className="p-6 relative z-10">
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wider font-medium">Current Plan</p>
                   <h3 className="text-2xl font-bold text-primary mt-1">Premium Academic</h3>
                 </div>
-                <span className="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span className="bg-primary/10 text-primary px-2.5 py-1 rounded-[5px] text-xs font-semibold flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-[5px] bg-primary"></span>
                   Active
                 </span>
               </div>
