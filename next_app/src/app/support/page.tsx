@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Search, CreditCard, BookOpen, Settings, Mail, MessageCircle } from 'lucide-react';
+import { CreditCard, BookOpen, Settings, Mail, MessageCircle } from 'lucide-react';
 
 export default function SupportPage() {
   return (
@@ -31,15 +31,6 @@ export default function SupportPage() {
             <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
               Find answers to your questions about our platform, billing, and learning experience.
             </p>
-          </div>
-          
-          <div className="relative max-w-2xl mx-auto">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-            <input 
-              type="text" 
-              placeholder="Search help articles..."
-              className="w-full h-14 pl-12 pr-6 rounded-[5px] border border-border bg-muted/20 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all text-base shadow-sm"
-            />
           </div>
         </section>
 

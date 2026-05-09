@@ -5,7 +5,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Progress } from '@/components/ui/progress';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, CheckCircle, Award, ChevronRight, Flame, Trophy, Star } from 'lucide-react';
+import { BookOpen, CheckCircle, Award, ChevronRight, Flame, Trophy, Star, Search } from 'lucide-react';
+import { Input } from '@/components/ui/input';
 import { BackButton } from '@/components/ui/back-button';
 
 export default function StudentDashboardPage() {
@@ -17,7 +18,13 @@ export default function StudentDashboardPage() {
           <h1 className="text-3xl font-extrabold tracking-tight">Welcome back, Natnael.</h1>
           <p className="text-muted-foreground mt-2 text-lg">You're making great progress. Keep it up!</p>
         </div>
-
+        <div className="relative w-full md:w-80">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Input 
+            placeholder="Search courses..." 
+            className="pl-10 h-11 bg-muted/20 border-border/50 focus-visible:ring-1 focus-visible:ring-primary/20 rounded-[5px]" 
+          />
+        </div>
       </header>
 
       {/* High-Level Progress Stats */}

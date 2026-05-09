@@ -1,4 +1,4 @@
-import { Bell, HelpCircle, Search } from 'lucide-react';
+import { Bell, HelpCircle } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -11,14 +11,7 @@ export function AdminTopAppBar() {
       </div>
       
       <div className="flex items-center gap-4 flex-1 justify-end">
-        <div className="relative hidden md:block w-64">
-          <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input 
-            type="search" 
-            placeholder="Search records..." 
-            className="pl-9 bg-muted/50 w-full h-9 rounded-md"
-          />
-        </div>
+
         
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" className="text-muted-foreground">

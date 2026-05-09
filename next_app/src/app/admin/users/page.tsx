@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Search, Download, Users, Verified, UserPlus, MoreVertical, Eye, Edit, Ban, CheckCircle } from 'lucide-react';
+import { Download, Users, Verified, UserPlus, MoreVertical, Eye, Edit, Ban, CheckCircle } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -66,14 +66,6 @@ export default function AdminUsersPage() {
       {/* Filter Bar */}
       <Card className="p-4 flex flex-col md:flex-row gap-4 items-center justify-between">
         <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
-          <div className="relative w-full md:w-80">
-            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-            <Input 
-              type="search" 
-              placeholder="Search by name or email..." 
-              className="pl-9 w-full bg-muted/50"
-            />
-          </div>
           <Select defaultValue="all">
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="All Statuses" />

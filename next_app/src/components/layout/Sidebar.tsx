@@ -26,18 +26,16 @@ export function Sidebar() {
         isCollapsed ? "w-16" : "w-64"
       )}
     >
-      <div className={cn("flex items-center justify-between p-4", isCollapsed ? "justify-center" : "")}>
-        {!isCollapsed && (
-          <div>
-            <h1 className="text-xl font-bold tracking-tight">Enzira Begena</h1>
-            <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mt-1">Portal</p>
-          </div>
-        )}
+      <div className={cn("flex items-center p-4 min-h-[80px]", isCollapsed ? "justify-center" : "justify-between")}>
+        <div className={cn("transition-all duration-300 origin-left overflow-hidden", isCollapsed ? "w-0 opacity-0" : "w-auto opacity-100")}>
+          <h1 className="text-xl font-bold tracking-tight whitespace-nowrap">Enzira Begena</h1>
+          <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mt-1 whitespace-nowrap">Portal</p>
+        </div>
         <Button 
           variant="ghost" 
           size="icon" 
           onClick={() => setIsCollapsed(!isCollapsed)}
-          className={cn("h-8 w-8 text-muted-foreground", isCollapsed && "mt-2")}
+          className={cn("h-8 w-8 text-muted-foreground shrink-0 transition-transform duration-300", isCollapsed && "mt-0")}
         >
           {isCollapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
         </Button>
@@ -52,55 +50,64 @@ export function Sidebar() {
               href={item.href}
               title={isCollapsed ? item.name : undefined}
               className={cn(
-                "flex items-center px-3 py-2.5 rounded-lg transition-colors text-sm font-medium",
+                "flex items-center px-3 py-2.5 rounded-lg transition-all duration-300 text-sm font-medium relative group",
                 isActive 
                   ? "bg-primary/10 text-primary" 
                   : "text-muted-foreground hover:bg-muted hover:text-foreground",
                 isCollapsed ? "justify-center" : "space-x-3"
               )}
             >
-              <item.icon className={cn("h-5 w-5 shrink-0", isActive ? "text-primary" : "text-muted-foreground")} />
-              {!isCollapsed && <span>{item.name}</span>}
+              <item.icon className={cn("h-5 w-5 shrink-0 transition-transform duration-300", isActive ? "text-primary" : "text-muted-foreground")} />
+              <span className={cn(
+                "transition-all duration-300 origin-left overflow-hidden whitespace-nowrap",
+                isCollapsed ? "w-0 opacity-0" : "w-auto opacity-100"
+              )}>
+                {item.name}
+              </span>
             </Link>
           );
         })}
       </div>
 
       <div className="p-3 border-t space-y-1">
-        {!isCollapsed ? (
-          <div className="mb-4">
-            <Button className="w-full" asChild>
-              <Link href="/subscriptions">Enroll Now</Link>
-            </Button>
-          </div>
-        ) : (
-          <div className="mb-4 flex justify-center">
-            <Button size="icon" asChild title="Enroll Now">
-              <Link href="/subscriptions"><CreditCard className="h-4 w-4" /></Link>
-            </Button>
-          </div>
-        )}
+        <div className={cn("mb-4 transition-all duration-300 overflow-hidden", isCollapsed ? "px-0" : "px-0")}>
+          <Button className={cn("w-full transition-all duration-300", isCollapsed ? "h-10 w-10 p-0 rounded-full" : "h-10")} asChild>
+            <Link href="/subscriptions" className="flex items-center justify-center">
+              {isCollapsed ? <CreditCard className="h-4 w-4 shrink-0" /> : <span className="whitespace-nowrap">Enroll Now</span>}
+            </Link>
+          </Button>
+        </div>
         <Link 
           href="#" 
           title={isCollapsed ? "Help Center" : undefined}
           className={cn(
-            "flex items-center px-3 py-2.5 rounded-lg transition-colors text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground",
+            "flex items-center px-3 py-2.5 rounded-lg transition-all duration-300 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground",
             isCollapsed ? "justify-center" : "space-x-3"
           )}
         >
           <HelpCircle className="h-5 w-5 shrink-0" />
-          {!isCollapsed && <span>Help Center</span>}
+          <span className={cn(
+            "transition-all duration-300 origin-left overflow-hidden whitespace-nowrap",
+            isCollapsed ? "w-0 opacity-0" : "w-auto opacity-100"
+          )}>
+            Help Center
+          </span>
         </Link>
         <Link 
           href="/login" 
           title={isCollapsed ? "Logout" : undefined}
           className={cn(
-            "flex items-center px-3 py-2.5 rounded-lg transition-colors text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground",
+            "flex items-center px-3 py-2.5 rounded-lg transition-all duration-300 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground",
             isCollapsed ? "justify-center" : "space-x-3"
           )}
         >
           <LogOut className="h-5 w-5 shrink-0" />
-          {!isCollapsed && <span>Logout</span>}
+          <span className={cn(
+            "transition-all duration-300 origin-left overflow-hidden whitespace-nowrap",
+            isCollapsed ? "w-0 opacity-0" : "w-auto opacity-100"
+          )}>
+            Logout
+          </span>
         </Link>
       </div>
     </nav>
