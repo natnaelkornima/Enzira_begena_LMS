@@ -112,7 +112,7 @@ export default function AboutPage() {
       {/* Footer */}
       <footer className="border-t py-12 mt-auto bg-muted/20">
         <div className="max-w-7xl mx-auto px-6 text-center text-sm text-muted-foreground">
-          © 2024 Academia LMS. Engineered for excellence.
+          © 2026 Enzira LMS. Engineered for excellence.
         </div>
       </footer>
     </div>
