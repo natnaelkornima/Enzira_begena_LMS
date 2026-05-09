@@ -1,123 +1,119 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Camera, Flame, Trophy, Star, CheckCircle } from 'lucide-react';
-import { BackButton } from '@/components/ui/back-button';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Flame, Trophy, Star, CheckCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function ProfilePage() {
   return (
-    <div className="p-6 max-w-3xl mx-auto space-y-6">
-      <header>
-        <BackButton />
-        <h2 className="text-3xl font-bold tracking-tight mb-2 mt-4">Personal Profile</h2>
-        <p className="text-muted-foreground">Manage your public persona and contact information.</p>
-      </header>
-
-      <Card>
-        <CardContent className="pt-6">
-          {/* Avatar Upload */}
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
-            <div className="relative group cursor-pointer">
-              <Avatar className="h-28 w-28 border-4 border-background shadow-sm group-hover:opacity-80 transition-opacity">
-                <AvatarFallback className="bg-primary/5 text-primary text-2xl font-bold">AS</AvatarFallback>
-              </Avatar>
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 rounded-full">
-                <Camera className="h-8 w-8 text-white drop-shadow-md" />
-              </div>
-            </div>
-            <div className="text-center sm:text-left mt-2">
-              <h3 className="font-semibold text-lg">Avatar Picture</h3>
-              <p className="text-sm text-muted-foreground mt-1 max-w-xs mb-3">Upload a picture to make your profile stand out. JPG, GIF or PNG. Max size of 800K.</p>
-              <Button size="sm" variant="outline">Upload New Avatar</Button>
-            </div>
-          </div>
-
-          <div className="border-t border-dashed my-8" />
-
-          {/* Profile Form */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <Label htmlFor="firstName">First Name</Label>
-              <Input id="firstName" defaultValue="Alexander" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="lastName">Last Name</Label>
-              <Input id="lastName" defaultValue="Sterling" />
-            </div>
-            <div className="space-y-2 md:col-span-2">
-              <Label htmlFor="email">Email Address</Label>
-              <Input id="email" type="email" defaultValue="alex.sterling@enzira.edu" />
-            </div>
-            <div className="space-y-2 md:col-span-2">
-              <Label htmlFor="bio">Short Bio</Label>
-              <Input id="bio" defaultValue="Architect and Computational Designer" />
-              <p className="text-xs text-muted-foreground mt-1">Write a short sentence about yourself.</p>
-            </div>
-          </div>
-          
-          <div className="mt-8 flex justify-end">
-            <Button>Save Profile</Button>
-          </div>
-        </CardContent>
-      </Card>
+    <div className="max-w-3xl mx-auto py-12 px-6 space-y-16 animate-in fade-in duration-700">
       
-      {/* Gamification Section */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card className="flex flex-col border-primary/20 bg-gradient-to-br from-primary/5 to-transparent hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-          <CardHeader className="pb-2 flex flex-row items-center justify-between">
-            <CardTitle className="text-xl tracking-tight">Current Streak</CardTitle>
-            <Flame className="h-5 w-5 text-orange-500" />
-          </CardHeader>
-          <CardContent className="flex items-center gap-6">
-            <div className="flex-1">
-              <div className="flex items-baseline gap-2">
-                <span className="text-4xl font-extrabold text-orange-500">12</span>
-                <span className="text-muted-foreground font-medium">days</span>
-              </div>
-              <p className="text-sm text-muted-foreground mt-1">You're on fire! Keep learning every day to unlock the 30-day badge.</p>
-            </div>
-            <div className="hidden sm:flex gap-1">
-              {[1, 2, 3, 4, 5, 6, 7].map((day, i) => (
-                <div key={i} className={cn("w-6 h-8 rounded-md flex flex-col items-center justify-end p-1", i < 5 ? "bg-orange-500/20" : "bg-muted")}>
-                  <div className={cn("w-full rounded-sm", i < 5 ? "bg-orange-500 h-3" : "bg-muted-foreground/20 h-1")} />
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+      {/* Header Profile Section */}
+      <section className="flex flex-col items-center text-center space-y-6">
+        <div className="relative group cursor-pointer">
+          <Avatar className="h-32 w-32 shadow-sm transition-transform duration-300 group-hover:scale-105 border border-primary/10">
+            <AvatarFallback className="bg-primary/5 text-primary text-3xl font-light">NK</AvatarFallback>
+          </Avatar>
+          <div className="absolute inset-0 bg-black/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+             <span className="text-xs font-medium text-black/70 bg-white/80 px-2 py-1 rounded-md backdrop-blur-sm shadow-sm">Change</span>
+          </div>
+        </div>
+        
+        <div>
+          <h1 className="text-3xl font-semibold tracking-tight text-foreground">Natnael Kornima</h1>
+          <p className="text-muted-foreground mt-1 font-medium">Student</p>
+        </div>
+      </section>
 
-        <Card className="hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-          <CardHeader className="pb-2 flex flex-row items-center justify-between">
-            <CardTitle className="text-xl tracking-tight">Recent Achievements</CardTitle>
-            <Button variant="link" className="text-xs h-auto p-0 text-primary">View All</Button>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-4 mt-2">
-              <div className="flex flex-col items-center gap-2 group cursor-pointer">
-                <div className="h-14 w-14 rounded-full bg-yellow-500/10 flex items-center justify-center border border-yellow-500/20 group-hover:scale-110 transition-transform">
+      <div className="h-px w-full bg-border/50"></div>
+
+      {/* Profile Details Form */}
+      <section className="space-y-8">
+        <div>
+          <h2 className="text-lg font-semibold tracking-tight">Personal Information</h2>
+          <p className="text-sm text-muted-foreground">Update your details and public profile.</p>
+        </div>
+
+        <div className="grid gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-3">
+              <Label htmlFor="firstName" className="text-sm text-muted-foreground font-medium">First name</Label>
+              <Input id="firstName" defaultValue="Natnael" className="h-12 bg-transparent border-t-0 border-x-0 border-b-border rounded-none focus-visible:ring-0 focus-visible:border-b-primary px-0 shadow-none text-base transition-colors" />
+            </div>
+            <div className="space-y-3">
+              <Label htmlFor="lastName" className="text-sm text-muted-foreground font-medium">Last name</Label>
+              <Input id="lastName" defaultValue="Kornima" className="h-12 bg-transparent border-t-0 border-x-0 border-b-border rounded-none focus-visible:ring-0 focus-visible:border-b-primary px-0 shadow-none text-base transition-colors" />
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            <Label htmlFor="email" className="text-sm text-muted-foreground font-medium">Email address</Label>
+            <Input id="email" type="email" defaultValue="natnael.k@enzira.edu" className="h-12 bg-transparent border-t-0 border-x-0 border-b-border rounded-none focus-visible:ring-0 focus-visible:border-b-primary px-0 shadow-none text-base transition-colors" />
+          </div>
+
+          <div className="space-y-3">
+            <Label htmlFor="bio" className="text-sm text-muted-foreground font-medium">Bio</Label>
+            <Input id="bio" defaultValue="Computer Science Student and Aspiring Designer" className="h-12 bg-transparent border-t-0 border-x-0 border-b-border rounded-none focus-visible:ring-0 focus-visible:border-b-primary px-0 shadow-none text-base transition-colors" />
+          </div>
+        </div>
+
+        <div className="flex justify-end pt-4">
+          <Button className="rounded-full px-8 font-medium">Save Changes</Button>
+        </div>
+      </section>
+
+      <div className="h-px w-full bg-border/50"></div>
+
+      {/* Gamification Section */}
+      <section className="space-y-8">
+        <div>
+          <h2 className="text-lg font-semibold tracking-tight">Your Progress</h2>
+          <p className="text-sm text-muted-foreground">Keep up the good work to unlock more achievements.</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Card className="border-border shadow-sm hover:shadow-md transition-shadow">
+            <CardContent className="p-6">
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-medium text-muted-foreground">Current Streak</span>
+                <Flame className="h-5 w-5 text-orange-500" />
+              </div>
+              <div className="flex items-baseline gap-2 mb-6">
+                <span className="text-4xl font-semibold text-foreground">12</span>
+                <span className="text-sm text-muted-foreground">days</span>
+              </div>
+              <div className="flex gap-1.5 w-full">
+                {[1, 2, 3, 4, 5, 6, 7].map((day, i) => (
+                  <div key={i} className={cn("flex-1 h-2 rounded-full", i < 5 ? "bg-orange-500" : "bg-muted")} />
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border shadow-sm hover:shadow-md transition-shadow">
+            <CardContent className="p-6">
+              <div className="flex items-center justify-between mb-6">
+                <span className="font-medium text-muted-foreground">Recent Badges</span>
+                <Button variant="ghost" size="sm" className="h-auto p-0 text-primary font-medium hover:bg-transparent hover:text-primary/80">View all</Button>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="h-14 w-14 rounded-2xl bg-yellow-50 flex items-center justify-center border border-yellow-100">
                   <Trophy className="h-6 w-6 text-yellow-600" />
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground text-center">Fast Learner</span>
-              </div>
-              <div className="flex flex-col items-center gap-2 group cursor-pointer">
-                <div className="h-14 w-14 rounded-full bg-blue-500/10 flex items-center justify-center border border-blue-500/20 group-hover:scale-110 transition-transform">
+                <div className="h-14 w-14 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100">
                   <Star className="h-6 w-6 text-blue-600" />
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground text-center">Perfect Score</span>
-              </div>
-              <div className="flex flex-col items-center gap-2 group cursor-pointer opacity-40 grayscale">
-                <div className="h-14 w-14 rounded-full bg-muted flex items-center justify-center border border-border">
-                  <CheckCircle className="h-6 w-6 text-muted-foreground" />
+                <div className="h-14 w-14 rounded-2xl bg-muted/30 flex items-center justify-center border border-dashed border-border">
+                  <CheckCircle className="h-6 w-6 text-muted-foreground/30" />
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground text-center">30 Day Streak</span>
               </div>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        </div>
       </section>
+
     </div>
   );
 }
