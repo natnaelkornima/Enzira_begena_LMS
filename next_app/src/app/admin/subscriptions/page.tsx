@@ -26,7 +26,7 @@ export default function AdminSubscriptionsPage() {
       {/* Dynamic Header */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
         <div className="space-y-1">
-          <h2 className="text-3xl font-extrabold tracking-tight">Submission Queue</h2>
+          <h2 className="text-3xl font-extrabold tracking-tight text-foreground">Submission Queue</h2>
           <p className="text-muted-foreground">Verify manual payments and student enrollments.</p>
         </div>
         
@@ -69,7 +69,7 @@ export default function AdminSubscriptionsPage() {
       </div>
 
       {/* Main Split Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 h-full">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Column: Compact Table */}
         <div className="lg:col-span-8">
           <Card className="rounded-[5px] border-border/50 overflow-hidden shadow-sm h-full">
@@ -131,7 +131,7 @@ export default function AdminSubscriptionsPage() {
 
         {/* Right Column: Dynamic Detail Pane */}
         <div className="lg:col-span-4 space-y-6">
-          <Card className="rounded-[5px] border-border/40 sticky top-24 overflow-hidden bg-card">
+          <Card className="rounded-[5px] border-border/40 sticky top-24 overflow-hidden bg-card shadow-sm">
             <div className="p-6 space-y-8">
               {/* Sleek Header */}
               <div className="flex justify-between items-start">
@@ -181,8 +181,8 @@ export default function AdminSubscriptionsPage() {
               </div>
             </div>
           </Card>
-        </div>
 
+          {/* Verification Helper */}
           <div className="p-6 bg-primary rounded-[5px] text-primary-foreground space-y-4 shadow-xl">
             <div className="h-10 w-10 rounded-[5px] bg-white/20 flex items-center justify-center">
               <FileText className="h-5 w-5 text-white" />
