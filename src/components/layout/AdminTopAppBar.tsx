@@ -1,4 +1,4 @@
-import { Bell, HelpCircle } from 'lucide-react';
+import { Bell, HelpCircle, Menu } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -6,7 +6,10 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 export function AdminTopAppBar() {
   return (
     <header className="sticky top-0 z-40 bg-card border-b flex justify-between items-center px-6 w-full h-14">
-      <div className="flex items-center">
+      <div className="flex items-center gap-4">
+        <Button variant="ghost" size="icon" className="md:hidden -ml-2">
+          <Menu className="h-5 w-5" />
+        </Button>
         <h2 className="text-lg font-semibold text-foreground hidden sm:block">LMS Admin</h2>
       </div>
       

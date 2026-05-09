@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ChevronRight, Play, CheckCircle2, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react';
+import { ChevronRight, Play, CheckCircle2, Sparkles, ArrowRight, ShieldCheck, Menu } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -21,8 +21,11 @@ export default function LandingPage() {
           </nav>
           <div className="flex items-center gap-4">
             <Link href="/login" className="text-sm font-semibold hidden md:block hover:text-primary transition-colors">Log in</Link>
-            <Button className="px-6" asChild>
+            <Button className="px-6 hidden md:flex" asChild>
               <Link href="/signup">Get Started</Link>
+            </Button>
+            <Button variant="ghost" size="icon" className="md:hidden">
+              <Menu className="h-6 w-6" />
             </Button>
           </div>
         </div>

@@ -22,7 +22,7 @@ export function AdminSidebar() {
   return (
     <aside 
       className={cn(
-        "sticky left-0 top-0 h-screen border-r bg-card flex flex-col z-50 transition-all duration-300 ease-in-out",
+        "sticky left-0 top-0 h-screen border-r bg-card hidden md:flex flex-col z-50 transition-all duration-300 ease-in-out",
         isCollapsed ? "w-20" : "w-64"
       )}
     >
