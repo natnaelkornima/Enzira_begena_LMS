@@ -13,81 +13,71 @@ export default function SignUpPage() {
         Back to home
       </Link>
 
-      <div className="w-full max-w-[400px] flex flex-col items-center">
+      <div className="w-full max-w-[360px] flex flex-col items-center">
         {/* Brand Header */}
-        <div className="mb-10 text-center">
-          <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-white font-bold text-2xl shadow-lg shadow-primary/20 mx-auto mb-6">E</div>
-          <h1 className="text-2xl font-bold tracking-tight mb-2">Create Account</h1>
-          <p className="text-sm text-muted-foreground">Join the Enzira Begena community today.</p>
+        <div className="mb-12 text-center w-full">
+          <h1 className="text-3xl font-semibold tracking-tight mb-2">Create Account</h1>
+          <p className="text-sm text-muted-foreground font-medium">Join the Enzira Begena community today.</p>
         </div>
 
-        {/* Signup Card */}
-        <div className="w-full bg-card border border-border/50 rounded-2xl p-8 shadow-xl">
-          <form className="space-y-4">
+        {/* Signup Form */}
+        <div className="w-full">
+          <form className="space-y-6">
             <div className="space-y-2">
-              <Label htmlFor="name" className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Full Name</Label>
-              <div className="relative">
-                <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground/50" />
-                <Input 
-                  id="name" 
-                  placeholder="John Doe" 
-                  className="pl-10 h-11 bg-muted/30 border-none focus-visible:ring-1 focus-visible:ring-primary/20" 
-                  required 
-                />
-              </div>
+              <Label htmlFor="name" className="text-sm font-medium text-muted-foreground">Full Name</Label>
+              <Input 
+                id="name" 
+                placeholder="John Doe" 
+                className="h-12 bg-transparent border-t-0 border-x-0 border-b border-border rounded-none focus-visible:ring-0 focus-visible:border-b-primary px-0 shadow-none text-base transition-colors" 
+                required 
+              />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Email Address</Label>
-              <div className="relative">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground/50" />
-                <Input 
-                  id="email" 
-                  type="email" 
-                  placeholder="name@enzira.edu" 
-                  className="pl-10 h-11 bg-muted/30 border-none focus-visible:ring-1 focus-visible:ring-primary/20" 
-                  required 
-                />
-              </div>
+              <Label htmlFor="email" className="text-sm font-medium text-muted-foreground">Email address</Label>
+              <Input 
+                id="email" 
+                type="email" 
+                placeholder="name@enzira.edu" 
+                className="h-12 bg-transparent border-t-0 border-x-0 border-b border-border rounded-none focus-visible:ring-0 focus-visible:border-b-primary px-0 shadow-none text-base transition-colors" 
+                required 
+              />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password" className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Password</Label>
-              <div className="relative">
-                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground/50" />
-                <Input 
-                  id="password" 
-                  type="password" 
-                  placeholder="••••••••" 
-                  className="pl-10 h-11 bg-muted/30 border-none focus-visible:ring-1 focus-visible:ring-primary/20" 
-                  required 
-                />
-              </div>
+              <Label htmlFor="password" className="text-sm font-medium text-muted-foreground">Password</Label>
+              <Input 
+                id="password" 
+                type="password" 
+                placeholder="••••••••" 
+                className="h-12 bg-transparent border-t-0 border-x-0 border-b border-border rounded-none focus-visible:ring-0 focus-visible:border-b-primary px-0 shadow-none text-base transition-colors" 
+                required 
+              />
             </div>
 
             <div className="flex items-start space-x-2 pt-2">
               <Checkbox id="terms" className="mt-1 border-border/50" />
-              <label htmlFor="terms" className="text-[10px] leading-tight text-muted-foreground">
-                I agree to the <Link href="#" className="text-primary font-bold hover:underline">Terms</Link> and <Link href="#" className="text-primary font-bold hover:underline">Privacy Policy</Link>.
+              <label htmlFor="terms" className="text-xs leading-tight text-muted-foreground">
+                I agree to the <Link href="#" className="text-primary hover:underline">Terms</Link> and <Link href="#" className="text-primary hover:underline">Privacy Policy</Link>.
               </label>
             </div>
 
-            <Button asChild className="w-full h-11 text-xs font-bold uppercase tracking-widest bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 mt-4">
+            <Button asChild className="w-full h-12 rounded-full font-medium text-base mt-8 shadow-sm">
               <Link href="/login">Create Account</Link>
             </Button>
           </form>
 
           {/* Divider */}
-          <div className="relative my-8">
+          <div className="relative my-10">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-border/50"></div>
+              <div className="w-full border-t border-border"></div>
             </div>
-            <div className="relative flex justify-center text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
-              <span className="bg-card px-3">Or continue with</span>
+            <div className="relative flex justify-center text-xs font-medium text-muted-foreground">
+              <span className="bg-muted/20 px-4">Or continue with</span>
             </div>
           </div>
 
           {/* Social Login */}
-          <Button variant="outline" className="w-full h-11 text-[11px] font-bold uppercase tracking-wider text-muted-foreground bg-background hover:bg-muted border-border/50">
-            <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24">
+          <Button variant="outline" className="w-full h-12 rounded-full font-medium bg-transparent border-border hover:bg-background shadow-sm">
+            <svg className="w-5 h-5 mr-3" viewBox="0 0 24 24">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
               <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
@@ -98,9 +88,9 @@ export default function SignUpPage() {
         </div>
 
         {/* Footer Link */}
-        <p className="mt-10 text-center text-xs text-muted-foreground font-medium">
+        <p className="mt-12 text-center text-sm text-muted-foreground font-medium">
           Already have an account? 
-          <Link href="/login" className="text-primary font-bold hover:underline ml-1">Sign In</Link>
+          <Link href="/login" className="text-primary hover:underline ml-1.5">Sign In</Link>
         </p>
       </div>
     </main>
