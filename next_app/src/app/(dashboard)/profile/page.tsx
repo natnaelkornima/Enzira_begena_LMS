@@ -21,8 +21,7 @@ export default function ProfilePage() {
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
             <div className="relative group cursor-pointer">
               <Avatar className="h-28 w-28 border-4 border-background shadow-sm group-hover:opacity-80 transition-opacity">
-                <AvatarImage src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA7EdsA1RBw-3xsF257S-i931n0d1vh82ELtPPn5rKWLXgHgeirENS02j26dCShharU9x6s1PvRYmFgFy05JiT0kf1aSFZJAGXva0Y1F0XZRsfQVvm8SO7O3CLqzy6fwnLUDExyA6OphMzc5crnTqVGekNeA7roa5TH54_QK4KsRH7u975N82uiYkBfM-G1qmunzt5-YC2p8z04ROX03gmfjn9oaZCgx4UVthIuAyS78sJHm0SD2UASSJFDt3uGUtNxytbQQXvGjg" />
-                <AvatarFallback>AS</AvatarFallback>
+                <AvatarFallback className="bg-primary/5 text-primary text-2xl font-bold">AS</AvatarFallback>
               </Avatar>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 rounded-full">
                 <Camera className="h-8 w-8 text-white drop-shadow-md" />

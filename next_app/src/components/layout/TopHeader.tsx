@@ -78,9 +78,8 @@ export function TopHeader() {
 
           <div className="h-8 w-px bg-border/60 hidden sm:block" />
 
-          <Avatar className="h-8 w-8 cursor-pointer ring-2 ring-transparent hover:ring-primary/20 transition-all">
-            <AvatarImage src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDhSkIJlFXZ_jlLgn-J8XkIT8PgBqrNdUuqVblQswdJzDJo_WeUBOBQVwhqYiKU_58eXC1Hx6h75vm-W-pnceMBbQBwPLlWQMr84Zhs4NhDLZx656p5pDup7YJp0LMNFg3i0fufE9QqvqaxG6U1Qa4dt6sdSZQJuhZCXgzPlta8zJf_Rwg_-c6sESBDZvTGiXFZ82anRsq8UG1js6x3SUR4a3d_E3y3YpBawQsuzYYo-36w2EDW1vofNn8WdGSHaTVMnvrip-jZRk" />
-            <AvatarFallback>JT</AvatarFallback>
+          <Avatar className="h-8 w-8 cursor-pointer ring-2 ring-transparent hover:ring-primary/20 transition-all border">
+            <AvatarFallback className="bg-primary/5 text-primary text-[10px] font-bold">NT</AvatarFallback>
           </Avatar>
         </div>
       </header>

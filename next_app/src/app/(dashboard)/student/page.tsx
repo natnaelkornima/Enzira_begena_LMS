@@ -133,30 +133,28 @@ export default function StudentDashboardPage() {
               instructor: "Dr. Elena Rostova",
               progress: 68,
               level: "Advanced",
-              img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCO4eznOM8amD3kg09Flak6yD4E1nk9K0DM6O41eZiy2xcyP6ag-vEnDfq6ESldjPBhaxYQ38O60Z0y_etkhQ03Nk8_WR_U2msJH56ZIZvIGg7wKav7ySMafP8SQuGaobbRwo0n5hxmDol0ONaqgqz1Bhj7zKQOAh3GExF8IkOyHOGTAa3pfz1ItacUoJnq6aou4JW2q9sVxbw2ew5aWgqztZmMVtvGkzovZ8cvVzT1D7dHMMFZzddPJSJ9154I_R1xKpXeXmxQv1A",
+              color: "from-blue-500/20 to-indigo-500/20",
             },
             {
               title: "Quantitative Financial Theory",
               instructor: "Prof. Marcus Sterling",
               progress: 32,
               level: "Mastery",
-              img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBjV-5ZomSh5wO98B-vX-HTSYzR-V9AlPUvW5VEclQ1rst6S2g50uJPmy0zV36nvUugRVc3NpFWOGcYO_rh_6ozjcqsxzh5IwXiDRrqJfg42z20aCb1PAdp6L8q8Cz2dqb8gFL12qkvj-xikipdIanlukdkBiQe5bpx7HQkdTOYVbrldskwXSbyGG7CiXqcKVlBSBpvFNQQRECrLHXvTgL7kk6syZn8Sa3rw-46bvCB7_TKvjOVGv2tCXVdD_riWkSduhKvCSj2KPg",
+              color: "from-emerald-500/20 to-teal-500/20",
             },
             {
               title: "Modern Web Architecture",
               instructor: "Sarah Jenkins, Senior Eng.",
               progress: 91,
               level: "Intermediate",
-              img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDK7JdiYvCDTo3tumsT9GvhnHfGRtDcLFYotgD6dMRVCJ1Kf0I6pmwZDMi4_4fFxcjikF6iUE-rB3zdanWheLhcrf5sDF8eaMiXcz8-Yu2R0lwFEHjovwe2Qovu1KK_BEV9DzQ2KaNBrd39mxfPm0bCskZhboMz-1gOcrDDq8fFWZY39IeVeQsLLTF1wrk37ddny9W_Rzlme7j6yG6PzjuTq16oEJXAf6MhVzCk1JehVV2XVLAN8r6v-KuCWSS-TY2Db2T78CuUqiU",
+              color: "from-orange-500/20 to-rose-500/20",
             }
           ].map((course, i) => (
             <Card key={i} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 group flex flex-col">
-              <div className="relative h-40">
-                <img 
-                  alt={course.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                  src={course.img}
-                />
+              <div className={cn("relative h-40 bg-gradient-to-br", course.color)}>
+                <div className="absolute inset-0 flex items-center justify-center opacity-20 group-hover:scale-110 transition-transform duration-500">
+                  <BookOpen className="h-12 w-12" />
+                </div>
                 <div className="absolute top-3 left-3">
                   <Badge variant="secondary" className="bg-background/90 backdrop-blur-sm uppercase tracking-widest text-[10px] font-bold text-primary">
                     {course.level}

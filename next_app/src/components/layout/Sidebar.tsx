@@ -29,7 +29,7 @@ export function Sidebar() {
       <div className={cn("flex items-center justify-between p-4", isCollapsed ? "justify-center" : "")}>
         {!isCollapsed && (
           <div>
-            <h1 className="text-xl font-bold tracking-tight">Academia</h1>
+            <h1 className="text-xl font-bold tracking-tight">Enzira Begena</h1>
             <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mt-1">Portal</p>
           </div>
         )}

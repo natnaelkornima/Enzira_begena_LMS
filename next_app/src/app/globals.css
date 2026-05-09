@@ -14,14 +14,14 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "Zalando Sans SemiExpanded", sans-serif;
+    font-family: "Mozilla Text", sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   html {
     @apply font-sans;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Zalando Sans SemiExpanded", sans-serif;
+    font-family: "Mozilla Text", sans-serif;
     font-weight: 700;
     letter-spacing: -0.02em;
   }
@@ -36,8 +36,8 @@
 }
 
 @theme {
-  --font-heading: "Zalando Sans SemiExpanded", var(--font-sans);
-  --font-sans: "Zalando Sans SemiExpanded", sans-serif;
+  --font-heading: "Mozilla Text", var(--font-sans);
+  --font-sans: "Mozilla Text", sans-serif;
   
   --color-brand-accent: #981C00;
   --color-brand-accent-hover: #7A1600;
