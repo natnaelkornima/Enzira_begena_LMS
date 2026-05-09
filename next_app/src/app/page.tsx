@@ -1,14 +1,13 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ChevronRight, Play, BookOpen, ShieldCheck, BarChart3, Users, CheckCircle2 } from 'lucide-react';
+import { ChevronRight, Play, CheckCircle2, Sparkles, ArrowRight } from 'lucide-react';
 
 export default function LandingPage() {
   return (
-    <div className="bg-background min-h-screen flex flex-col font-sans">
+    <div className="bg-background min-h-screen flex flex-col font-sans selection:bg-primary/10 text-foreground overflow-x-hidden">
       {/* Navigation */}
-      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">A</div>
@@ -30,120 +29,129 @@ export default function LandingPage() {
         </div>
       </header>
 
-      <main className="flex-grow">
+      <main className="flex-grow flex flex-col">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
-          {/* Background Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-primary/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
+        <section className="relative min-h-[80vh] flex flex-col items-center justify-center pt-24 pb-16 overflow-hidden">
+          {/* Subtle Ambient Background Glows */}
+          <div className="absolute top-[10%] left-[-5%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[100px] animate-pulse-glow -z-10" />
+          <div className="absolute bottom-[0%] right-[-5%] w-[40%] h-[40%] bg-rose-500/5 rounded-full blur-[100px] animate-pulse-glow -z-10" style={{ animationDelay: '-3s' }} />
           
-          <div className="max-w-7xl mx-auto px-6 text-center">
-            <Badge variant="secondary" className="mb-6 rounded-full px-4 py-1.5 text-xs font-semibold bg-primary/10 text-primary border-primary/20">
-              Introducing Academia 2.0 <ChevronRight className="h-3 w-3 inline ml-1" />
-            </Badge>
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1] max-w-4xl mx-auto">
-              Master Your Craft with <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-rose-600">Expert Precision</span>
+          <div className="max-w-4xl mx-auto px-6 text-center animate-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 text-xs font-bold text-primary/80 mb-8 hover:bg-primary/10 transition-colors cursor-pointer group">
+              Featured in Fortune · Academia 2.0 <ChevronRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground mb-8 leading-[1.1]">
+              Professional Learning,<br />
+              <span className="text-primary/90">at Scale</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-              We handle the complex curriculum and interactive learning so you can focus on what matters: accelerating your career.
+            
+            <p className="text-base md:text-lg text-muted-foreground mb-10 max-w-xl mx-auto leading-relaxed">
+              Trusted by world-class institutions and modern teams for interactive training, 
+              curriculum design, and precision analytics.
             </p>
+            
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="rounded-full h-14 px-8 text-base font-semibold w-full sm:w-auto shadow-lg shadow-primary/20" asChild>
-                <Link href="/subscriptions">Start Learning Now</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full h-14 px-8 text-base font-semibold w-full sm:w-auto bg-background/50 backdrop-blur-sm" asChild>
-                <Link href="/courses/1"><Play className="h-4 w-4 mr-2" /> View Course Demo</Link>
+              <Button size="lg" className="rounded-full h-12 px-8 text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20" asChild>
+                <Link href="/subscriptions">Start Your Journey</Link>
               </Button>
             </div>
-            
-            {/* Social Proof */}
-            <div className="mt-16 flex items-center justify-center gap-4 text-sm text-muted-foreground font-medium">
-              <div className="flex -space-x-2">
-                <img src="https://i.pravatar.cc/100?img=1" className="w-8 h-8 rounded-full border-2 border-background" alt="User" />
-                <img src="https://i.pravatar.cc/100?img=2" className="w-8 h-8 rounded-full border-2 border-background" alt="User" />
-                <img src="https://i.pravatar.cc/100?img=3" className="w-8 h-8 rounded-full border-2 border-background" alt="User" />
+          </div>
+
+          {/* Minimalist Corner Markers */}
+          <div className="absolute top-[25%] left-[15%] w-1 h-1 bg-primary/20 rounded-full" />
+          <div className="absolute top-[25%] right-[15%] w-1 h-1 bg-primary/20 rounded-full" />
+          <div className="absolute bottom-[25%] left-[15%] w-1 h-1 bg-primary/20 rounded-full" />
+          <div className="absolute bottom-[25%] right-[15%] w-1 h-1 bg-primary/20 rounded-full" />
+        </section>
+
+        {/* Simplified Bento Section */}
+        <section className="py-24 border-t border-border/40 bg-muted/20">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-5 h-auto md:h-[500px]">
+              <div className="md:col-span-8 bg-background border border-border/40 rounded-3xl p-10 hover:shadow-xl hover:shadow-primary/5 transition-all group overflow-hidden relative">
+                <div className="max-w-sm">
+                  <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px]">Curriculum</Badge>
+                  <h3 className="text-3xl font-bold text-foreground mb-4 leading-tight">Expertly Crafted Pathways</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Deploy complex learning paths across your organization with surgical precision and ease.
+                  </p>
+                </div>
+                <div className="absolute bottom-[-20px] right-[-20px] w-1/2 h-1/2 bg-gradient-to-tl from-primary/5 to-transparent rounded-tl-3xl p-8 border-t border-l border-primary/10 group-hover:translate-y-[-10px] transition-transform duration-500">
+                  <div className="flex flex-col gap-3 opacity-20">
+                    <div className="h-3 w-full bg-primary rounded-full" />
+                    <div className="h-3 w-4/5 bg-primary rounded-full" />
+                  </div>
+                </div>
               </div>
-              <p>Trusted by <strong className="text-foreground">12,000+</strong> students globally</p>
+              
+              <div className="md:col-span-4 bg-background border border-border/40 rounded-3xl p-8 hover:shadow-xl hover:shadow-primary/5 transition-all flex flex-col justify-between">
+                <div>
+                  <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px]">Analytics</Badge>
+                  <h3 className="text-xl font-bold text-foreground mb-3">Real-time Insights</h3>
+                  <p className="text-muted-foreground text-xs leading-relaxed">
+                    Track progress and engagement with absolute precision.
+                  </p>
+                </div>
+                <div className="pt-8 flex items-center justify-center">
+                  <div className="relative w-24 h-24">
+                    <div className="absolute inset-0 border-2 border-primary/10 rounded-full" />
+                    <div className="absolute inset-0 border-2 border-primary border-t-transparent border-r-transparent rounded-full rotate-45" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="md:col-span-4 bg-background border border-border/40 rounded-3xl p-8 hover:shadow-xl hover:shadow-primary/5 transition-all">
+                <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px]">Security</Badge>
+                <h3 className="text-xl font-bold text-foreground mb-3">Enterprise Grade</h3>
+                <p className="text-muted-foreground text-xs leading-relaxed">
+                  SOC2 compliant and encrypted data at rest and in transit.
+                </p>
+              </div>
+
+              <div className="md:col-span-8 bg-background border border-border/40 rounded-3xl p-8 hover:shadow-xl hover:shadow-primary/5 transition-all flex items-center gap-10">
+                <div className="flex-1">
+                  <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px]">Global</Badge>
+                  <h3 className="text-2xl font-bold text-foreground mb-3">Scale Globally</h3>
+                  <p className="text-muted-foreground text-xs leading-relaxed">
+                    Localized content in 40+ languages with automation.
+                  </p>
+                </div>
+                <div className="flex-1 hidden md:flex items-center gap-2 opacity-30">
+                  {[1, 2, 3, 4].map(i => (
+                    <div key={i} className="w-10 h-10 rounded-full bg-primary/10 animate-pulse-glow" style={{ animationDelay: `${i * 0.5}s` }} />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Mockup Section */}
-        <section className="max-w-6xl mx-auto px-6 pb-32">
-          <div className="relative rounded-2xl md:rounded-[2.5rem] border border-border/50 bg-background/40 backdrop-blur-xl p-2 md:p-4 shadow-2xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-white/0 dark:from-white/5 dark:to-white/0 pointer-events-none" />
-            <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvU-OsDHucqOyvFyMJ2JHqKDd-SOhrMY5_DrzDp41nzwTAmf146tM6M6tmQzjHMUp1iE6oMo1pY_aoJ8cM6koxos9w_9V2upn2tpOTg1gY-1tcSfaopORwt44BopenJO37mXUwRLDd10QTXfiqivO_rX3a_zHOjfE7--0RQ8j3mVcFzPWTZ4IaEJEQuFlgCeyBIJCNe39G9KY8sG0Uld6Ib4mJq1pGUMN-GvjrKdGadVGBMG5OMHPf6f3UI3GcfpIULXXYl7txkh8" 
-              alt="Dashboard Preview" 
-              className="w-full rounded-xl md:rounded-[2rem] border border-border/50 shadow-sm"
-            />
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section id="features" className="py-24 bg-muted/30 border-y border-border/50">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Why Academia?</h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Everything you need to master new skills and advance your career, all in one beautifully designed platform.</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="bg-background/60 backdrop-blur-sm border-border/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8 space-y-4">
-                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
-                    <BookOpen className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-xl font-bold">World-Class Curriculum</h3>
-                  <p className="text-muted-foreground leading-relaxed">Learn from industry experts with courses designed to take you from beginner to mastery.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-background/60 backdrop-blur-sm border-border/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8 space-y-4">
-                  <div className="w-12 h-12 bg-green-500/10 text-green-600 rounded-xl flex items-center justify-center mb-6">
-                    <BarChart3 className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-xl font-bold">Interactive Learning</h3>
-                  <p className="text-muted-foreground leading-relaxed">Engage with dynamic video players, instant-feedback quizzes, and downloadable resources.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-background/60 backdrop-blur-sm border-border/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8 space-y-4">
-                  <div className="w-12 h-12 bg-blue-500/10 text-blue-600 rounded-xl flex items-center justify-center mb-6">
-                    <ShieldCheck className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-xl font-bold">Verified Certificates</h3>
-                  <p className="text-muted-foreground leading-relaxed">Earn verified certificates upon completion to showcase your skills to future employers.</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-32 relative overflow-hidden">
-          <div className="absolute inset-0 bg-primary/5" />
-          <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Ready to scale your knowledge?</h2>
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">Join thousands of students who are already advancing their careers with Academia LMS.</p>
-            <Button size="lg" className="rounded-full h-14 px-10 text-lg font-semibold shadow-xl shadow-primary/20" asChild>
-              <Link href="/subscriptions">Get Started Today</Link>
+        {/* Final CTA */}
+        <section className="py-32 text-center relative overflow-hidden">
+          <div className="max-w-2xl mx-auto px-6">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-8">Start your journey today.</h2>
+            <Button size="lg" className="rounded-full h-12 px-10 text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all" asChild>
+              <Link href="/signup">Get Started Free</Link>
             </Button>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 bg-background py-12">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded bg-primary flex items-center justify-center text-primary-foreground font-bold text-xs">A</div>
-            <span className="font-bold tracking-tight">Academia LMS</span>
+      <footer className="py-16 border-t border-border/40 bg-background">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10">
+          <div className="flex items-center gap-2 opacity-80">
+            <div className="w-1.5 h-4 bg-primary rounded-full mr-1" />
+            <span className="font-bold tracking-widest text-foreground text-sm">ENZIRA</span>
           </div>
-          <p className="text-sm text-muted-foreground">© 2024 Academia LMS. All rights reserved.</p>
-          <div className="flex gap-6 text-sm font-medium text-muted-foreground">
-            <Link href="#" className="hover:text-foreground transition-colors">Privacy</Link>
-            <Link href="#" className="hover:text-foreground transition-colors">Terms</Link>
+          <div className="flex gap-8 text-[11px] font-bold tracking-tighter text-muted-foreground">
+            <Link href="#" className="hover:text-primary transition-colors uppercase">Twitter</Link>
+            <Link href="#" className="hover:text-primary transition-colors uppercase">LinkedIn</Link>
+            <Link href="#" className="hover:text-primary transition-colors uppercase">Privacy</Link>
+            <Link href="#" className="hover:text-primary transition-colors uppercase">Terms</Link>
           </div>
+          <p className="text-[10px] font-bold tracking-[0.1em] text-muted-foreground opacity-50 uppercase">© 2024 ENZIRA CORP.</p>
         </div>
       </footer>
     </div>
