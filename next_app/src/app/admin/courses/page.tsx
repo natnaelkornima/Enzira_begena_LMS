@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { Edit2, BarChart2, Trash2, User, BookOpen, ChevronRight, ArrowRight, Calendar } from 'lucide-react';
+import { Edit2, BarChart2, Trash2, User, BookOpen, ChevronRight, ArrowRight, Calendar, PlusSquare } from 'lucide-react';
 
 export default function AdminCoursesPage() {
   return (
@@ -14,7 +15,7 @@ export default function AdminCoursesPage() {
           <h1 className="text-3xl font-bold tracking-tight mb-2">Course Management</h1>
           <p className="text-muted-foreground">Review, update, and manage the complete academic catalog.</p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-2">
           <Select defaultValue="all-categories">
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="All Categories" />
@@ -27,17 +28,12 @@ export default function AdminCoursesPage() {
               <SelectItem value="fine-arts">Fine Arts</SelectItem>
             </SelectContent>
           </Select>
-          <Select defaultValue="all-statuses">
-            <SelectTrigger className="w-[160px]">
-              <SelectValue placeholder="All Statuses" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all-statuses">All Statuses</SelectItem>
-              <SelectItem value="published">Published</SelectItem>
-              <SelectItem value="draft">Draft</SelectItem>
-              <SelectItem value="archived">Archived</SelectItem>
-            </SelectContent>
-          </Select>
+          <Button asChild className="rounded-[5px]">
+            <Link href="/admin/courses/create">
+              <PlusSquare className="h-4 w-4 mr-2" />
+              New Course
+            </Link>
+          </Button>
         </div>
       </section>
 

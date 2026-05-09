@@ -9,7 +9,7 @@ export default function AdminLayout({
   return (
     <div className="flex bg-background min-h-screen">
       <AdminSidebar />
-      <main className="ml-64 min-h-screen flex-1 bg-background">
+      <main className="min-h-screen flex-1 bg-background min-w-0">
         <AdminTopAppBar />
         {children}
       </main>
