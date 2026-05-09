@@ -17,16 +17,7 @@ export default function StudentDashboardPage() {
           <h1 className="text-3xl font-extrabold tracking-tight">Welcome back, Natnael.</h1>
           <p className="text-muted-foreground mt-2 text-lg">You're making great progress. Keep it up!</p>
         </div>
-        <Card className="p-4 flex items-center space-x-4">
-          <Avatar className="h-12 w-12">
-            <AvatarImage src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDhSkIJlFXZ_jlLgn-J8XkIT8PgBqrNdUuqVblQswdJzDJo_WeUBOBQVwhqYiKU_58eXC1Hx6h75vm-W-pnceMBbQBwPLlWQMr84Zhs4NhDLZx656p5pDup7YJp0LMNFg3i0fufE9QqvqaxG6U1Qa4dt6sdSZQJuhZCXgzPlta8zJf_Rwg_-c6sESBDZvTGiXFZ82anRsq8UG1js6x3SUR4a3d_E3y3YpBawQsuzYYo-36w2EDW1vofNn8WdGSHaTVMnvrip-jZRk" />
-            <AvatarFallback>JT</AvatarFallback>
-          </Avatar>
-          <div>
-            <p className="font-semibold text-sm">Julian Thorne</p>
-            <p className="text-xs text-muted-foreground">Academic Year 2024</p>
-          </div>
-        </Card>
+
       </header>
 
       {/* High-Level Progress Stats */}
