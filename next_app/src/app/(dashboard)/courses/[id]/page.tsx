@@ -11,24 +11,7 @@ import { BackButton } from '@/components/ui/back-button';
 export default function SingleCoursePage() {
   return (
     <div className="bg-background min-h-screen">
-      {/* TopAppBar */}
-      <header className="bg-card border-b sticky top-0 z-50">
-        <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
-          <div className="flex items-center gap-2">
-            <span className="text-xl font-bold">Enzira Begena LMS</span>
-          </div>
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/subscriptions">Pricing</Link>
-            <Link className="text-foreground border-b-2 border-primary" href="/courses/1">Courses</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/about">About</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/support">Support</Link>
-          </nav>
-          <div className="flex items-center gap-2">
-            <Button variant="ghost">Login</Button>
-            <Button>Get Started</Button>
-          </div>
-        </div>
-      </header>
+
 
       <main className="max-w-7xl mx-auto px-6 py-8">
         <div className="mb-6"><BackButton /></div>
@@ -54,13 +37,10 @@ export default function SingleCoursePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Column: Video Player & Tabs */}
           <div className="lg:col-span-8 space-y-6">
-            {/* Video Player Container */}
-            <div className="aspect-video bg-black rounded-lg overflow-hidden relative group border">
-              <img 
-                alt="Architectural Course Video Thumbnail" 
-                className="w-full h-full object-cover opacity-80" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMUSAgdNfsR_x9kjjSUCzHadPiheR_KwFyRZkwHI55gIkMaT1pKv8iH8ZOJ-DHpcojNCw7bq4JZPLv3LKnazF0DKk8FGDURzH0z0LFZ5Td0Jgx4ERi7lrRrmViEI2C0Yw94Mnm8yDlD6OmVjmJ6sszmiCeTqSliS0mq1RgJ53x-2JIuLoZmldcml2mkrlhI0NoetQFVOseRTRjvEvQsVE37DXZwAt9N3z1OJEK7TyVGLR3c_qyfHSz0n3pK4wsVv6AOC0pOBGeVLw"
-              />
+            <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg overflow-hidden relative group border">
+              <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+                <PlayCircle className="h-20 w-20 text-primary" />
+              </div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <Button size="icon" className="h-16 w-16 rounded-full shadow-2xl scale-110 hover:scale-125 transition-transform bg-primary hover:bg-primary">
                   <Play className="h-8 w-8 fill-current ml-1" />
@@ -113,8 +93,7 @@ export default function SingleCoursePage() {
                 <Card className="bg-gradient-to-br from-primary/5 to-transparent border-black/5 dark:border-white/5 rounded-[1.25rem] shadow-sm hover:shadow-md transition-shadow">
                   <CardContent className="p-6 flex items-start gap-5">
                     <Avatar className="h-16 w-16 border-2 border-background shadow-sm">
-                      <AvatarImage src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6lFMtygXsJBSM1GSnpiMBNm1AN61R4CDln_sxZM7eAd6ejWLEmAIb1nV59CgPohFDLbxyhUmQ201XYOppinESE8yLgk7D_hsNkq2W1MjqpZQrHElLs_s0EtKCZX5fcH4pe-LnvTK86Ejw1iGI6D4WXsH1dlmb_osQZ_nXHqN5Owof6yl-tNfmcZ4RKq6Kfdds4079PsiC_i0ccsnvLZngS37nmOMuyuXXlJf0IIi_hPAwDpDpFhMpzu6smN6-RNboigAFov7Bqis" />
-                      <AvatarFallback>HV</AvatarFallback>
+                      <AvatarFallback className="bg-primary/10 text-primary font-bold">HV</AvatarFallback>
                     </Avatar>
                     <div>
                       <h4 className="font-bold text-lg tracking-tight">Dr. Helena Vance</h4>
@@ -269,12 +248,6 @@ export default function SingleCoursePage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t py-6 mt-12">
-        <div className="max-w-7xl mx-auto px-6 text-center text-sm text-muted-foreground">
-          © 2024 Enzira Begena LMS. All rights reserved.
-        </div>
-      </footer>
     </div>
   );
 }

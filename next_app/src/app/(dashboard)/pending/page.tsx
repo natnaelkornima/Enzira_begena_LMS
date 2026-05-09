@@ -7,23 +7,9 @@ import { BackButton } from '@/components/ui/back-button';
 export default function PendingApprovalPage() {
   return (
     <div className="bg-background min-h-screen flex flex-col">
-      <header className="bg-card shadow-sm fixed top-0 w-full z-50 border-b">
-        <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
-          <div className="text-xl font-bold">Enzira Begena LMS</div>
-          <nav className="hidden md:flex space-x-6 text-sm font-medium">
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/subscriptions">Pricing</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/courses/1">Courses</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="#">About</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="#">Support</Link>
-          </nav>
-          <div className="flex items-center space-x-2">
-            <Button variant="ghost">Login</Button>
-            <Button>Get Started</Button>
-          </div>
-        </div>
-      </header>
 
-      <main className="flex-grow flex items-center justify-center p-6 pt-32 pb-16">
+
+      <main className="flex-grow flex items-center justify-center p-6 pt-12 pb-16">
         <div className="max-w-xl w-full">
           <BackButton />
           <Card className="text-center">
@@ -87,12 +73,6 @@ export default function PendingApprovalPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t py-6 mt-auto">
-        <div className="max-w-7xl mx-auto px-6 text-center text-sm text-muted-foreground">
-          © 2024 Enzira Begena LMS. All rights reserved.
-        </div>
-      </footer>
     </div>
   );
 }

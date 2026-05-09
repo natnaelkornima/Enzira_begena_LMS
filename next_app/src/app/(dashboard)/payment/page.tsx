@@ -9,24 +9,9 @@ import { BackButton } from '@/components/ui/back-button';
 export default function SubmitPaymentPage() {
   return (
     <div className="bg-background min-h-screen flex flex-col">
-      {/* TopAppBar */}
-      <header className="bg-card shadow-sm fixed top-0 w-full z-50 border-b">
-        <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
-          <div className="text-xl font-bold tracking-tight">Enzira Begena LMS</div>
-          <nav className="hidden md:flex space-x-6 text-sm font-medium">
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/subscriptions">Pricing</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/courses/1">Courses</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="#">About</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="#">Support</Link>
-          </nav>
-          <div className="flex items-center space-x-2">
-            <Button variant="ghost">Login</Button>
-            <Button>Get Started</Button>
-          </div>
-        </div>
-      </header>
 
-      <main className="flex-grow pt-[100px] pb-16">
+
+      <main className="flex-grow pt-8 pb-16">
         <div className="max-w-5xl mx-auto px-6">
           <BackButton />
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -57,15 +42,8 @@ export default function SubmitPaymentPage() {
               </CardContent>
             </Card>
 
-            <div className="relative h-48 md:h-64 rounded-xl overflow-hidden shadow-sm border hidden md:block">
-              <img 
-                alt="Workspace" 
-                className="w-full h-full object-cover" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvU-OsDHucqOyvFyMJ2JHqKDd-SOhrMY5_DrzDp41nzwTAmf146tM6M6tmQzjHMUp1iE6oMo1pY_aoJ8cM6koxos9w_9V2upn2tpOTg1gY-1tcSfaopORwt44BopenJO37mXUwRLDd10QTXfiqivO_rX3a_zHOjfE7--0RQ8j3mVcFzPWTZ4IaEJEQuFlgCeyBIJCNe39G9KY8sG0Uld6Ib4mJq1pGUMN-GvjrKdGadVGBMG5OMHPf6f3UI3GcfpIULXXYl7txkh8"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-                <p className="text-white text-sm italic font-medium">"Education is the most powerful weapon which you can use to change the world."</p>
-              </div>
+            <div className="relative h-48 md:h-64 rounded-xl overflow-hidden shadow-sm border hidden md:flex items-center justify-center bg-gradient-to-br from-primary/10 to-transparent p-6">
+                <p className="text-muted-foreground text-sm italic font-medium text-center">"Education is the most powerful weapon which you can use to change the world."</p>
             </div>
           </div>
 
@@ -126,12 +104,6 @@ export default function SubmitPaymentPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t py-6 mt-auto">
-        <div className="max-w-7xl mx-auto px-6 text-center text-sm text-muted-foreground">
-          © 2024 Enzira Begena LMS. All rights reserved.
-        </div>
-      </footer>
     </div>
   );
 }
