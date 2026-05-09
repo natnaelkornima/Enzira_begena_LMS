@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ChevronRight, Play, CheckCircle2, Sparkles, ArrowRight } from 'lucide-react';
+import { ChevronRight, Play, CheckCircle2, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -52,8 +52,11 @@ export default function LandingPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="rounded-full h-12 px-8 text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20" asChild>
-                <Link href="/subscriptions">Start Your Journey</Link>
+              <Button size="lg" className="rounded-full h-12 px-8 text-sm font-bold bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20 group" asChild>
+                <Link href="/subscriptions">
+                  Start Your Journey
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -68,59 +71,90 @@ export default function LandingPage() {
         {/* Simplified Bento Section */}
         <section className="py-24 border-t border-border/40 bg-muted/20">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-5 h-auto md:h-[500px]">
-              <div className="md:col-span-8 bg-background border border-border/40 rounded-3xl p-10 hover:shadow-xl hover:shadow-primary/5 transition-all group overflow-hidden relative">
-                <div className="max-w-sm">
-                  <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px]">Curriculum</Badge>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[500px]">
+              {/* Expertly Crafted Pathways */}
+              <div className="md:col-span-8 bg-white dark:bg-zinc-900 border border-primary/10 rounded-2xl p-10 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-500 group overflow-hidden relative bg-gradient-to-br from-white via-white to-primary/5 dark:from-zinc-900 dark:via-zinc-900 dark:to-primary/10">
+                <div className="max-w-sm relative z-10">
+                  <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px] font-bold">Curriculum</Badge>
                   <h3 className="text-3xl font-bold text-foreground mb-4 leading-tight">Expertly Crafted Pathways</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     Deploy complex learning paths across your organization with surgical precision and ease.
                   </p>
                 </div>
-                <div className="absolute bottom-[-20px] right-[-20px] w-1/2 h-1/2 bg-gradient-to-tl from-primary/5 to-transparent rounded-tl-3xl p-8 border-t border-l border-primary/10 group-hover:translate-y-[-10px] transition-transform duration-500">
-                  <div className="flex flex-col gap-3 opacity-20">
-                    <div className="h-3 w-full bg-primary rounded-full" />
-                    <div className="h-3 w-4/5 bg-primary rounded-full" />
+                <div className="absolute bottom-[-10px] right-[-10px] w-1/2 h-1/2 bg-gradient-to-tl from-primary/10 to-transparent rounded-tl-2xl p-6 border-t border-l border-primary/20 group-hover:translate-y-[-12px] group-hover:translate-x-[-12px] transition-all duration-700 flex flex-col justify-end gap-3 pointer-events-none">
+                  <div className="space-y-1.5">
+                    <div className="h-1.5 w-full bg-primary/20 rounded-full overflow-hidden">
+                      <div className="h-full w-3/4 bg-primary rounded-full animate-pulse" />
+                    </div>
+                    <div className="h-1.5 w-4/5 bg-primary/20 rounded-full overflow-hidden">
+                      <div className="h-full w-1/2 bg-primary rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
+                    </div>
+                  </div>
+                  <div className="flex gap-1.5">
+                    <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center text-[9px] font-bold text-primary">01</div>
+                    <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center text-[9px] font-bold text-primary">02</div>
+                    <div className="w-7 h-7 rounded-lg bg-primary flex items-center justify-center text-[9px] font-bold text-primary-foreground shadow-lg shadow-primary/20">03</div>
                   </div>
                 </div>
               </div>
               
-              <div className="md:col-span-4 bg-background border border-border/40 rounded-3xl p-8 hover:shadow-xl hover:shadow-primary/5 transition-all flex flex-col justify-between">
+              {/* Real-time Insights */}
+              <div className="md:col-span-4 bg-white dark:bg-zinc-900 border border-primary/10 rounded-2xl p-8 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-500 flex flex-col justify-between group bg-gradient-to-br from-white via-white to-primary/5 dark:from-zinc-900 dark:via-zinc-900 dark:to-primary/10">
                 <div>
-                  <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px]">Analytics</Badge>
+                  <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px] font-bold">Analytics</Badge>
                   <h3 className="text-xl font-bold text-foreground mb-3">Real-time Insights</h3>
                   <p className="text-muted-foreground text-xs leading-relaxed">
                     Track progress and engagement with absolute precision.
                   </p>
                 </div>
-                <div className="pt-8 flex items-center justify-center">
-                  <div className="relative w-24 h-24">
-                    <div className="absolute inset-0 border-2 border-primary/10 rounded-full" />
-                    <div className="absolute inset-0 border-2 border-primary border-t-transparent border-r-transparent rounded-full rotate-45" />
+                <div className="pt-8 flex items-center justify-center relative">
+                  <div className="relative w-24 h-24 flex items-center justify-center">
+                    <div className="absolute inset-0 border-[3px] border-primary/10 rounded-full" />
+                    <div className="absolute inset-0 border-[3px] border-primary border-t-transparent border-r-transparent rounded-full rotate-[120deg] group-hover:rotate-[240deg] transition-transform duration-1000" />
+                    <span className="text-xl font-bold text-primary group-hover:scale-110 transition-transform">84%</span>
+                  </div>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
+                </div>
+              </div>
+
+              {/* Enterprise Grade */}
+              <div className="md:col-span-4 bg-white dark:bg-zinc-900 border border-primary/10 rounded-2xl p-8 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-500 flex flex-col justify-between group bg-gradient-to-br from-white via-white to-primary/5 dark:from-zinc-900 dark:via-zinc-900 dark:to-primary/10">
+                <div>
+                  <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px] font-bold">Security</Badge>
+                  <h3 className="text-xl font-bold text-foreground mb-3">Enterprise Grade</h3>
+                  <p className="text-muted-foreground text-xs leading-relaxed">
+                    SOC2 compliant and encrypted data at rest and in transit.
+                  </p>
+                </div>
+                <div className="pt-8 flex justify-end">
+                  <div className="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm border border-primary/10">
+                    <ShieldCheck className="h-7 w-7" />
                   </div>
                 </div>
               </div>
 
-              <div className="md:col-span-4 bg-background border border-border/40 rounded-3xl p-8 hover:shadow-xl hover:shadow-primary/5 transition-all">
-                <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px]">Security</Badge>
-                <h3 className="text-xl font-bold text-foreground mb-3">Enterprise Grade</h3>
-                <p className="text-muted-foreground text-xs leading-relaxed">
-                  SOC2 compliant and encrypted data at rest and in transit.
-                </p>
-              </div>
-
-              <div className="md:col-span-8 bg-background border border-border/40 rounded-3xl p-8 hover:shadow-xl hover:shadow-primary/5 transition-all flex items-center gap-10">
+              {/* Scale Globally */}
+              <div className="md:col-span-8 bg-white dark:bg-zinc-900 border border-primary/10 rounded-2xl p-8 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-500 flex items-center gap-10 group bg-gradient-to-br from-white via-white to-primary/5 dark:from-zinc-900 dark:via-zinc-900 dark:to-primary/10">
                 <div className="flex-1">
-                  <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px]">Global</Badge>
+                  <Badge variant="secondary" className="bg-primary/5 text-primary border-none mb-5 uppercase tracking-widest text-[10px] font-bold">Global</Badge>
                   <h3 className="text-2xl font-bold text-foreground mb-3">Scale Globally</h3>
                   <p className="text-muted-foreground text-xs leading-relaxed">
-                    Localized content in 40+ languages with automation.
+                    Localized content in 40+ languages with automated delivery systems.
                   </p>
                 </div>
-                <div className="flex-1 hidden md:flex items-center gap-2 opacity-30">
-                  {[1, 2, 3, 4].map(i => (
-                    <div key={i} className="w-10 h-10 rounded-full bg-primary/10 animate-pulse-glow" style={{ animationDelay: `${i * 0.5}s` }} />
+                <div className="flex-1 hidden md:flex items-center -space-x-3">
+                  {[12, 34, 45, 67].map((id, i) => (
+                    <div key={id} className="w-12 h-12 rounded-full border-[3px] border-white dark:border-zinc-900 bg-muted overflow-hidden hover:translate-y-[-4px] transition-transform cursor-pointer relative z-[1]" style={{ transitionDelay: `${i * 100}ms` }}>
+                      <img 
+                        src={`https://i.pravatar.cc/150?u=${id}`} 
+                        alt="User" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   ))}
+                  <div className="w-12 h-12 rounded-full border-[3px] border-white dark:border-zinc-900 bg-primary/10 flex items-center justify-center text-[10px] font-bold text-primary relative z-0">
+                    +40
+                  </div>
                 </div>
               </div>
             </div>
@@ -131,8 +165,11 @@ export default function LandingPage() {
         <section className="py-32 text-center relative overflow-hidden">
           <div className="max-w-2xl mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-8">Start your journey today.</h2>
-            <Button size="lg" className="rounded-full h-12 px-10 text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all" asChild>
-              <Link href="/signup">Get Started Free</Link>
+            <Button size="lg" className="rounded-full h-12 px-10 text-sm font-bold bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all group" asChild>
+              <Link href="/signup">
+                Get Started Free
+                <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
           </div>
         </section>
@@ -141,9 +178,9 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="py-16 border-t border-border/40 bg-background">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10">
-          <div className="flex items-center gap-2 opacity-80">
-            <div className="w-1.5 h-4 bg-primary rounded-full mr-1" />
-            <span className="font-bold tracking-widest text-foreground text-sm">ENZIRA</span>
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded bg-primary flex items-center justify-center text-primary-foreground font-bold text-[10px]">A</div>
+            <span className="font-bold tracking-tight text-foreground text-sm uppercase">Academia LMS</span>
           </div>
           <div className="flex gap-8 text-[11px] font-bold tracking-tighter text-muted-foreground">
             <Link href="#" className="hover:text-primary transition-colors uppercase">Twitter</Link>
@@ -151,7 +188,7 @@ export default function LandingPage() {
             <Link href="#" className="hover:text-primary transition-colors uppercase">Privacy</Link>
             <Link href="#" className="hover:text-primary transition-colors uppercase">Terms</Link>
           </div>
-          <p className="text-[10px] font-bold tracking-[0.1em] text-muted-foreground opacity-50 uppercase">© 2024 ENZIRA CORP.</p>
+          <p className="text-[10px] font-bold tracking-[0.1em] text-muted-foreground opacity-50 uppercase">© 2024 Academia LMS. All rights reserved.</p>
         </div>
       </footer>
     </div>

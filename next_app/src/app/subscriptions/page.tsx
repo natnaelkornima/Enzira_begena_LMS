@@ -26,10 +26,10 @@ export default function SubscriptionsPage() {
 
       <main className="max-w-7xl mx-auto px-6 pt-32 pb-16">
         {/* Hero Section */}
-        <div className="mb-6"><BackButton /></div>
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Elevate Your Intellectual Journey</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Choose a plan that matches your academic rigor. From individual learners to global institutions, we provide the tools for mastery.</p>
+        <BackButton />
+        <div className="mb-16">
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">Elevate Your Intellectual Journey</h1>
+          <p className="text-base text-muted-foreground max-w-2xl leading-relaxed">Choose a plan that matches your academic rigor. From individual learners to global institutions, we provide the tools for mastery.</p>
         </div>
 
         {/* Pricing Grid */}

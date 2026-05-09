@@ -32,7 +32,7 @@ export default function PendingApprovalPage() {
                 <Clock className="h-10 w-10 text-primary" />
               </div>
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tight">Payment Pending</h1>
+                <h1 className="text-2xl md:text-3xl font-bold tracking-tight">Payment Pending</h1>
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Your payment is under review. This usually takes between 2 to 4 hours. We will notify you via email as soon as it's processed.
                 </p>

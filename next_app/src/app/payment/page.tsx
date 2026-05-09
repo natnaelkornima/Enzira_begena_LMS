@@ -34,8 +34,8 @@ export default function SubmitPaymentPage() {
             <div className="md:col-span-5 flex flex-col space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle className="text-3xl">Payment Verification</CardTitle>
-                <CardDescription className="text-base mt-2">
+                <CardTitle className="text-2xl md:text-3xl font-bold tracking-tight">Payment Verification</CardTitle>
+                <CardDescription className="text-sm mt-2">
                   Complete your enrollment by submitting your transaction details. Our academic administrators verify all manual transfers within 24 hours.
                 </CardDescription>
               </CardHeader>

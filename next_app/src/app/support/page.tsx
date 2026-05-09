@@ -26,10 +26,10 @@ export default function SupportPage() {
 
       <main className="flex-1 pt-32 pb-24">
         {/* Hero Section */}
-        <section className="max-w-3xl mx-auto px-6 mb-20 text-center">
-          <div className="flex justify-center mb-8"><BackButton /></div>
-          <h1 className="text-5xl font-extrabold tracking-tight mb-6">How can we help you?</h1>
-          <p className="text-lg text-muted-foreground mb-10">Search our knowledge base or browse categories below to find exactly what you need.</p>
+        <section className="max-w-4xl mx-auto px-6 mb-16">
+          <BackButton />
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6">How can we help you?</h1>
+          <p className="text-base text-muted-foreground mb-10">Search our knowledge base or browse categories below to find exactly what you need.</p>
           
           <div className="relative max-w-2xl mx-auto">
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -45,7 +45,7 @@ export default function SupportPage() {
 
         {/* Categories Grid */}
         <section className="max-w-5xl mx-auto px-6 mb-24">
-          <h2 className="text-2xl font-bold tracking-tight mb-8 text-center">Browse by Category</h2>
+          <h2 className="text-xl md:text-2xl font-bold tracking-tight mb-8">Browse by Category</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { icon: BookOpen, title: "Course Access", desc: "Troubleshoot video players, quizzes, and missing certificates." },

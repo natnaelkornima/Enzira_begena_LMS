@@ -35,7 +35,7 @@ export default function SingleCoursePage() {
         {/* Header Section: Course Identity & Progress */}
         <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Advanced Computational Architecture &amp; Digital Tectonics</h1>
+            <h1 className="text-2xl md:text-3xl font-bold tracking-tight">Advanced Computational Architecture &amp; Digital Tectonics</h1>
             <p className="text-muted-foreground mt-2 flex items-center gap-2">
               <User className="h-4 w-4" />
               Instructor: Dr. Helena Vance
@@ -104,7 +104,7 @@ export default function SingleCoursePage() {
               
               <TabsContent value="description" className="mt-8 space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
                 <div>
-                  <h3 className="text-2xl font-extrabold tracking-tight mb-3">About this Lesson</h3>
+                  <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-3">About this Lesson</h3>
                   <p className="text-muted-foreground leading-loose text-[15px]">
                     In this section, we delve into the core principles of parametric design. We will explore how algorithmic thinking translates into physical structures and how computational tools allow for unprecedented formal experimentation. This lesson focuses on the relationship between mathematical constraints and aesthetic output.
                   </p>
@@ -126,7 +126,7 @@ export default function SingleCoursePage() {
               </TabsContent>
               
               <TabsContent value="resources" className="mt-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
-                <h3 className="text-2xl font-extrabold tracking-tight mb-6">Downloadable Resources</h3>
+                <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-6">Downloadable Resources</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="group flex items-center gap-4 p-4 rounded-2xl border border-black/5 dark:border-white/5 bg-gradient-to-br from-primary/5 to-transparent hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-primary/20 transition-all duration-300 cursor-pointer">
                     <div className="bg-background shadow-sm border border-black/5 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300 text-primary">

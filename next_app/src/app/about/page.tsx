@@ -29,15 +29,15 @@ export default function AboutPage() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
         {/* Hero Section */}
-        <section className="max-w-5xl mx-auto px-6 mb-24 text-center mt-12">
-          <div className="flex justify-center mb-10"><BackButton /></div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-8 border border-primary/20">
+        <section className="max-w-5xl mx-auto px-6 mb-24 mt-12">
+          <BackButton />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 text-primary text-[10px] font-bold uppercase tracking-widest mb-6 border border-primary/10">
             <Sparkles className="h-4 w-4" /> The Future of Learning
           </div>
-          <h1 className="text-6xl md:text-8xl font-extrabold tracking-tighter mb-8 leading-[1.05]">
-            Redefining the <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground via-primary to-foreground">Academic Standard</span>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+            Redefining the <br /> <span className="text-primary/90">Academic Standard</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-medium">
+          <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
             We engineer distraction-free, highly engaging digital ecosystems where knowledge transfers seamlessly. No clutter. Just pure mastery.
           </p>
         </section>
@@ -100,9 +100,9 @@ export default function AboutPage() {
               { icon: Globe, label: "Countries", value: "145" },
               { icon: GraduationCap, label: "Certifications", value: "85k+" },
             ].map((stat, i) => (
-              <Card key={i} className="p-8 flex flex-col items-center text-center bg-transparent border-black/5 dark:border-white/5 rounded-[2rem] hover:bg-muted/30 transition-colors duration-300">
-                <h3 className="text-5xl font-extrabold tracking-tighter mb-2">{stat.value}</h3>
-                <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">{stat.label}</p>
+              <Card key={i} className="p-6 flex flex-col items-center text-center bg-transparent border-border/40 rounded-3xl hover:bg-muted/30 transition-colors duration-300">
+                <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-1">{stat.value}</h3>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{stat.label}</p>
               </Card>
             ))}
           </div>
