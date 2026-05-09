@@ -10,10 +10,9 @@ export default function SupportPage() {
       {/* Top Navigation Bar */}
       <header className="bg-card/80 backdrop-blur-md shadow-sm fixed w-full top-0 z-50 border-b">
         <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
-          <Link href="/" className="text-xl font-bold tracking-tight">Academia LMS</Link>
+          <Link href="/" className="text-xl font-bold tracking-tight">Enzira Begena LMS</Link>
           <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
             <Link className="text-muted-foreground hover:text-primary transition-colors" href="/subscriptions">Pricing</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/courses/1">Courses</Link>
             <Link className="text-muted-foreground hover:text-primary transition-colors" href="/about">About</Link>
             <Link className="text-foreground border-b-2 border-primary pb-1" href="/support">Support</Link>
           </nav>
@@ -87,7 +86,7 @@ export default function SupportPage() {
       {/* Footer */}
       <footer className="border-t py-12 mt-auto bg-muted/20">
         <div className="max-w-7xl mx-auto px-6 text-center text-sm text-muted-foreground">
-          © 2024 Academia LMS. Crafted with precision.
+          © 2024 Enzira Begena LMS. Crafted with precision.
         </div>
       </footer>
     </div>

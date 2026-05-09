@@ -84,7 +84,7 @@ export default function AdminSubscriptionsPage() {
           <TableBody>
             {[
               { init: 'JD', name: 'Julianne Devis', email: 'j.devis@university.edu', txn: 'TXN-882910394', date: 'Oct 24, 2023', amt: '$199.00', status: 'Pending' },
-              { init: 'MK', name: 'Marcus Knight', email: 'm.knight@academy.org', txn: 'TXN-773821094', date: 'Oct 23, 2023', amt: '$49.00', status: 'Pending' },
+              { init: 'MK', name: 'Marcus Knight', email: 'm.knight@enzira.org', txn: 'TXN-773821094', date: 'Oct 23, 2023', amt: '$49.00', status: 'Pending' },
               { init: 'SL', name: 'Sarah Lopez', email: 's.lopez@edu.net', txn: 'TXN-112093485', date: 'Oct 23, 2023', amt: '$129.00', status: 'Pending' },
             ].map((row, i) => (
               <TableRow key={i}>

@@ -15,7 +15,7 @@ export default function SingleCoursePage() {
       <header className="bg-card border-b sticky top-0 z-50">
         <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold">Academia LMS</span>
+            <span className="text-xl font-bold">Enzira Begena LMS</span>
           </div>
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
             <Link className="text-muted-foreground hover:text-primary transition-colors" href="/subscriptions">Pricing</Link>
@@ -272,7 +272,7 @@ export default function SingleCoursePage() {
       {/* Footer */}
       <footer className="border-t py-6 mt-12">
         <div className="max-w-7xl mx-auto px-6 text-center text-sm text-muted-foreground">
-          © 2024 Academia LMS. All rights reserved.
+          © 2024 Enzira Begena LMS. All rights reserved.
         </div>
       </footer>
     </div>

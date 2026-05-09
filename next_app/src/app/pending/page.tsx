@@ -9,7 +9,7 @@ export default function PendingApprovalPage() {
     <div className="bg-background min-h-screen flex flex-col">
       <header className="bg-card shadow-sm fixed top-0 w-full z-50 border-b">
         <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
-          <div className="text-xl font-bold">Academia LMS</div>
+          <div className="text-xl font-bold">Enzira Begena LMS</div>
           <nav className="hidden md:flex space-x-6 text-sm font-medium">
             <Link className="text-muted-foreground hover:text-primary transition-colors" href="/subscriptions">Pricing</Link>
             <Link className="text-muted-foreground hover:text-primary transition-colors" href="/courses/1">Courses</Link>
@@ -90,7 +90,7 @@ export default function PendingApprovalPage() {
       {/* Footer */}
       <footer className="border-t py-6 mt-auto">
         <div className="max-w-7xl mx-auto px-6 text-center text-sm text-muted-foreground">
-          © 2024 Academia LMS. All rights reserved.
+          © 2024 Enzira Begena LMS. All rights reserved.
         </div>
       </footer>
     </div>

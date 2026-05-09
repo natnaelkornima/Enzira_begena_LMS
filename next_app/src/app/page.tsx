@@ -10,13 +10,12 @@ export default function LandingPage() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">A</div>
-            <span className="font-bold text-xl tracking-tight">Academia</span>
+            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">E</div>
+            <span className="font-bold text-xl tracking-tight">Enzira Begena</span>
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
             <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</Link>
             <Link href="/subscriptions" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</Link>
-            <Link href="/courses/1" className="text-muted-foreground hover:text-foreground transition-colors">Catalog</Link>
             <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About</Link>
             <Link href="/support" className="text-muted-foreground hover:text-foreground transition-colors">Support</Link>
           </nav>
@@ -38,7 +37,7 @@ export default function LandingPage() {
           
           <div className="max-w-4xl mx-auto px-6 text-center animate-reveal">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 text-xs font-bold text-primary/80 mb-8 hover:bg-primary/10 transition-colors cursor-pointer group">
-              Featured in Fortune · Academia 2.0 <ChevronRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
+              Featured in Fortune · Enzira Begena 2.0 <ChevronRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
             </div>
             
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground mb-8 leading-[1.1]">
@@ -144,12 +143,8 @@ export default function LandingPage() {
                 </div>
                 <div className="flex-1 hidden md:flex items-center -space-x-3">
                   {[12, 34, 45, 67].map((id, i) => (
-                    <div key={id} className="w-12 h-12 rounded-full border-[3px] border-white dark:border-zinc-900 bg-muted overflow-hidden hover:translate-y-[-4px] transition-transform cursor-pointer relative z-[1]" style={{ transitionDelay: `${i * 100}ms` }}>
-                      <img 
-                        src={`https://i.pravatar.cc/150?u=${id}`} 
-                        alt="User" 
-                        className="w-full h-full object-cover"
-                      />
+                    <div key={id} className="w-12 h-12 rounded-full border-[3px] border-white dark:border-zinc-900 bg-muted-foreground/10 overflow-hidden hover:translate-y-[-4px] transition-transform cursor-pointer relative z-[1] flex items-center justify-center" style={{ transitionDelay: `${i * 100}ms` }}>
+                      <span className="text-[10px] font-bold text-muted-foreground/40">U{i+1}</span>
                     </div>
                   ))}
                   <div className="w-12 h-12 rounded-full border-[3px] border-white dark:border-zinc-900 bg-primary/10 flex items-center justify-center text-[10px] font-bold text-primary relative z-0">
@@ -179,8 +174,8 @@ export default function LandingPage() {
       <footer className="py-16 border-t border-border/40 bg-background">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded bg-primary flex items-center justify-center text-primary-foreground font-bold text-[10px]">A</div>
-            <span className="font-bold tracking-tight text-foreground text-sm uppercase">Academia LMS</span>
+            <div className="w-6 h-6 rounded bg-primary flex items-center justify-center text-primary-foreground font-bold text-[10px]">E</div>
+            <span className="font-bold tracking-tight text-foreground text-sm uppercase">Enzira Begena LMS</span>
           </div>
           <div className="flex gap-8 text-[11px] font-bold tracking-tighter text-muted-foreground">
             <Link href="#" className="hover:text-primary transition-colors uppercase">Twitter</Link>
@@ -188,7 +183,7 @@ export default function LandingPage() {
             <Link href="#" className="hover:text-primary transition-colors uppercase">Privacy</Link>
             <Link href="#" className="hover:text-primary transition-colors uppercase">Terms</Link>
           </div>
-          <p className="text-[10px] font-bold tracking-[0.1em] text-muted-foreground opacity-50 uppercase">© 2024 Academia LMS. All rights reserved.</p>
+          <p className="text-[10px] font-bold tracking-[0.1em] text-muted-foreground opacity-50 uppercase">© 2024 Enzira Begena LMS. All rights reserved.</p>
         </div>
       </footer>
     </div>

@@ -49,7 +49,7 @@ export default function ProfilePage() {
             </div>
             <div className="space-y-2 md:col-span-2">
               <Label htmlFor="email">Email Address</Label>
-              <Input id="email" type="email" defaultValue="alex.sterling@academia.edu" />
+              <Input id="email" type="email" defaultValue="alex.sterling@enzira.edu" />
             </div>
             <div className="space-y-2 md:col-span-2">
               <Label htmlFor="bio">Short Bio</Label>

@@ -10,10 +10,9 @@ export default function AboutPage() {
       {/* Top Navigation Bar */}
       <header className="bg-card/80 backdrop-blur-md shadow-sm fixed w-full top-0 z-50 border-b">
         <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
-          <Link href="/" className="text-xl font-bold tracking-tight">Academia LMS</Link>
+          <Link href="/" className="text-xl font-bold tracking-tight">Enzira Begena LMS</Link>
           <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
             <Link className="text-muted-foreground hover:text-primary transition-colors" href="/subscriptions">Pricing</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/courses/1">Courses</Link>
             <Link className="text-foreground border-b-2 border-primary pb-1" href="/about">About</Link>
             <Link className="text-muted-foreground hover:text-primary transition-colors" href="/support">Support</Link>
           </nav>
@@ -52,7 +51,7 @@ export default function AboutPage() {
               <Target className="h-10 w-10 text-primary mb-8" />
               <h2 className="text-4xl font-extrabold tracking-tight mb-6">Our Mission</h2>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-                Founded in 2024, Academia LMS started as a research project at a leading university. Frustrated by clunky interfaces, we set out to design a platform that feels less like a chore and more like a premium consumer application.
+                Founded in 2024, Enzira Begena LMS started as a research project at a leading university. Frustrated by clunky interfaces, we set out to design a platform that feels less like a chore and more like a premium consumer application.
               </p>
             </Card>
 
