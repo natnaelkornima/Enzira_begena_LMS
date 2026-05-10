@@ -8,12 +8,14 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex bg-background min-h-screen">
+    <div className="flex flex-col md:flex-row bg-background min-h-screen">
       <MobileNav />
       <Sidebar />
       <main className="flex-1 bg-background min-w-0 flex flex-col">
-        <TopHeader />
-        <div className="flex-1">
+        <div className="hidden md:block">
+          <TopHeader />
+        </div>
+        <div className="flex-1 pb-24 md:pb-0">
           {children}
         </div>
         <footer className="border-t py-6 mt-auto">

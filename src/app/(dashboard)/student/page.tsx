@@ -11,12 +11,12 @@ import { BackButton } from '@/components/ui/back-button';
 
 export default function StudentDashboardPage() {
   return (
-    <div className="p-4 md:p-8 lg:p-12 max-w-7xl mx-auto space-y-8 md:space-y-10 animate-in fade-in duration-500">
+    <div className="p-4 sm:p-6 md:p-8 lg:p-12 max-w-7xl mx-auto space-y-6 md:space-y-10 animate-in fade-in duration-500">
       {/* Welcome Section */}
-      <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-        <div>
-          <h1 className="text-3xl font-extrabold tracking-tight">Welcome back, Natnael.</h1>
-          <p className="text-muted-foreground mt-2 text-lg">You're making great progress. Keep it up!</p>
+      <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-8">
+        <div className="space-y-1">
+          <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">Welcome back, Natnael.</h1>
+          <p className="text-muted-foreground text-sm md:text-lg">You're making great progress. Keep it up!</p>
         </div>
         <div className="relative w-full md:w-80">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -28,7 +28,7 @@ export default function StudentDashboardPage() {
       </header>
 
       {/* High-Level Progress Stats */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
         <Card className="p-5 flex flex-row items-center gap-5 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-primary/10 hover:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden">
           <div className="absolute -right-4 -top-4 h-24 w-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors"></div>
           <div className="flex items-center justify-center h-14 w-14 shrink-0 rounded-2xl bg-background/50 backdrop-blur-sm shadow-sm border border-primary/20 text-primary group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10">
@@ -71,7 +71,7 @@ export default function StudentDashboardPage() {
           <h2 className="text-2xl font-bold tracking-tight">In Progress</h2>
           <Button variant="ghost" className="text-sm text-primary">View all <ChevronRight className="h-4 w-4 ml-1" /></Button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {[
             {
               title: "Begena Introduction",
