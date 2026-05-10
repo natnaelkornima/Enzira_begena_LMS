@@ -2,25 +2,13 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { GraduationCap, Users, Globe, BookOpen, Target, Zap } from 'lucide-react';
+import { SiteHeader } from '@/components/layout/SiteHeader';
 
 export default function AboutPage() {
   return (
     <div className="bg-background min-h-screen flex flex-col font-sans">
       {/* Top Navigation Bar */}
-      <header className="fixed w-full top-0 z-50 border-b bg-background/80 backdrop-blur-md">
-        <div className="flex justify-between items-center w-full px-6 py-4 max-w-5xl mx-auto">
-          <Link href="/" className="text-xl font-bold tracking-tighter">Enzira Begena<span className="text-primary">.</span></Link>
-          <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/subscriptions">Pricing</Link>
-            <Link className="text-foreground font-semibold" href="/about">About</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/support">Support</Link>
-          </nav>
-          <div className="flex items-center space-x-4">
-            <Link href="/login" className="text-sm font-medium text-muted-foreground hover:text-foreground">Sign in</Link>
-            <Button size="sm" className="rounded-[5px] px-5 font-semibold">Get Started</Button>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="flex-1 pt-32 pb-24 space-y-32">
         

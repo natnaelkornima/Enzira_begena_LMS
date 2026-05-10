@@ -11,7 +11,7 @@ import { BackButton } from '@/components/ui/back-button';
 
 export default function StudentDashboardPage() {
   return (
-    <div className="p-8 md:p-12 max-w-7xl mx-auto space-y-10 animate-in fade-in duration-500">
+    <div className="p-4 md:p-8 lg:p-12 max-w-7xl mx-auto space-y-8 md:space-y-10 animate-in fade-in duration-500">
       {/* Welcome Section */}
       <header className="flex flex-col md:flex-row justify-between items-end gap-8">
         <div>

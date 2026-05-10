@@ -4,25 +4,13 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { CheckCircle2, XCircle } from 'lucide-react';
 import { BackButton } from '@/components/ui/back-button';
+import { SiteHeader } from '@/components/layout/SiteHeader';
 
 export default function SubscriptionsPage() {
   return (
     <div className="bg-background min-h-screen">
       {/* Top Navigation Bar */}
-      <header className="bg-card shadow-sm fixed w-full top-0 z-50 border-b">
-        <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
-          <div className="text-xl font-bold">Enzira Begena LMS</div>
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <Link className="text-foreground border-b-2 border-primary pb-1" href="/subscriptions">Pricing</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/about">About</Link>
-            <Link className="text-muted-foreground hover:text-primary transition-colors" href="/support">Support</Link>
-          </nav>
-          <div className="flex items-center space-x-2">
-            <Button variant="ghost">Login</Button>
-            <Button>Get Started</Button>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="max-w-7xl mx-auto px-6 pt-32 pb-16">
         {/* Hero Section */}

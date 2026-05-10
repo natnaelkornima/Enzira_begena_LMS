@@ -1,35 +1,14 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ChevronRight, Play, CheckCircle2, Sparkles, ArrowRight, ShieldCheck, Menu } from 'lucide-react';
+import { ChevronRight, Play, CheckCircle2, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react';
+import { SiteHeader } from '@/components/layout/SiteHeader';
 
 export default function LandingPage() {
   return (
     <div className="bg-background min-h-screen flex flex-col font-sans selection:bg-primary/10 text-foreground overflow-x-hidden">
       {/* Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">E</div>
-            <span className="font-bold text-xl tracking-tight">Enzira Begena</span>
-          </div>
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</Link>
-            <Link href="/subscriptions" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</Link>
-            <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About</Link>
-            <Link href="/support" className="text-muted-foreground hover:text-foreground transition-colors">Support</Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Link href="/login" className="text-sm font-semibold hidden md:block hover:text-primary transition-colors">Log in</Link>
-            <Button className="px-6 hidden md:flex" asChild>
-              <Link href="/signup">Get Started</Link>
-            </Button>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-6 w-6" />
-            </Button>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="flex-grow flex flex-col">
         {/* Hero Section */}
@@ -43,8 +22,8 @@ export default function LandingPage() {
               Featured in Fortune · Enzira Begena 2.0 <ChevronRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground mb-8 leading-[1.1]">
-              Professional Learning,<br />
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-foreground mb-8 leading-[1.1]">
+              Professional Learning,<br className="hidden sm:block" />
               <span className="text-primary/90">at Scale</span>
             </h1>
             
@@ -73,7 +52,7 @@ export default function LandingPage() {
         {/* Simplified Bento Section */}
         <section className="py-24 border-t border-border/40 bg-muted/20">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[500px]">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:min-h-[500px]">
               {/* Expertly Crafted Pathways */}
               <div className="md:col-span-8 bg-white dark:bg-zinc-900 border border-primary/10 rounded-[5px] p-10 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-500 group overflow-hidden relative bg-gradient-to-br from-white via-white to-primary/5 dark:from-zinc-900 dark:via-zinc-900 dark:to-primary/10">
                 <div className="max-w-sm relative z-10">

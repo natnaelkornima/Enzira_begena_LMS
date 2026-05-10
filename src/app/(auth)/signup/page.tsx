@@ -32,7 +32,7 @@ export default function SignUpPage() {
         </div>
 
         {/* Right Side - Form Panel */}
-        <div className="w-full md:w-7/12 p-6 md:p-8 flex flex-col justify-center bg-background">
+        <div className="w-full md:w-7/12 p-4 sm:p-6 md:p-8 flex flex-col justify-center bg-background">
           <div className="w-full max-w-[300px] mx-auto">
             {/* Mobile Logo */}
             <div className="text-xl font-black tracking-tighter text-primary mb-3 md:hidden">E<span className="text-primary/40">.</span></div>
