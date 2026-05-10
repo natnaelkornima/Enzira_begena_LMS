@@ -13,7 +13,7 @@ export default function StudentDashboardPage() {
   return (
     <div className="p-4 md:p-8 lg:p-12 max-w-7xl mx-auto space-y-8 md:space-y-10 animate-in fade-in duration-500">
       {/* Welcome Section */}
-      <header className="flex flex-col md:flex-row justify-between items-end gap-8">
+      <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
         <div>
           <h1 className="text-3xl font-extrabold tracking-tight">Welcome back, Natnael.</h1>
           <p className="text-muted-foreground mt-2 text-lg">You're making great progress. Keep it up!</p>
@@ -74,21 +74,21 @@ export default function StudentDashboardPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              title: "Principles of Visual Narrative",
+              title: "Begena Introduction",
               instructor: "Dr. Elena Rostova",
               progress: 68,
               level: "Advanced",
               color: "from-blue-500/20 to-indigo-500/20",
             },
             {
-              title: "Quantitative Financial Theory",
+              title: "Begena Medium",
               instructor: "Prof. Marcus Sterling",
               progress: 32,
               level: "Mastery",
               color: "from-emerald-500/20 to-teal-500/20",
             },
             {
-              title: "Modern Web Architecture",
+              title: "Begena Advanced",
               instructor: "Sarah Jenkins, Senior Eng.",
               progress: 91,
               level: "Intermediate",

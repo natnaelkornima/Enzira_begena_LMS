@@ -23,7 +23,7 @@ export default function LandingPage() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-foreground mb-8 leading-[1.1]">
-              Professional Learning,<br className="hidden sm:block" />
+              Professional Learning, <br className="hidden sm:block" />
               <span className="text-primary/90">at Scale</span>
             </h1>
             
@@ -165,7 +165,7 @@ export default function LandingPage() {
             <Link href="#" className="hover:text-primary transition-colors uppercase">Privacy</Link>
             <Link href="#" className="hover:text-primary transition-colors uppercase">Terms</Link>
           </div>
-          <p className="text-[10px] font-bold tracking-[0.1em] text-muted-foreground opacity-50 uppercase">© 2024 Enzira Begena LMS. All rights reserved.</p>
+          <p className="text-[10px] font-bold tracking-[0.1em] text-muted-foreground opacity-50 uppercase">© 2016 made by Enzira production team. All rights reserved.</p>
         </div>
       </footer>
     </div>

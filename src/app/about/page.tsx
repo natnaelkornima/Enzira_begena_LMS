@@ -104,7 +104,7 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto px-6 text-center space-y-4">
           <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Enzira Begena</p>
           <div className="text-xs text-muted-foreground">
-            © 2026 Enzira Begena LMS. Engineered for excellence.
+            © 2016 made by Enzira production team. Engineered for excellence.
           </div>
         </div>
       </footer>
