@@ -75,21 +75,21 @@ export default function StudentDashboardPage() {
           {[
             {
               title: "Begena Introduction",
-              instructor: "Dr. Elena Rostova",
+              instructor: "Fitsum Tarekegn",
               progress: 68,
               level: "Advanced",
               color: "from-blue-500/20 to-indigo-500/20",
             },
             {
               title: "Begena Medium",
-              instructor: "Prof. Marcus Sterling",
+              instructor: "Fitsum Tarekegn",
               progress: 32,
               level: "Mastery",
               color: "from-emerald-500/20 to-teal-500/20",
             },
             {
               title: "Begena Advanced",
-              instructor: "Sarah Jenkins, Senior Eng.",
+              instructor: "Fitsum Tarekegn",
               progress: 91,
               level: "Intermediate",
               color: "from-orange-500/20 to-rose-500/20",

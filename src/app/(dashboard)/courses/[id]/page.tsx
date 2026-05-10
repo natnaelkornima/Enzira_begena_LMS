@@ -18,10 +18,10 @@ export default function SingleCoursePage() {
         {/* Header Section: Course Identity & Progress */}
         <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
-            <h1 className="text-2xl md:text-3xl font-bold tracking-tight">Advanced Computational Architecture &amp; Digital Tectonics</h1>
+            <h1 className="text-2xl md:text-3xl font-bold tracking-tight">Begena Mastery: Traditional Ethiopian Harp</h1>
             <p className="text-muted-foreground mt-2 flex items-center gap-2">
               <User className="h-4 w-4" />
-              Instructor: Dr. Helena Vance
+              Instructor: Fitsum Tarekegn
             </p>
           </div>
           <div className="w-full md:w-64">
@@ -64,7 +64,7 @@ export default function SingleCoursePage() {
                 <ChevronLeft className="h-4 w-4" />
                 Previous Lesson
               </Button>
-              <span className="text-sm font-medium hidden md:block">Lesson 4 of 12: Parametric Foundations</span>
+              <span className="text-sm font-medium hidden md:block">Lesson 4 of 12: Tuning the Ten Strings</span>
               <Button className="gap-2">
                 Next Lesson
                 <ChevronRight className="h-4 w-4" />
@@ -86,19 +86,19 @@ export default function SingleCoursePage() {
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-3">About this Lesson</h3>
                   <p className="text-muted-foreground leading-loose text-[15px]">
-                    In this section, we delve into the core principles of parametric design. We will explore how algorithmic thinking translates into physical structures and how computational tools allow for unprecedented formal experimentation. This lesson focuses on the relationship between mathematical constraints and aesthetic output.
+                    In this lesson, we explore the spiritual and historical significance of the Begena. We will cover the basic anatomy of the instrument, the importance of the ten strings, and the meditative approach required for traditional performance.
                   </p>
                 </div>
                 
                 <Card className="bg-gradient-to-br from-primary/5 to-transparent border-black/5 dark:border-white/5 rounded-[1.25rem] shadow-sm hover:shadow-md transition-shadow">
                   <CardContent className="p-6 flex items-start gap-5">
                     <Avatar className="h-16 w-16 border-2 border-background shadow-sm">
-                      <AvatarFallback className="bg-primary/10 text-primary font-bold">HV</AvatarFallback>
+                      <AvatarFallback className="bg-primary/10 text-primary font-bold">FT</AvatarFallback>
                     </Avatar>
                     <div>
-                      <h4 className="font-bold text-lg tracking-tight">Dr. Helena Vance</h4>
-                      <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">PhD in Computational Design, MIT</p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">Helena is a leading figure in digital fabrication and has consulted for major architectural firms worldwide. Her work bridges the gap between complex algorithms and physical material constraints.</p>
+                      <h4 className="font-bold text-lg tracking-tight">Fitsum Tarekegn</h4>
+                      <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">Master of Traditional Music</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">Fitsum is a renowned expert in Begena and traditional Ethiopian music theory, with over 15 years of teaching experience.</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -112,8 +112,8 @@ export default function SingleCoursePage() {
                       <FileText className="h-6 w-6" />
                     </div>
                     <div className="flex-grow">
-                      <h5 className="font-bold text-sm tracking-tight text-foreground mb-0.5">Lecture_Slides_V2.pdf</h5>
-                      <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest">4.2 MB • PDF Document</p>
+                      <h5 className="font-bold text-sm tracking-tight text-foreground mb-0.5">Begena_Tuning_Guide.pdf</h5>
+                      <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest">2.1 MB • PDF Document</p>
                     </div>
                     <div className="h-10 w-10 rounded-[5px] bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                       <Download className="h-4 w-4" />
@@ -125,8 +125,8 @@ export default function SingleCoursePage() {
                       <FileText className="h-6 w-6" />
                     </div>
                     <div className="flex-grow">
-                      <h5 className="font-bold text-sm tracking-tight text-foreground mb-0.5">Project_Files.zip</h5>
-                      <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest">128 MB • ZIP Archive</p>
+                      <h5 className="font-bold text-sm tracking-tight text-foreground mb-0.5">Traditional_Melodies_Audio.zip</h5>
+                      <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest">45 MB • ZIP Archive</p>
                     </div>
                     <div className="h-10 w-10 rounded-[5px] bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                       <Download className="h-4 w-4" />
@@ -139,26 +139,26 @@ export default function SingleCoursePage() {
                 <Card className="border-primary/20 shadow-md">
                   <CardContent className="p-8">
                     <div className="flex justify-between items-center mb-6">
-                      <h3 className="text-2xl font-bold tracking-tight">Module 2 Assessment</h3>
+                      <h3 className="text-2xl font-bold tracking-tight">Begena Basics Assessment</h3>
                       <span className="text-sm font-semibold text-primary bg-primary/10 px-3 py-1 rounded-[5px]">3 Questions</span>
                     </div>
-                    <p className="text-muted-foreground mb-8">Test your understanding of parametric foundations before moving to the next module.</p>
+                    <p className="text-muted-foreground mb-8">Test your knowledge of the instrument's history and tuning before moving to the next module.</p>
                     
                     <div className="space-y-6">
                       <div className="space-y-4">
-                        <p className="font-semibold text-lg">1. Which of the following best describes 'algorithmic thinking' in design?</p>
+                        <p className="font-semibold text-lg">1. How many strings does a traditional Begena have?</p>
                         <div className="grid grid-cols-1 gap-3">
                           <label className="flex items-center p-4 border rounded-[5px] cursor-pointer hover:bg-muted/50 transition-colors">
                             <input type="radio" name="q1" className="mr-4 h-4 w-4 accent-primary" />
-                            <span>Creating manual drawings based on algorithms.</span>
+                            <span>6 strings</span>
                           </label>
                           <label className="flex items-center p-4 border-2 border-primary bg-primary/5 rounded-[5px] cursor-pointer transition-colors">
                             <input type="radio" name="q1" defaultChecked className="mr-4 h-4 w-4 accent-primary" />
-                            <span className="font-medium text-primary">Defining rules and constraints to generate forms.</span>
+                            <span className="font-medium text-primary">10 strings</span>
                           </label>
                           <label className="flex items-center p-4 border rounded-[5px] cursor-pointer hover:bg-muted/50 transition-colors">
                             <input type="radio" name="q1" className="mr-4 h-4 w-4 accent-primary" />
-                            <span>Using software to render final images.</span>
+                            <span>12 strings</span>
                           </label>
                         </div>
                       </div>
@@ -185,17 +185,16 @@ export default function SingleCoursePage() {
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold mb-4">Course Content</h3>
                 <Accordion defaultValue={["module-2"]} className="space-y-3">
-                  
-                  {/* Module 1 */}
+                                 {/* Module 1 */}
                   <AccordionItem value="module-1" className="border rounded-[5px] px-2">
                     <AccordionTrigger className="hover:no-underline py-3">
-                      <span className="text-sm font-medium">Module 1: Foundations</span>
+                      <span className="text-sm font-medium">Module 1: Foundations of Begena</span>
                     </AccordionTrigger>
                     <AccordionContent className="pb-3 space-y-1">
                       <div className="p-2 flex items-center gap-3 bg-muted/50 rounded-[5px]">
                         <CheckCircle2 className="h-4 w-4 text-green-600" />
                         <div className="flex-grow">
-                          <p className="text-sm font-semibold">1.1 Introduction to Tectonics</p>
+                          <p className="text-sm font-semibold">1.1 Introduction to the Instrument</p>
                           <p className="text-xs text-muted-foreground">12:30</p>
                         </div>
                       </div>
@@ -205,27 +204,27 @@ export default function SingleCoursePage() {
                   {/* Module 2 (Active) */}
                   <AccordionItem value="module-2" className="border rounded-[5px] px-2">
                     <AccordionTrigger className="hover:no-underline py-3">
-                      <span className="text-sm font-medium">Module 2: Parametric Modeling</span>
+                      <span className="text-sm font-medium">Module 2: Tuning and Basic Melodies</span>
                     </AccordionTrigger>
                     <AccordionContent className="pb-3 space-y-1">
                       <div className="p-2 flex items-center gap-3 bg-primary/5 border-l-4 border-primary rounded-r-md">
                         <PlayCircle className="h-4 w-4 text-primary" />
                         <div className="flex-grow">
-                          <p className="text-sm font-bold text-foreground">2.1 Parametric Foundations</p>
+                          <p className="text-sm font-bold text-foreground">2.1 Tuning the Ten Strings</p>
                           <p className="text-xs text-muted-foreground">Currently Watching</p>
                         </div>
                       </div>
                       <div className="p-2 flex items-center gap-3 hover:bg-muted transition-colors rounded-[5px] cursor-pointer group">
                         <Lock className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
                         <div className="flex-grow">
-                          <p className="text-sm font-medium text-muted-foreground">2.2 Advanced Geometry</p>
+                          <p className="text-sm font-medium text-muted-foreground">2.2 Hand Positioning</p>
                           <p className="text-xs text-muted-foreground">24:40</p>
                         </div>
                       </div>
                       <div className="p-2 flex items-center gap-3 hover:bg-muted transition-colors rounded-[5px] cursor-pointer group">
                         <Lock className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
                         <div className="flex-grow">
-                          <p className="text-sm font-medium text-muted-foreground">2.3 Algorithmic Workflows</p>
+                          <p className="text-sm font-medium text-muted-foreground">2.3 Basic Vibrato Techniques</p>
                           <p className="text-xs text-muted-foreground">15:20</p>
                         </div>
                       </div>
@@ -236,7 +235,7 @@ export default function SingleCoursePage() {
                   <AccordionItem value="module-3" className="border rounded-[5px] px-2 opacity-60">
                     <AccordionTrigger className="hover:no-underline py-3" disabled>
                       <span className="text-sm font-medium flex items-center justify-between w-full pr-4">
-                        Module 3: Physical Output
+                        Module 3: Advanced Rhythmic Patterns
                         <Lock className="h-4 w-4" />
                       </span>
                     </AccordionTrigger>

@@ -128,11 +128,11 @@ export default function AdminDashboardPage() {
           </CardHeader>
           <CardContent className="space-y-4">
             {[
-              { icon: UserPlus, title: 'Sarah Jenkins', action: 'joined', desc: 'Medical Sciences • 2m ago', color: 'text-green-600', bg: 'bg-green-100' },
-              { icon: BookOpen, title: 'David Miller', action: 'enrolled in', desc: 'Advanced Calculus • 15m ago', color: 'text-blue-600', bg: 'bg-blue-100' },
-              { icon: CheckCircle, title: 'Ethics 101', action: 'was approved', desc: 'Curriculum Review • 1h ago', color: 'text-yellow-600', bg: 'bg-yellow-100' },
-              { icon: PlusSquare, title: 'Prof. Watson', action: 'created', desc: 'Organic Chemistry • 3h ago', color: 'text-purple-600', bg: 'bg-purple-100' },
-              { icon: UserPlus, title: 'Elena Rodriguez', action: 'joined', desc: 'Modern History • 5h ago', color: 'text-green-600', bg: 'bg-green-100' },
+              { icon: UserPlus, title: 'Fitsum Tarekegn', action: 'joined', desc: 'Begena Basics • 2m ago', color: 'text-green-600', bg: 'bg-green-100' },
+              { icon: BookOpen, title: 'Fitsum Tarekegn', action: 'enrolled in', desc: 'Begena Advanced • 15m ago', color: 'text-blue-600', bg: 'bg-blue-100' },
+              { icon: CheckCircle, title: 'Begena Introduction', action: 'was approved', desc: 'Curriculum Review • 1h ago', color: 'text-yellow-600', bg: 'bg-yellow-100' },
+              { icon: PlusSquare, title: 'Fitsum Tarekegn', action: 'created', desc: 'Begena Medium • 3h ago', color: 'text-purple-600', bg: 'bg-purple-100' },
+              { icon: UserPlus, title: 'Fitsum Tarekegn', action: 'joined', desc: 'Begena Introduction • 5h ago', color: 'text-green-600', bg: 'bg-green-100' },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
                 <div className={`h-8 w-8 rounded-[5px] flex items-center justify-center shrink-0 ${item.bg} ${item.color}`}>
@@ -159,47 +159,49 @@ export default function AdminDashboardPage() {
             <Button>Bulk Approve</Button>
           </div>
         </CardHeader>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Full Name</TableHead>
-              <TableHead>Course Program</TableHead>
-              <TableHead>Registration Date</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead className="text-right">Action</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {[
-              { init: 'AW', name: 'Arthur Wright', course: 'Computer Science Honors', date: 'Oct 24, 2023', status: 'Approved', badge: 'bg-green-100 text-green-800 hover:bg-green-100/80' },
-              { init: 'MB', name: 'Marcus Bennett', course: 'Applied Economics', date: 'Oct 24, 2023', status: 'Pending', badge: 'bg-yellow-100 text-yellow-800 hover:bg-yellow-100/80' },
-              { init: 'CH', name: 'Catherine Hill', course: 'Political Philosophy', date: 'Oct 23, 2023', status: 'Approved', badge: 'bg-green-100 text-green-800 hover:bg-green-100/80' },
-              { init: 'LS', name: 'Linda Sullivan', course: 'Biochemistry Research', date: 'Oct 23, 2023', status: 'Flagged', badge: 'bg-red-100 text-red-800 hover:bg-red-100/80' },
-              { init: 'JK', name: 'Julian King', course: 'Modern Architecture', date: 'Oct 22, 2023', status: 'Approved', badge: 'bg-green-100 text-green-800 hover:bg-green-100/80' },
-            ].map((row, i) => (
-              <TableRow key={i}>
-                <TableCell>
-                  <div className="flex items-center gap-3">
-                    <Avatar className="h-8 w-8">
-                      <AvatarFallback className="bg-primary/10 text-primary font-semibold text-xs">{row.init}</AvatarFallback>
-                    </Avatar>
-                    <span className="font-medium">{row.name}</span>
-                  </div>
-                </TableCell>
-                <TableCell className="text-muted-foreground">{row.course}</TableCell>
-                <TableCell className="text-muted-foreground">{row.date}</TableCell>
-                <TableCell>
-                  <Badge variant="secondary" className={row.badge}>{row.status}</Badge>
-                </TableCell>
-                <TableCell className="text-right">
-                  <Button variant="ghost" size="icon">
-                    <MoreVertical className="h-4 w-4" />
-                  </Button>
-                </TableCell>
+        <div className="overflow-x-auto">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="min-w-[200px]">Full Name</TableHead>
+                <TableHead className="min-w-[200px]">Course Program</TableHead>
+                <TableHead className="min-w-[150px]">Registration Date</TableHead>
+                <TableHead>Status</TableHead>
+                <TableHead className="text-right">Action</TableHead>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+            </TableHeader>
+            <TableBody>
+              {[
+                { init: 'FT', name: 'Fitsum Tarekegn', course: 'Begena Introduction', date: 'Oct 24, 2023', status: 'Approved', badge: 'bg-green-100 text-green-800 hover:bg-green-100/80' },
+                { init: 'FT', name: 'Fitsum Tarekegn', course: 'Begena Medium', date: 'Oct 24, 2023', status: 'Pending', badge: 'bg-yellow-100 text-yellow-800 hover:bg-yellow-100/80' },
+                { init: 'FT', name: 'Fitsum Tarekegn', course: 'Begena Advanced', date: 'Oct 23, 2023', status: 'Approved', badge: 'bg-green-100 text-green-800 hover:bg-green-100/80' },
+                { init: 'FT', name: 'Fitsum Tarekegn', course: 'Begena Introduction', date: 'Oct 23, 2023', status: 'Flagged', badge: 'bg-red-100 text-red-800 hover:bg-red-100/80' },
+                { init: 'FT', name: 'Fitsum Tarekegn', course: 'Begena Advanced', date: 'Oct 22, 2023', status: 'Approved', badge: 'bg-green-100 text-green-800 hover:bg-green-100/80' },
+              ].map((row, i) => (
+                <TableRow key={i}>
+                  <TableCell>
+                    <div className="flex items-center gap-3">
+                      <Avatar className="h-8 w-8">
+                        <AvatarFallback className="bg-primary/10 text-primary font-semibold text-xs">{row.init}</AvatarFallback>
+                      </Avatar>
+                      <span className="font-medium">{row.name}</span>
+                    </div>
+                  </TableCell>
+                  <TableCell className="text-muted-foreground">{row.course}</TableCell>
+                  <TableCell className="text-muted-foreground">{row.date}</TableCell>
+                  <TableCell>
+                    <Badge variant="secondary" className={row.badge}>{row.status}</Badge>
+                  </TableCell>
+                  <TableCell className="text-right">
+                    <Button variant="ghost" size="icon">
+                      <MoreVertical className="h-4 w-4" />
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
       </Card>
     </div>
   );
