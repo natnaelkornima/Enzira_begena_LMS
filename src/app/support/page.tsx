@@ -74,7 +74,7 @@ export default function SupportPage() {
         <div className="max-w-5xl mx-auto px-6 text-center space-y-4">
           <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Enzira Begena</p>
           <div className="text-xs text-muted-foreground">
-            © 2016 made by Enzira production team. Crafted with precision.
+            © 2026 made by Enzira production team. Crafted with precision.
           </div>
         </div>
       </footer>

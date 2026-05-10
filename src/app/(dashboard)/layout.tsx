@@ -20,7 +20,7 @@ export default function DashboardLayout({
         </div>
         <footer className="border-t py-6 mt-auto">
           <div className="max-w-7xl mx-auto px-6 text-center text-sm text-muted-foreground">
-            © 2016 made by Enzira production team. All rights reserved.
+            © 2026 made by Enzira production team. All rights reserved.
           </div>
         </footer>
       </main>

@@ -74,7 +74,7 @@ export default function SettingsPage() {
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Next Payment</span>
-                  <span className="font-semibold">Sept 12, 2016</span>
+                  <span className="font-semibold">Sept 12, 2026</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Amount</span>
@@ -97,8 +97,8 @@ export default function SettingsPage() {
                 {/* Row 1 */}
                 <div className="py-4 flex items-center justify-between">
                   <div>
-                    <p className="font-semibold text-sm">Invoice #INV-2016-001</p>
-                    <p className="text-xs text-muted-foreground">Aug 12, 2016</p>
+                    <p className="font-semibold text-sm">Invoice #INV-2026-001</p>
+                    <p className="text-xs text-muted-foreground">Aug 12, 2026</p>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="font-semibold text-sm">$249.00</span>

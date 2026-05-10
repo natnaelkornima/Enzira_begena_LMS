@@ -98,7 +98,7 @@ export default function SingleCoursePage() {
                     <div>
                       <h4 className="font-bold text-lg tracking-tight">Fitsum Tarekegn</h4>
                       <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">Master of Traditional Music</p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">Fitsum is a renowned expert in Begena and traditional Ethiopian music theory, with over 15 years of teaching experience.</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">Fitsum is a renowned expert in Begena and traditional Ethiopian music theory, with over 4 years of teaching experience.</p>
                     </div>
                   </CardContent>
                 </Card>

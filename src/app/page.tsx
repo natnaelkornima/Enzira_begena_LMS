@@ -19,7 +19,7 @@ export default function LandingPage() {
           
           <div className="max-w-4xl mx-auto px-6 text-center animate-reveal">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[5px] bg-primary/5 border border-primary/10 text-xs font-bold text-primary/80 mb-8 hover:bg-primary/10 transition-colors cursor-pointer group">
-              Featured in Fortune · Enzira Begena 2.0 <ChevronRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
+              Enzira Begena 1.0 <ChevronRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-foreground mb-8 leading-[1.1]">
@@ -62,7 +62,7 @@ export default function LandingPage() {
                     Deploy complex learning paths across your organization with surgical precision and ease.
                   </p>
                 </div>
-                <div className="absolute bottom-[-10px] right-[-10px] w-1/2 h-1/2 bg-gradient-to-tl from-primary/10 to-transparent rounded-tl-2xl p-6 border-t border-l border-primary/20 group-hover:translate-y-[-12px] group-hover:translate-x-[-12px] transition-all duration-700 flex flex-col justify-end gap-3 pointer-events-none">
+                <div className="absolute -bottom-6 -right-6 w-1/2 h-1/2 bg-gradient-to-tl from-primary/10 to-transparent rounded-tl-2xl p-6 border-t border-l border-primary/20 group-hover:translate-y-[-12px] group-hover:translate-x-[-12px] transition-all duration-700 flex flex-col justify-end gap-3 pointer-events-none opacity-50 md:opacity-100">
                   <div className="space-y-1.5">
                     <div className="h-1.5 w-full bg-primary/20 rounded-full overflow-hidden">
                       <div className="h-full w-3/4 bg-primary rounded-full animate-pulse" />
@@ -165,7 +165,7 @@ export default function LandingPage() {
             <Link href="#" className="hover:text-primary transition-colors uppercase">Privacy</Link>
             <Link href="#" className="hover:text-primary transition-colors uppercase">Terms</Link>
           </div>
-          <p className="text-[10px] font-bold tracking-[0.1em] text-muted-foreground opacity-50 uppercase">© 2016 made by Enzira production team. All rights reserved.</p>
+          <p className="text-[10px] font-bold tracking-[0.1em] text-muted-foreground opacity-50 uppercase">© 2026 made by Enzira production team. All rights reserved.</p>
         </div>
       </footer>
     </div>
